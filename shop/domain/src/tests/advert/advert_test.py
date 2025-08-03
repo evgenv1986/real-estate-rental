@@ -1,12 +1,12 @@
-from main.python.advert.advert import Advert
-from main.python.advert.advert_types import Contact
+from shop.domain.src.main.python.advert.advert import Advert
+from shop.domain.src.main.python.advert.advert_types import Contact, Address
 
 
 class TestAdvert():
     def test_initial(self):
         assert  Advert.create(
                     contact = Contact('+7...'),
-                    address = 'street, house',
+                    address = Address('street', 'house'),
                     floor_count = '9',
                     room_count = '2',
                     area = '54.0, 56.1',
@@ -18,7 +18,7 @@ class TestAdvert():
             .__eq__ (
                 Advert.create(
                     contact = Contact('+7...'),
-                    address = 'street, house',
+                    address = Address('street', 'house'),
                     floor_count = '9',
                     room_count = '2',
                     area = '54.0, 56.1',

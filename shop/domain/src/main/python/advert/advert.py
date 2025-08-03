@@ -1,10 +1,13 @@
-from main.python.advert.advert_types import Contact
+
+from shop.domain.src.main.python.advert.advert_types import Contact, Address
+
 
 class AdvertEqualsException(Exception):pass
 
+
 class Advert:
     _contact: Contact
-    _address: str
+    _address: Address
     _floor_count: str
     _room_count: str
     _area: str
@@ -38,9 +41,9 @@ class Advert:
         self._source_advert = source_advert
 
     @classmethod
-    def create (cls, 
+    def create (cls,
                 contact: Contact,
-                address: str,
+                address: Address,
                 floor_count: str,
                 room_count: str,
                 area: str,
@@ -70,5 +73,8 @@ class Advert:
             raise AdvertEqualsException('Ошибка при сравнении объявлений, сравниваемый объект не является классом объявления')
         other: Advert = obj
         return \
-            other.contact().telephone() == self.contact().telephone()
+            other.contact().telephone() == self.contact().telephone() and \
+            other._address._street == self._address._street and \
+            other._address._house == self._address._house
+
             
