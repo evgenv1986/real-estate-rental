@@ -1,0 +1,4838 @@
+.
+|____.pytest_cache
+| |____CACHEDIR.TAG
+| |____README.md
+| |____.gitignore
+| |____v
+| | |____cache
+| | | |____nodeids
+| | | |____lastfailed
+| | | |____stepwise
+|____shop
+| |____domain
+| | |____src
+| | | |____tests
+| | | | |____pytest.ini
+| | | | |____requirements.txt
+| | | | |____.pytest_cache
+| | | | | |____CACHEDIR.TAG
+| | | | | |____README.md
+| | | | | |____.gitignore
+| | | | | |____v
+| | | | | | |____cache
+| | | | | | | |____nodeids
+| | | | | | | |____lastfailed
+| | | | | | | |____stepwise
+| | | | |____advert
+| | | | | |______init__.py
+| | | | | |______pycache__
+| | | | | | |____advert_test.cpython-311-pytest-8.4.1.pyc
+| | | | | | |____advert_test.cpython-311-pytest-8.3.5.pyc
+| | | | | | |______init__.cpython-311.pyc
+| | | | |____pyproject.toml
+| | | | |______init__.py
+| | | | |______pycache__
+| | | | | |____advert_test.cpython-311-pytest-8.4.1.pyc
+| | | | | |______init__.cpython-311.pyc
+| | | | |____advert_test.py
+| | | | |____.env
+| | | | |____venv
+| | | | | |____bin
+| | | | | | |____Activate.ps1
+| | | | | | |____python3
+| | | | | | |____pytest
+| | | | | | |____python
+| | | | | | |____pip3
+| | | | | | |____activate.fish
+| | | | | | |____python3.11
+| | | | | | |____pip
+| | | | | | |____pip3.11
+| | | | | | |____pygmentize
+| | | | | | |____activate
+| | | | | | |____py.test
+| | | | | | |____activate.csh
+| | | | | |____include
+| | | | | | |____python3.11
+| | | | | |____pyvenv.cfg
+| | | | | |____lib
+| | | | | | |____python3.11
+| | | | | | | |____site-packages
+| | | | | | | | |____packaging
+| | | | | | | | | |____tags.py
+| | | | | | | | | |_____musllinux.py
+| | | | | | | | | |____metadata.py
+| | | | | | | | | |____version.py
+| | | | | | | | | |____licenses
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |_____spdx.py
+| | | | | | | | | |______init__.py
+| | | | | | | | | |_____parser.py
+| | | | | | | | | |____utils.py
+| | | | | | | | | |____requirements.py
+| | | | | | | | | |_____structures.py
+| | | | | | | | | |____markers.py
+| | | | | | | | | |____py.typed
+| | | | | | | | | |_____manylinux.py
+| | | | | | | | | |_____tokenizer.py
+| | | | | | | | | |____specifiers.py
+| | | | | | | | | |_____elffile.py
+| | | | | | | | |____pip-25.2.dist-info
+| | | | | | | | | |____RECORD
+| | | | | | | | | |____licenses
+| | | | | | | | | | |____LICENSE.txt
+| | | | | | | | | | |____AUTHORS.txt
+| | | | | | | | | | |____src
+| | | | | | | | | | | |____pip
+| | | | | | | | | | | | |_____vendor
+| | | | | | | | | | | | | |____packaging
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | | |____LICENSE.APACHE
+| | | | | | | | | | | | | | |____LICENSE.BSD
+| | | | | | | | | | | | | |____truststore
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | |____msgpack
+| | | | | | | | | | | | | | |____COPYING
+| | | | | | | | | | | | | |____dependency_groups
+| | | | | | | | | | | | | | |____LICENSE.txt
+| | | | | | | | | | | | | |____pygments
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | |____distlib
+| | | | | | | | | | | | | | |____LICENSE.txt
+| | | | | | | | | | | | | |____distro
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | |____cachecontrol
+| | | | | | | | | | | | | | |____LICENSE.txt
+| | | | | | | | | | | | | |____idna
+| | | | | | | | | | | | | | |____LICENSE.md
+| | | | | | | | | | | | | |____requests
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | |____tomli
+| | | | | | | | | | | | | | |____LICENSE-HEADER
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | |____certifi
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | |____pyproject_hooks
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | |____rich
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | |____tomli_w
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | |____urllib3
+| | | | | | | | | | | | | | |____LICENSE.txt
+| | | | | | | | | | | | | |____pkg_resources
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | |____resolvelib
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | |____platformdirs
+| | | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | |____WHEEL
+| | | | | | | | | |____entry_points.txt
+| | | | | | | | | |____top_level.txt
+| | | | | | | | | |____REQUESTED
+| | | | | | | | | |____INSTALLER
+| | | | | | | | | |____METADATA
+| | | | | | | | |____pygments
+| | | | | | | | | |____filters
+| | | | | | | | | | |______init__.py
+| | | | | | | | | |____modeline.py
+| | | | | | | | | |____console.py
+| | | | | | | | | |____scanner.py
+| | | | | | | | | |____formatter.py
+| | | | | | | | | |____lexers
+| | | | | | | | | | |____soong.py
+| | | | | | | | | | |____c_like.py
+| | | | | | | | | | |____ampl.py
+| | | | | | | | | | |____agile.py
+| | | | | | | | | | |____graphics.py
+| | | | | | | | | | |____hdl.py
+| | | | | | | | | | |____ecl.py
+| | | | | | | | | | |____futhark.py
+| | | | | | | | | | |____ada.py
+| | | | | | | | | | |_____postgres_builtins.py
+| | | | | | | | | | |____console.py
+| | | | | | | | | | |____mime.py
+| | | | | | | | | | |_____lua_builtins.py
+| | | | | | | | | | |____capnproto.py
+| | | | | | | | | | |____nimrod.py
+| | | | | | | | | | |____rebol.py
+| | | | | | | | | | |____objective.py
+| | | | | | | | | | |____sas.py
+| | | | | | | | | | |_____qlik_builtins.py
+| | | | | | | | | | |____phix.py
+| | | | | | | | | | |____graphql.py
+| | | | | | | | | | |____usd.py
+| | | | | | | | | | |____crystal.py
+| | | | | | | | | | |____verifpal.py
+| | | | | | | | | | |_____sourcemod_builtins.py
+| | | | | | | | | | |____web.py
+| | | | | | | | | | |____ldap.py
+| | | | | | | | | | |____verification.py
+| | | | | | | | | | |____erlang.py
+| | | | | | | | | | |_____sql_builtins.py
+| | | | | | | | | | |____apdlexer.py
+| | | | | | | | | | |____slash.py
+| | | | | | | | | | |____boa.py
+| | | | | | | | | | |____elpi.py
+| | | | | | | | | | |____maxima.py
+| | | | | | | | | | |____chapel.py
+| | | | | | | | | | |____configs.py
+| | | | | | | | | | |____clean.py
+| | | | | | | | | | |____mojo.py
+| | | | | | | | | | |____jslt.py
+| | | | | | | | | | |____ul4.py
+| | | | | | | | | | |____numbair.py
+| | | | | | | | | | |____qvt.py
+| | | | | | | | | | |____tablegen.py
+| | | | | | | | | | |____inferno.py
+| | | | | | | | | | |____tlb.py
+| | | | | | | | | | |____nix.py
+| | | | | | | | | | |____wren.py
+| | | | | | | | | | |____parasail.py
+| | | | | | | | | | |____smithy.py
+| | | | | | | | | | |_____css_builtins.py
+| | | | | | | | | | |____graphviz.py
+| | | | | | | | | | |____r.py
+| | | | | | | | | | |____pawn.py
+| | | | | | | | | | |____dns.py
+| | | | | | | | | | |____maple.py
+| | | | | | | | | | |____idl.py
+| | | | | | | | | | |____iolang.py
+| | | | | | | | | | |____amdgpu.py
+| | | | | | | | | | |____dsls.py
+| | | | | | | | | | |____supercollider.py
+| | | | | | | | | | |____comal.py
+| | | | | | | | | | |____solidity.py
+| | | | | | | | | | |_____scilab_builtins.py
+| | | | | | | | | | |_____lilypond_builtins.py
+| | | | | | | | | | |____hare.py
+| | | | | | | | | | |____lisp.py
+| | | | | | | | | | |____j.py
+| | | | | | | | | | |____blueprint.py
+| | | | | | | | | | |____mosel.py
+| | | | | | | | | | |_____googlesql_builtins.py
+| | | | | | | | | | |_____vbscript_builtins.py
+| | | | | | | | | | |_____openedge_builtins.py
+| | | | | | | | | | |____smalltalk.py
+| | | | | | | | | | |____spice.py
+| | | | | | | | | | |____monte.py
+| | | | | | | | | | |_____luau_builtins.py
+| | | | | | | | | | |____webmisc.py
+| | | | | | | | | | |____teal.py
+| | | | | | | | | | |____c_cpp.py
+| | | | | | | | | | |____perl.py
+| | | | | | | | | | |____robotframework.py
+| | | | | | | | | | |____textfmts.py
+| | | | | | | | | | |____jsonnet.py
+| | | | | | | | | | |____cplint.py
+| | | | | | | | | | |____jsx.py
+| | | | | | | | | | |____prolog.py
+| | | | | | | | | | |____rnc.py
+| | | | | | | | | | |____wowtoc.py
+| | | | | | | | | | |_____julia_builtins.py
+| | | | | | | | | | |____algebra.py
+| | | | | | | | | | |____typoscript.py
+| | | | | | | | | | |____automation.py
+| | | | | | | | | | |____sieve.py
+| | | | | | | | | | |____esoteric.py
+| | | | | | | | | | |____graph.py
+| | | | | | | | | | |____html.py
+| | | | | | | | | | |_____php_builtins.py
+| | | | | | | | | | |____shell.py
+| | | | | | | | | | |____scripting.py
+| | | | | | | | | | |____gsql.py
+| | | | | | | | | | |____gdscript.py
+| | | | | | | | | | |____ambient.py
+| | | | | | | | | | |____arrow.py
+| | | | | | | | | | |____oberon.py
+| | | | | | | | | | |_____stata_builtins.py
+| | | | | | | | | | |____floscript.py
+| | | | | | | | | | |____resource.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____d.py
+| | | | | | | | | | |____ruby.py
+| | | | | | | | | | |____other.py
+| | | | | | | | | | |____pony.py
+| | | | | | | | | | |____matlab.py
+| | | | | | | | | | |____felix.py
+| | | | | | | | | | |____tnt.py
+| | | | | | | | | | |_____vim_builtins.py
+| | | | | | | | | | |____freefem.py
+| | | | | | | | | | |____thingsdb.py
+| | | | | | | | | | |____teraterm.py
+| | | | | | | | | | |____parsers.py
+| | | | | | | | | | |____jmespath.py
+| | | | | | | | | | |____carbon.py
+| | | | | | | | | | |____theorem.py
+| | | | | | | | | | |____compiled.py
+| | | | | | | | | | |____int_fiction.py
+| | | | | | | | | | |_____cocoa_builtins.py
+| | | | | | | | | | |____ncl.py
+| | | | | | | | | | |____vyper.py
+| | | | | | | | | | |____lilypond.py
+| | | | | | | | | | |____markup.py
+| | | | | | | | | | |____pddl.py
+| | | | | | | | | | |_____asy_builtins.py
+| | | | | | | | | | |____igor.py
+| | | | | | | | | | |____ml.py
+| | | | | | | | | | |____savi.py
+| | | | | | | | | | |____bqn.py
+| | | | | | | | | | |____tal.py
+| | | | | | | | | | |____tls.py
+| | | | | | | | | | |____templates.py
+| | | | | | | | | | |____forth.py
+| | | | | | | | | | |____css.py
+| | | | | | | | | | |____asm.py
+| | | | | | | | | | |____roboconf.py
+| | | | | | | | | | |_____lasso_builtins.py
+| | | | | | | | | | |____pascal.py
+| | | | | | | | | | |____csound.py
+| | | | | | | | | | |____typst.py
+| | | | | | | | | | |____ptx.py
+| | | | | | | | | | |____sgf.py
+| | | | | | | | | | |____kusto.py
+| | | | | | | | | | |____webassembly.py
+| | | | | | | | | | |____procfile.py
+| | | | | | | | | | |____functional.py
+| | | | | | | | | | |____codeql.py
+| | | | | | | | | | |____textedit.py
+| | | | | | | | | | |____installers.py
+| | | | | | | | | | |____business.py
+| | | | | | | | | | |____tcl.py
+| | | | | | | | | | |____minecraft.py
+| | | | | | | | | | |____vip.py
+| | | | | | | | | | |____mips.py
+| | | | | | | | | | |____meson.py
+| | | | | | | | | | |____basic.py
+| | | | | | | | | | |_____stan_builtins.py
+| | | | | | | | | | |____prql.py
+| | | | | | | | | | |____eiffel.py
+| | | | | | | | | | |____scdoc.py
+| | | | | | | | | | |____dax.py
+| | | | | | | | | | |____rdf.py
+| | | | | | | | | | |____gleam.py
+| | | | | | | | | | |____email.py
+| | | | | | | | | | |____sophia.py
+| | | | | | | | | | |____modula2.py
+| | | | | | | | | | |____nit.py
+| | | | | | | | | | |____actionscript.py
+| | | | | | | | | | |____qlik.py
+| | | | | | | | | | |____text.py
+| | | | | | | | | | |____apl.py
+| | | | | | | | | | |_____cl_builtins.py
+| | | | | | | | | | |_____mql_builtins.py
+| | | | | | | | | | |____srcinfo.py
+| | | | | | | | | | |____rego.py
+| | | | | | | | | | |____archetype.py
+| | | | | | | | | | |____python.py
+| | | | | | | | | | |_____csound_builtins.py
+| | | | | | | | | | |____factor.py
+| | | | | | | | | | |____dalvik.py
+| | | | | | | | | | |____go.py
+| | | | | | | | | | |____berry.py
+| | | | | | | | | | |____unicon.py
+| | | | | | | | | | |_____usd_builtins.py
+| | | | | | | | | | |____cddl.py
+| | | | | | | | | | |____dylan.py
+| | | | | | | | | | |____make.py
+| | | | | | | | | | |____diff.py
+| | | | | | | | | | |____xorg.py
+| | | | | | | | | | |____trafficscript.py
+| | | | | | | | | | |____kuin.py
+| | | | | | | | | | |____jvm.py
+| | | | | | | | | | |____smv.py
+| | | | | | | | | | |____math.py
+| | | | | | | | | | |____tact.py
+| | | | | | | | | | |____promql.py
+| | | | | | | | | | |____php.py
+| | | | | | | | | | |____sql.py
+| | | | | | | | | | |____x10.py
+| | | | | | | | | | |____json5.py
+| | | | | | | | | | |_____mapping.py
+| | | | | | | | | | |____gcodelexer.py
+| | | | | | | | | | |____praat.py
+| | | | | | | | | | |____lean.py
+| | | | | | | | | | |____bibtex.py
+| | | | | | | | | | |____whiley.py
+| | | | | | | | | | |____q.py
+| | | | | | | | | | |____snobol.py
+| | | | | | | | | | |_____mysql_builtins.py
+| | | | | | | | | | |____webidl.py
+| | | | | | | | | | |____rita.py
+| | | | | | | | | | |____haskell.py
+| | | | | | | | | | |____testing.py
+| | | | | | | | | | |____fortran.py
+| | | | | | | | | | |____modeling.py
+| | | | | | | | | | |____arturo.py
+| | | | | | | | | | |____varnish.py
+| | | | | | | | | | |____elm.py
+| | | | | | | | | | |____asc.py
+| | | | | | | | | | |____javascript.py
+| | | | | | | | | | |____ooc.py
+| | | | | | | | | | |____bdd.py
+| | | | | | | | | | |____julia.py
+| | | | | | | | | | |____hexdump.py
+| | | | | | | | | | |____foxpro.py
+| | | | | | | | | | |____stata.py
+| | | | | | | | | | |____zig.py
+| | | | | | | | | | |____grammar_notation.py
+| | | | | | | | | | |____bare.py
+| | | | | | | | | | |____openscad.py
+| | | | | | | | | | |____dotnet.py
+| | | | | | | | | | |____fantom.py
+| | | | | | | | | | |____special.py
+| | | | | | | | | | |____yang.py
+| | | | | | | | | | |____fift.py
+| | | | | | | | | | |____ezhil.py
+| | | | | | | | | | |____ride.py
+| | | | | | | | | | |_____scheme_builtins.py
+| | | | | | | | | | |____devicetree.py
+| | | | | | | | | | |____macaulay2.py
+| | | | | | | | | | |____urbi.py
+| | | | | | | | | | |____haxe.py
+| | | | | | | | | | |____func.py
+| | | | | | | | | | |____data.py
+| | | | | | | | | | |_____ada_builtins.py
+| | | | | | | | | | |____yara.py
+| | | | | | | | | | |____pointless.py
+| | | | | | | | | | |____asn1.py
+| | | | | | | | | | |_____tsql_builtins.py
+| | | | | | | | | | |____wgsl.py
+| | | | | | | | | | |____rust.py
+| | | | | | | | | |____token.py
+| | | | | | | | | |____style.py
+| | | | | | | | | |____util.py
+| | | | | | | | | |____sphinxext.py
+| | | | | | | | | |____cmdline.py
+| | | | | | | | | |______init__.py
+| | | | | | | | | |____formatters
+| | | | | | | | | | |____terminal.py
+| | | | | | | | | | |____html.py
+| | | | | | | | | | |____irc.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____other.py
+| | | | | | | | | | |____img.py
+| | | | | | | | | | |____terminal256.py
+| | | | | | | | | | |____rtf.py
+| | | | | | | | | | |____svg.py
+| | | | | | | | | | |____bbcode.py
+| | | | | | | | | | |____pangomarkup.py
+| | | | | | | | | | |_____mapping.py
+| | | | | | | | | | |____groff.py
+| | | | | | | | | | |____latex.py
+| | | | | | | | | |____styles
+| | | | | | | | | | |____sas.py
+| | | | | | | | | | |____material.py
+| | | | | | | | | | |____friendly_grayscale.py
+| | | | | | | | | | |____pastie.py
+| | | | | | | | | | |____onedark.py
+| | | | | | | | | | |____inkpot.py
+| | | | | | | | | | |____xcode.py
+| | | | | | | | | | |____gruvbox.py
+| | | | | | | | | | |____monokai.py
+| | | | | | | | | | |____tango.py
+| | | | | | | | | | |____friendly.py
+| | | | | | | | | | |____staroffice.py
+| | | | | | | | | | |____paraiso_dark.py
+| | | | | | | | | | |____solarized.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____algol_nu.py
+| | | | | | | | | | |____gh_dark.py
+| | | | | | | | | | |____native.py
+| | | | | | | | | | |____colorful.py
+| | | | | | | | | | |____lilypond.py
+| | | | | | | | | | |____igor.py
+| | | | | | | | | | |____zenburn.py
+| | | | | | | | | | |____bw.py
+| | | | | | | | | | |____emacs.py
+| | | | | | | | | | |____dracula.py
+| | | | | | | | | | |____vs.py
+| | | | | | | | | | |____default.py
+| | | | | | | | | | |____paraiso_light.py
+| | | | | | | | | | |____lovelace.py
+| | | | | | | | | | |____stata_dark.py
+| | | | | | | | | | |____vim.py
+| | | | | | | | | | |____borland.py
+| | | | | | | | | | |____coffee.py
+| | | | | | | | | | |_____mapping.py
+| | | | | | | | | | |____murphy.py
+| | | | | | | | | | |____lightbulb.py
+| | | | | | | | | | |____fruity.py
+| | | | | | | | | | |____abap.py
+| | | | | | | | | | |____rainbow_dash.py
+| | | | | | | | | | |____manni.py
+| | | | | | | | | | |____autumn.py
+| | | | | | | | | | |____rrt.py
+| | | | | | | | | | |____perldoc.py
+| | | | | | | | | | |____trac.py
+| | | | | | | | | | |____algol.py
+| | | | | | | | | | |____arduino.py
+| | | | | | | | | | |____nord.py
+| | | | | | | | | | |____stata_light.py
+| | | | | | | | | |____unistring.py
+| | | | | | | | | |____lexer.py
+| | | | | | | | | |____regexopt.py
+| | | | | | | | | |____plugin.py
+| | | | | | | | | |____filter.py
+| | | | | | | | | |______main__.py
+| | | | | | | | |____pytest
+| | | | | | | | | |______init__.py
+| | | | | | | | | |____py.typed
+| | | | | | | | | |______main__.py
+| | | | | | | | |____setuptools-80.7.1.dist-info
+| | | | | | | | | |____RECORD
+| | | | | | | | | |____licenses
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____WHEEL
+| | | | | | | | | |____entry_points.txt
+| | | | | | | | | |____top_level.txt
+| | | | | | | | | |____REQUESTED
+| | | | | | | | | |____INSTALLER
+| | | | | | | | | |____METADATA
+| | | | | | | | |____pytest-8.4.1.dist-info
+| | | | | | | | | |____RECORD
+| | | | | | | | | |____licenses
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | | |____AUTHORS
+| | | | | | | | | |____WHEEL
+| | | | | | | | | |____entry_points.txt
+| | | | | | | | | |____top_level.txt
+| | | | | | | | | |____REQUESTED
+| | | | | | | | | |____INSTALLER
+| | | | | | | | | |____METADATA
+| | | | | | | | |____pip
+| | | | | | | | | |_____internal
+| | | | | | | | | | |____configuration.py
+| | | | | | | | | | |____pyproject.py
+| | | | | | | | | | |____network
+| | | | | | | | | | | |____auth.py
+| | | | | | | | | | | |____xmlrpc.py
+| | | | | | | | | | | |____download.py
+| | | | | | | | | | | |____session.py
+| | | | | | | | | | | |____cache.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____utils.py
+| | | | | | | | | | | |____lazy_wheel.py
+| | | | | | | | | | |____cache.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____utils
+| | | | | | | | | | | |____logging.py
+| | | | | | | | | | | |____misc.py
+| | | | | | | | | | | |____egg_link.py
+| | | | | | | | | | | |____compat.py
+| | | | | | | | | | | |____deprecation.py
+| | | | | | | | | | | |____subprocess.py
+| | | | | | | | | | | |____filesystem.py
+| | | | | | | | | | | |____direct_url_helpers.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____jaraco_text.py
+| | | | | | | | | | | |____temp_dir.py
+| | | | | | | | | | | |____retry.py
+| | | | | | | | | | | |____appdirs.py
+| | | | | | | | | | | |____setuptools_build.py
+| | | | | | | | | | | |____packaging.py
+| | | | | | | | | | | |____entrypoints.py
+| | | | | | | | | | | |____filetypes.py
+| | | | | | | | | | | |____compatibility_tags.py
+| | | | | | | | | | | |____datetime.py
+| | | | | | | | | | | |____urls.py
+| | | | | | | | | | | |____hashes.py
+| | | | | | | | | | | |____virtualenv.py
+| | | | | | | | | | | |_____log.py
+| | | | | | | | | | | |____glibc.py
+| | | | | | | | | | | |____wheel.py
+| | | | | | | | | | | |____unpacking.py
+| | | | | | | | | | |____models
+| | | | | | | | | | | |____link.py
+| | | | | | | | | | | |____selection_prefs.py
+| | | | | | | | | | | |____direct_url.py
+| | | | | | | | | | | |____index.py
+| | | | | | | | | | | |____target_python.py
+| | | | | | | | | | | |____pylock.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____search_scope.py
+| | | | | | | | | | | |____candidate.py
+| | | | | | | | | | | |____format_control.py
+| | | | | | | | | | | |____installation_report.py
+| | | | | | | | | | | |____scheme.py
+| | | | | | | | | | | |____wheel.py
+| | | | | | | | | | |____cli
+| | | | | | | | | | | |____cmdoptions.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____index_command.py
+| | | | | | | | | | | |____status_codes.py
+| | | | | | | | | | | |____parser.py
+| | | | | | | | | | | |____command_context.py
+| | | | | | | | | | | |____spinners.py
+| | | | | | | | | | | |____autocompletion.py
+| | | | | | | | | | | |____base_command.py
+| | | | | | | | | | | |____main_parser.py
+| | | | | | | | | | | |____progress_bars.py
+| | | | | | | | | | | |____main.py
+| | | | | | | | | | | |____req_command.py
+| | | | | | | | | | |____operations
+| | | | | | | | | | | |____install
+| | | | | | | | | | | | |____editable_legacy.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____wheel.py
+| | | | | | | | | | | |____check.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____freeze.py
+| | | | | | | | | | | |____build
+| | | | | | | | | | | | |____wheel_legacy.py
+| | | | | | | | | | | | |____metadata.py
+| | | | | | | | | | | | |____metadata_editable.py
+| | | | | | | | | | | | |____wheel_editable.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____metadata_legacy.py
+| | | | | | | | | | | | |____wheel.py
+| | | | | | | | | | | | |____build_tracker.py
+| | | | | | | | | | | |____prepare.py
+| | | | | | | | | | |____req
+| | | | | | | | | | | |____req_install.py
+| | | | | | | | | | | |____req_set.py
+| | | | | | | | | | | |____req_uninstall.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____req_dependency_group.py
+| | | | | | | | | | | |____req_file.py
+| | | | | | | | | | | |____constructors.py
+| | | | | | | | | | |____resolution
+| | | | | | | | | | | |____legacy
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____resolver.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____base.py
+| | | | | | | | | | | |____resolvelib
+| | | | | | | | | | | | |____provider.py
+| | | | | | | | | | | | |____found_candidates.py
+| | | | | | | | | | | | |____reporter.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____factory.py
+| | | | | | | | | | | | |____requirements.py
+| | | | | | | | | | | | |____resolver.py
+| | | | | | | | | | | | |____candidates.py
+| | | | | | | | | | | | |____base.py
+| | | | | | | | | | |____vcs
+| | | | | | | | | | | |____git.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____mercurial.py
+| | | | | | | | | | | |____bazaar.py
+| | | | | | | | | | | |____versioncontrol.py
+| | | | | | | | | | | |____subversion.py
+| | | | | | | | | | |____locations
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____sysconfig.py
+| | | | | | | | | | | |_____distutils.py
+| | | | | | | | | | | |____base.py
+| | | | | | | | | | |____index
+| | | | | | | | | | | |____collector.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____sources.py
+| | | | | | | | | | | |____package_finder.py
+| | | | | | | | | | |____exceptions.py
+| | | | | | | | | | |____commands
+| | | | | | | | | | | |____configuration.py
+| | | | | | | | | | | |____show.py
+| | | | | | | | | | | |____list.py
+| | | | | | | | | | | |____check.py
+| | | | | | | | | | | |____index.py
+| | | | | | | | | | | |____completion.py
+| | | | | | | | | | | |____download.py
+| | | | | | | | | | | |____cache.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____hash.py
+| | | | | | | | | | | |____inspect.py
+| | | | | | | | | | | |____debug.py
+| | | | | | | | | | | |____uninstall.py
+| | | | | | | | | | | |____lock.py
+| | | | | | | | | | | |____freeze.py
+| | | | | | | | | | | |____search.py
+| | | | | | | | | | | |____install.py
+| | | | | | | | | | | |____help.py
+| | | | | | | | | | | |____wheel.py
+| | | | | | | | | | |____main.py
+| | | | | | | | | | |____wheel_builder.py
+| | | | | | | | | | |____metadata
+| | | | | | | | | | | |_____json.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____pkg_resources.py
+| | | | | | | | | | | |____importlib
+| | | | | | | | | | | | |_____dists.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |_____compat.py
+| | | | | | | | | | | | |_____envs.py
+| | | | | | | | | | | |____base.py
+| | | | | | | | | | |____distributions
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____sdist.py
+| | | | | | | | | | | |____installed.py
+| | | | | | | | | | | |____base.py
+| | | | | | | | | | | |____wheel.py
+| | | | | | | | | | |____self_outdated_check.py
+| | | | | | | | | | |____build_env.py
+| | | | | | | | | |_____vendor
+| | | | | | | | | | |____packaging
+| | | | | | | | | | | |____tags.py
+| | | | | | | | | | | |_____musllinux.py
+| | | | | | | | | | | |____metadata.py
+| | | | | | | | | | | |____version.py
+| | | | | | | | | | | |____licenses
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |_____spdx.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____parser.py
+| | | | | | | | | | | |____utils.py
+| | | | | | | | | | | |____requirements.py
+| | | | | | | | | | | |_____structures.py
+| | | | | | | | | | | |____markers.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |_____manylinux.py
+| | | | | | | | | | | |_____tokenizer.py
+| | | | | | | | | | | |____specifiers.py
+| | | | | | | | | | | |_____elffile.py
+| | | | | | | | | | |____vendor.txt
+| | | | | | | | | | |____truststore
+| | | | | | | | | | | |_____openssl.py
+| | | | | | | | | | | |_____api.py
+| | | | | | | | | | | |_____macos.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____ssl_constants.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |_____windows.py
+| | | | | | | | | | |____msgpack
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____exceptions.py
+| | | | | | | | | | | |____fallback.py
+| | | | | | | | | | | |____ext.py
+| | | | | | | | | | |____dependency_groups
+| | | | | | | | | | | |_____lint_dependency_groups.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____pip_wrapper.py
+| | | | | | | | | | | |_____implementation.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |_____toml_compat.py
+| | | | | | | | | | | |______main__.py
+| | | | | | | | | | |____pygments
+| | | | | | | | | | | |____filters
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____modeline.py
+| | | | | | | | | | | |____console.py
+| | | | | | | | | | | |____scanner.py
+| | | | | | | | | | | |____formatter.py
+| | | | | | | | | | | |____lexers
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____python.py
+| | | | | | | | | | | | |_____mapping.py
+| | | | | | | | | | | |____token.py
+| | | | | | | | | | | |____style.py
+| | | | | | | | | | | |____util.py
+| | | | | | | | | | | |____sphinxext.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____formatters
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |_____mapping.py
+| | | | | | | | | | | |____styles
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |_____mapping.py
+| | | | | | | | | | | |____unistring.py
+| | | | | | | | | | | |____lexer.py
+| | | | | | | | | | | |____regexopt.py
+| | | | | | | | | | | |____plugin.py
+| | | | | | | | | | | |____filter.py
+| | | | | | | | | | | |______main__.py
+| | | | | | | | | | |____distlib
+| | | | | | | | | | | |____w64-arm.exe
+| | | | | | | | | | | |____w32.exe
+| | | | | | | | | | | |____compat.py
+| | | | | | | | | | | |____util.py
+| | | | | | | | | | | |____t32.exe
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____w64.exe
+| | | | | | | | | | | |____resources.py
+| | | | | | | | | | | |____t64-arm.exe
+| | | | | | | | | | | |____scripts.py
+| | | | | | | | | | | |____t64.exe
+| | | | | | | | | | |____distro
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |____distro.py
+| | | | | | | | | | | |______main__.py
+| | | | | | | | | | |____cachecontrol
+| | | | | | | | | | | |____serialize.py
+| | | | | | | | | | | |____wrapper.py
+| | | | | | | | | | | |____controller.py
+| | | | | | | | | | | |____filewrapper.py
+| | | | | | | | | | | |____heuristics.py
+| | | | | | | | | | | |____adapter.py
+| | | | | | | | | | | |____cache.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |_____cmd.py
+| | | | | | | | | | | |____caches
+| | | | | | | | | | | | |____file_cache.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____redis_cache.py
+| | | | | | | | | | |____idna
+| | | | | | | | | | | |____intranges.py
+| | | | | | | | | | | |____package_data.py
+| | | | | | | | | | | |____compat.py
+| | | | | | | | | | | |____idnadata.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____core.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |____codec.py
+| | | | | | | | | | | |____uts46data.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____requests
+| | | | | | | | | | | |____cookies.py
+| | | | | | | | | | | |____auth.py
+| | | | | | | | | | | |____sessions.py
+| | | | | | | | | | | |____hooks.py
+| | | | | | | | | | | |____compat.py
+| | | | | | | | | | | |____models.py
+| | | | | | | | | | | |____certs.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____status_codes.py
+| | | | | | | | | | | |____packages.py
+| | | | | | | | | | | |______version__.py
+| | | | | | | | | | | |____api.py
+| | | | | | | | | | | |_____internal_utils.py
+| | | | | | | | | | | |____utils.py
+| | | | | | | | | | | |____exceptions.py
+| | | | | | | | | | | |____structures.py
+| | | | | | | | | | | |____help.py
+| | | | | | | | | | | |____adapters.py
+| | | | | | | | | | |____tomli
+| | | | | | | | | | | |_____types.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____parser.py
+| | | | | | | | | | | |_____re.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | |____certifi
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____core.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |____cacert.pem
+| | | | | | | | | | | |______main__.py
+| | | | | | | | | | |____pyproject_hooks
+| | | | | | | | | | | |_____impl.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____in_process
+| | | | | | | | | | | | |_____in_process.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | |____rich
+| | | | | | | | | | | |____themes.py
+| | | | | | | | | | | |____screen.py
+| | | | | | | | | | | |____logging.py
+| | | | | | | | | | | |____measure.py
+| | | | | | | | | | | |____tree.py
+| | | | | | | | | | | |____console.py
+| | | | | | | | | | | |____live_render.py
+| | | | | | | | | | | |_____emoji_codes.py
+| | | | | | | | | | | |____box.py
+| | | | | | | | | | | |____color.py
+| | | | | | | | | | | |_____timer.py
+| | | | | | | | | | | |_____fileno.py
+| | | | | | | | | | | |____align.py
+| | | | | | | | | | | |____theme.py
+| | | | | | | | | | | |____style.py
+| | | | | | | | | | | |____default_styles.py
+| | | | | | | | | | | |_____wrap.py
+| | | | | | | | | | | |_____log_render.py
+| | | | | | | | | | | |____emoji.py
+| | | | | | | | | | | |____layout.py
+| | | | | | | | | | | |____containers.py
+| | | | | | | | | | | |_____emoji_replace.py
+| | | | | | | | | | | |____traceback.py
+| | | | | | | | | | | |____region.py
+| | | | | | | | | | | |____protocol.py
+| | | | | | | | | | | |_____loop.py
+| | | | | | | | | | | |____control.py
+| | | | | | | | | | | |____filesize.py
+| | | | | | | | | | | |_____null_file.py
+| | | | | | | | | | | |_____palettes.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____pick.py
+| | | | | | | | | | | |____file_proxy.py
+| | | | | | | | | | | |____palette.py
+| | | | | | | | | | | |____markup.py
+| | | | | | | | | | | |_____ratio.py
+| | | | | | | | | | | |____repr.py
+| | | | | | | | | | | |____constrain.py
+| | | | | | | | | | | |____pretty.py
+| | | | | | | | | | | |____diagnose.py
+| | | | | | | | | | | |____columns.py
+| | | | | | | | | | | |____rule.py
+| | | | | | | | | | | |_____inspect.py
+| | | | | | | | | | | |____pager.py
+| | | | | | | | | | | |____text.py
+| | | | | | | | | | | |____highlighter.py
+| | | | | | | | | | | |_____spinners.py
+| | | | | | | | | | | |____terminal_theme.py
+| | | | | | | | | | | |____bar.py
+| | | | | | | | | | | |____live.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |____syntax.py
+| | | | | | | | | | | |____table.py
+| | | | | | | | | | | |_____export_format.py
+| | | | | | | | | | | |____progress_bar.py
+| | | | | | | | | | | |____errors.py
+| | | | | | | | | | | |____prompt.py
+| | | | | | | | | | | |____segment.py
+| | | | | | | | | | | |____ansi.py
+| | | | | | | | | | | |____progress.py
+| | | | | | | | | | | |_____stack.py
+| | | | | | | | | | | |_____windows.py
+| | | | | | | | | | | |_____cell_widths.py
+| | | | | | | | | | | |____cells.py
+| | | | | | | | | | | |_____win32_console.py
+| | | | | | | | | | | |____panel.py
+| | | | | | | | | | | |____styled.py
+| | | | | | | | | | | |____spinner.py
+| | | | | | | | | | | |_____windows_renderer.py
+| | | | | | | | | | | |____json.py
+| | | | | | | | | | | |____padding.py
+| | | | | | | | | | | |______main__.py
+| | | | | | | | | | | |____scope.py
+| | | | | | | | | | | |_____extension.py
+| | | | | | | | | | | |____status.py
+| | | | | | | | | | | |____abc.py
+| | | | | | | | | | | |____jupyter.py
+| | | | | | | | | | | |____color_triplet.py
+| | | | | | | | | | |____tomli_w
+| | | | | | | | | | | |_____writer.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | |____urllib3
+| | | | | | | | | | | |____filepost.py
+| | | | | | | | | | | |____fields.py
+| | | | | | | | | | | |____util
+| | | | | | | | | | | | |____queue.py
+| | | | | | | | | | | | |____ssltransport.py
+| | | | | | | | | | | | |____proxy.py
+| | | | | | | | | | | | |____wait.py
+| | | | | | | | | | | | |____request.py
+| | | | | | | | | | | | |____timeout.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____response.py
+| | | | | | | | | | | | |____ssl_.py
+| | | | | | | | | | | | |____retry.py
+| | | | | | | | | | | | |____url.py
+| | | | | | | | | | | | |____connection.py
+| | | | | | | | | | | | |____ssl_match_hostname.py
+| | | | | | | | | | | |_____version.py
+| | | | | | | | | | | |____request.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____poolmanager.py
+| | | | | | | | | | | |____response.py
+| | | | | | | | | | | |____contrib
+| | | | | | | | | | | | |____securetransport.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____socks.py
+| | | | | | | | | | | | |_____appengine_environ.py
+| | | | | | | | | | | | |____pyopenssl.py
+| | | | | | | | | | | | |____appengine.py
+| | | | | | | | | | | | |_____securetransport
+| | | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | | |____low_level.py
+| | | | | | | | | | | | | |____bindings.py
+| | | | | | | | | | | | |____ntlmpool.py
+| | | | | | | | | | | |____connection.py
+| | | | | | | | | | | |_____collections.py
+| | | | | | | | | | | |____packages
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____backports
+| | | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | | |____makefile.py
+| | | | | | | | | | | | | |____weakref_finalize.py
+| | | | | | | | | | | | |____six.py
+| | | | | | | | | | | |____exceptions.py
+| | | | | | | | | | | |____connectionpool.py
+| | | | | | | | | | |____pkg_resources
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | |____resolvelib
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____resolvers
+| | | | | | | | | | | | |____abstract.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____exceptions.py
+| | | | | | | | | | | | |____criterion.py
+| | | | | | | | | | | | |____resolution.py
+| | | | | | | | | | | |____providers.py
+| | | | | | | | | | | |____structs.py
+| | | | | | | | | | | |____reporters.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | |____platformdirs
+| | | | | | | | | | | |____macos.py
+| | | | | | | | | | | |____unix.py
+| | | | | | | | | | | |____version.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____api.py
+| | | | | | | | | | | |____android.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |____windows.py
+| | | | | | | | | | | |______main__.py
+| | | | | | | | | |______init__.py
+| | | | | | | | | |____py.typed
+| | | | | | | | | |______pip-runner__.py
+| | | | | | | | | |______main__.py
+| | | | | | | | |____distutils-precedence.pth
+| | | | | | | | |____packaging-25.0.dist-info
+| | | | | | | | | |____RECORD
+| | | | | | | | | |____licenses
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | | |____LICENSE.APACHE
+| | | | | | | | | | |____LICENSE.BSD
+| | | | | | | | | |____WHEEL
+| | | | | | | | | |____INSTALLER
+| | | | | | | | | |____METADATA
+| | | | | | | | |____pluggy
+| | | | | | | | | |_____tracing.py
+| | | | | | | | | |_____version.py
+| | | | | | | | | |_____callers.py
+| | | | | | | | | |______init__.py
+| | | | | | | | | |_____warnings.py
+| | | | | | | | | |_____hooks.py
+| | | | | | | | | |_____result.py
+| | | | | | | | | |____py.typed
+| | | | | | | | | |_____manager.py
+| | | | | | | | |____pluggy-1.6.0.dist-info
+| | | | | | | | | |____RECORD
+| | | | | | | | | |____licenses
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____WHEEL
+| | | | | | | | | |____top_level.txt
+| | | | | | | | | |____INSTALLER
+| | | | | | | | | |____METADATA
+| | | | | | | | |____pygments-2.19.2.dist-info
+| | | | | | | | | |____RECORD
+| | | | | | | | | |____licenses
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | | |____AUTHORS
+| | | | | | | | | |____WHEEL
+| | | | | | | | | |____entry_points.txt
+| | | | | | | | | |____INSTALLER
+| | | | | | | | | |____METADATA
+| | | | | | | | |____setuptools
+| | | | | | | | | |_____path.py
+| | | | | | | | | |____cli-arm64.exe
+| | | | | | | | | |____logging.py
+| | | | | | | | | |____windows_support.py
+| | | | | | | | | |_____normalization.py
+| | | | | | | | | |____compat
+| | | | | | | | | | |____py39.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____py312.py
+| | | | | | | | | | |____py311.py
+| | | | | | | | | | |____py310.py
+| | | | | | | | | |____archive_util.py
+| | | | | | | | | |_____imp.py
+| | | | | | | | | |____version.py
+| | | | | | | | | |____modified.py
+| | | | | | | | | |_____vendor
+| | | | | | | | | | |____packaging
+| | | | | | | | | | | |____tags.py
+| | | | | | | | | | | |_____musllinux.py
+| | | | | | | | | | | |____metadata.py
+| | | | | | | | | | | |____version.py
+| | | | | | | | | | | |____licenses
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |_____spdx.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____parser.py
+| | | | | | | | | | | |____utils.py
+| | | | | | | | | | | |____requirements.py
+| | | | | | | | | | | |_____structures.py
+| | | | | | | | | | | |____markers.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |_____manylinux.py
+| | | | | | | | | | | |_____tokenizer.py
+| | | | | | | | | | | |____specifiers.py
+| | | | | | | | | | | |_____elffile.py
+| | | | | | | | | | |____jaraco.text-3.12.1.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____top_level.txt
+| | | | | | | | | | | |____REQUESTED
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____jaraco.collections-5.1.0.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____top_level.txt
+| | | | | | | | | | | |____REQUESTED
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____importlib_metadata-8.0.0.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____top_level.txt
+| | | | | | | | | | | |____REQUESTED
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____inflect
+| | | | | | | | | | | |____compat
+| | | | | | | | | | | | |____py38.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | |____jaraco
+| | | | | | | | | | | |____context.py
+| | | | | | | | | | | |____functools
+| | | | | | | | | | | | |______init__.pyi
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |____text
+| | | | | | | | | | | | |____to-qwerty.py
+| | | | | | | | | | | | |____show-newlines.py
+| | | | | | | | | | | | |____to-dvorak.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____strip-prefix.py
+| | | | | | | | | | | | |____Lorem ipsum.txt
+| | | | | | | | | | | | |____layouts.py
+| | | | | | | | | | | |____collections
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____py.typed
+| | | | | | | | | | |____jaraco.functools-4.0.1.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____top_level.txt
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____jaraco.context-5.3.0.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____top_level.txt
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____inflect-7.3.1.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____top_level.txt
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____importlib_metadata
+| | | | | | | | | | | |_____meta.py
+| | | | | | | | | | | |____compat
+| | | | | | | | | | | | |____py39.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____py311.py
+| | | | | | | | | | | |_____text.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____functools.py
+| | | | | | | | | | | |____diagnose.py
+| | | | | | | | | | | |_____collections.py
+| | | | | | | | | | | |_____itertools.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |_____adapters.py
+| | | | | | | | | | | |_____compat.py
+| | | | | | | | | | |____wheel
+| | | | | | | | | | | |____metadata.py
+| | | | | | | | | | | |____macosx_libfile.py
+| | | | | | | | | | | |____util.py
+| | | | | | | | | | | |_____setuptools_logging.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____cli
+| | | | | | | | | | | | |____pack.py
+| | | | | | | | | | | | |____tags.py
+| | | | | | | | | | | | |____convert.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____unpack.py
+| | | | | | | | | | | |____bdist_wheel.py
+| | | | | | | | | | | |____vendored
+| | | | | | | | | | | | |____packaging
+| | | | | | | | | | | | | |____tags.py
+| | | | | | | | | | | | | |_____musllinux.py
+| | | | | | | | | | | | | |____version.py
+| | | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | | | |____LICENSE.APACHE
+| | | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | | |_____parser.py
+| | | | | | | | | | | | | |____LICENSE.BSD
+| | | | | | | | | | | | | |____utils.py
+| | | | | | | | | | | | | |____requirements.py
+| | | | | | | | | | | | | |_____structures.py
+| | | | | | | | | | | | | |____markers.py
+| | | | | | | | | | | | | |_____manylinux.py
+| | | | | | | | | | | | | |_____tokenizer.py
+| | | | | | | | | | | | | |____specifiers.py
+| | | | | | | | | | | | | |_____elffile.py
+| | | | | | | | | | | | |____vendor.txt
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____bdist_wheel.py
+| | | | | | | | | | | |____wheelfile.py
+| | | | | | | | | | | |______main__.py
+| | | | | | | | | | |____zipp
+| | | | | | | | | | | |____compat
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |____py310.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____glob.py
+| | | | | | | | | | |____autocommand-2.2.2.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____top_level.txt
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____more_itertools
+| | | | | | | | | | | |______init__.pyi
+| | | | | | | | | | | |____more.pyi
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____more.py
+| | | | | | | | | | | |____recipes.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |____recipes.pyi
+| | | | | | | | | | |____backports
+| | | | | | | | | | | |____tarfile
+| | | | | | | | | | | | |____compat
+| | | | | | | | | | | | | |____py38.py
+| | | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | | |______main__.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | |____autocommand
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____automain.py
+| | | | | | | | | | | |____errors.py
+| | | | | | | | | | | |____autocommand.py
+| | | | | | | | | | | |____autoasync.py
+| | | | | | | | | | | |____autoparse.py
+| | | | | | | | | | |____tomli
+| | | | | | | | | | | |_____types.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____parser.py
+| | | | | | | | | | | |_____re.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | |____backports.tarfile-1.2.0.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____top_level.txt
+| | | | | | | | | | | |____REQUESTED
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____typeguard-4.3.0.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____entry_points.txt
+| | | | | | | | | | | |____top_level.txt
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____packaging-24.2.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____LICENSE.APACHE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____LICENSE.BSD
+| | | | | | | | | | | |____REQUESTED
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____wheel-0.45.1.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____entry_points.txt
+| | | | | | | | | | | |____LICENSE.txt
+| | | | | | | | | | | |____REQUESTED
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____zipp-3.19.2.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____top_level.txt
+| | | | | | | | | | | |____REQUESTED
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____tomli-2.0.1.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____REQUESTED
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____typing_extensions-4.12.2.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____more_itertools-10.3.0.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____REQUESTED
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____platformdirs-4.2.2.dist-info
+| | | | | | | | | | | |____RECORD
+| | | | | | | | | | | |____licenses
+| | | | | | | | | | | | |____LICENSE
+| | | | | | | | | | | |____WHEEL
+| | | | | | | | | | | |____REQUESTED
+| | | | | | | | | | | |____INSTALLER
+| | | | | | | | | | | |____METADATA
+| | | | | | | | | | |____typeguard
+| | | | | | | | | | | |_____checkers.py
+| | | | | | | | | | | |_____suppression.py
+| | | | | | | | | | | |_____importhook.py
+| | | | | | | | | | | |_____pytest_plugin.py
+| | | | | | | | | | | |_____functions.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |_____decorators.py
+| | | | | | | | | | | |_____memo.py
+| | | | | | | | | | | |_____transformer.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |_____union_transformer.py
+| | | | | | | | | | | |_____config.py
+| | | | | | | | | | | |_____exceptions.py
+| | | | | | | | | | | |_____utils.py
+| | | | | | | | | | |____typing_extensions.py
+| | | | | | | | | | |____platformdirs
+| | | | | | | | | | | |____macos.py
+| | | | | | | | | | | |____unix.py
+| | | | | | | | | | | |____version.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____api.py
+| | | | | | | | | | | |____android.py
+| | | | | | | | | | | |____py.typed
+| | | | | | | | | | | |____windows.py
+| | | | | | | | | | | |______main__.py
+| | | | | | | | | |____discovery.py
+| | | | | | | | | |____config
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |_____validate_pyproject
+| | | | | | | | | | | |____fastjsonschema_exceptions.py
+| | | | | | | | | | | |____extra_validations.py
+| | | | | | | | | | | |____error_reporting.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____NOTICE
+| | | | | | | | | | | |____fastjsonschema_validations.py
+| | | | | | | | | | | |____formats.py
+| | | | | | | | | | |____NOTICE
+| | | | | | | | | | |____setupcfg.py
+| | | | | | | | | | |____setuptools.schema.json
+| | | | | | | | | | |_____apply_pyprojecttoml.py
+| | | | | | | | | | |____distutils.schema.json
+| | | | | | | | | | |____pyprojecttoml.py
+| | | | | | | | | | |____expand.py
+| | | | | | | | | |_____static.py
+| | | | | | | | | |____warnings.py
+| | | | | | | | | |____cli-64.exe
+| | | | | | | | | |_____reqs.py
+| | | | | | | | | |____tests
+| | | | | | | | | | |____test_bdist_deprecations.py
+| | | | | | | | | | |____test_build_py.py
+| | | | | | | | | | |____test_build_meta.py
+| | | | | | | | | | |____test_warnings.py
+| | | | | | | | | | |____compat
+| | | | | | | | | | | |____py39.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | |____textwrap.py
+| | | | | | | | | | |____test_logging.py
+| | | | | | | | | | |____test_virtualenv.py
+| | | | | | | | | | |____test_namespaces.py
+| | | | | | | | | | |____test_shutil_wrapper.py
+| | | | | | | | | | |____script-with-bom.py
+| | | | | | | | | | |____test_distutils_adoption.py
+| | | | | | | | | | |____config
+| | | | | | | | | | | |____test_pyprojecttoml_dynamic_deps.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____test_expand.py
+| | | | | | | | | | | |____setupcfg_examples.txt
+| | | | | | | | | | | |____test_setupcfg.py
+| | | | | | | | | | | |____test_pyprojecttoml.py
+| | | | | | | | | | | |____downloads
+| | | | | | | | | | | | |____preload.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____test_apply_pyprojecttoml.py
+| | | | | | | | | | |____test_depends.py
+| | | | | | | | | | |____integration
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____test_pbr.py
+| | | | | | | | | | | |____helpers.py
+| | | | | | | | | | | |____test_pip_install_sdist.py
+| | | | | | | | | | |____test_core_metadata.py
+| | | | | | | | | | |____test_extern.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____test_manifest.py
+| | | | | | | | | | |____test_build_clib.py
+| | | | | | | | | | |____test_setopt.py
+| | | | | | | | | | |____test_wheel.py
+| | | | | | | | | | |____test_egg_info.py
+| | | | | | | | | | |____test_build.py
+| | | | | | | | | | |____test_install_scripts.py
+| | | | | | | | | | |____test_find_py_modules.py
+| | | | | | | | | | |____test_build_ext.py
+| | | | | | | | | | |____test_unicode_utils.py
+| | | | | | | | | | |____text.py
+| | | | | | | | | | |____test_bdist_egg.py
+| | | | | | | | | | |____test_glob.py
+| | | | | | | | | | |____environment.py
+| | | | | | | | | | |____test_config_discovery.py
+| | | | | | | | | | |____test_windows_wrappers.py
+| | | | | | | | | | |____mod_with_constant.py
+| | | | | | | | | | |____test_find_packages.py
+| | | | | | | | | | |____contexts.py
+| | | | | | | | | | |____test_setuptools.py
+| | | | | | | | | | |____test_dist.py
+| | | | | | | | | | |____test_scripts.py
+| | | | | | | | | | |____test_bdist_wheel.py
+| | | | | | | | | | |____test_develop.py
+| | | | | | | | | | |____test_editable_install.py
+| | | | | | | | | | |____fixtures.py
+| | | | | | | | | | |____namespaces.py
+| | | | | | | | | | |____test_sdist.py
+| | | | | | | | | | |____test_archive_util.py
+| | | | | | | | | | |____indexes
+| | | | | | | | | | | |____test_links_priority
+| | | | | | | | | | | | |____external.html
+| | | | | | | | | | | | |____simple
+| | | | | | | | | | | | | |____foobar
+| | | | | | | | | | | | | | |____index.html
+| | | | | | | | | | |____test_dist_info.py
+| | | | | | | | | |____gui-64.exe
+| | | | | | | | | |____depends.py
+| | | | | | | | | |______init__.py
+| | | | | | | | | |____installer.py
+| | | | | | | | | |____glob.py
+| | | | | | | | | |____script.tmpl
+| | | | | | | | | |____launch.py
+| | | | | | | | | |____extension.py
+| | | | | | | | | |_____core_metadata.py
+| | | | | | | | | |____unicode_utils.py
+| | | | | | | | | |_____itertools.py
+| | | | | | | | | |____monkey.py
+| | | | | | | | | |____build_meta.py
+| | | | | | | | | |____cli.exe
+| | | | | | | | | |____errors.py
+| | | | | | | | | |____command
+| | | | | | | | | | |____build.py
+| | | | | | | | | | |____bdist_egg.py
+| | | | | | | | | | |____alias.py
+| | | | | | | | | | |____build_ext.py
+| | | | | | | | | | |____easy_install.py
+| | | | | | | | | | |____editable_wheel.py
+| | | | | | | | | | |____launcher manifest.xml
+| | | | | | | | | | |____install_scripts.py
+| | | | | | | | | | |____dist_info.py
+| | | | | | | | | | |____install_lib.py
+| | | | | | | | | | |____build_py.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____sdist.py
+| | | | | | | | | | |____test.py
+| | | | | | | | | | |____saveopts.py
+| | | | | | | | | | |____bdist_rpm.py
+| | | | | | | | | | |____build_clib.py
+| | | | | | | | | | |____bdist_wheel.py
+| | | | | | | | | | |____egg_info.py
+| | | | | | | | | | |_____requirestxt.py
+| | | | | | | | | | |____install.py
+| | | | | | | | | | |____develop.py
+| | | | | | | | | | |____rotate.py
+| | | | | | | | | | |____install_egg_info.py
+| | | | | | | | | | |____setopt.py
+| | | | | | | | | |____msvc.py
+| | | | | | | | | |_____importlib.py
+| | | | | | | | | |_____scripts.py
+| | | | | | | | | |_____entry_points.py
+| | | | | | | | | |____cli-32.exe
+| | | | | | | | | |____gui-32.exe
+| | | | | | | | | |____gui.exe
+| | | | | | | | | |____dist.py
+| | | | | | | | | |_____distutils
+| | | | | | | | | | |_____msvccompiler.py
+| | | | | | | | | | |_____modified.py
+| | | | | | | | | | |____unixccompiler.py
+| | | | | | | | | | |____filelist.py
+| | | | | | | | | | |____ccompiler.py
+| | | | | | | | | | |____compat
+| | | | | | | | | | | |____py39.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____numpy.py
+| | | | | | | | | | |____archive_util.py
+| | | | | | | | | | |____cmd.py
+| | | | | | | | | | |____version.py
+| | | | | | | | | | |____log.py
+| | | | | | | | | | |____util.py
+| | | | | | | | | | |____fancy_getopt.py
+| | | | | | | | | | |____tests
+| | | | | | | | | | | |____test_bdist.py
+| | | | | | | | | | | |____test_text_file.py
+| | | | | | | | | | | |____test_version.py
+| | | | | | | | | | | |____test_install_lib.py
+| | | | | | | | | | | |____test_build_py.py
+| | | | | | | | | | | |____test_extension.py
+| | | | | | | | | | | |____compat
+| | | | | | | | | | | | |____py39.py
+| | | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____test_spawn.py
+| | | | | | | | | | | |____support.py
+| | | | | | | | | | | |____test_bdist_rpm.py
+| | | | | | | | | | | |____test_install_data.py
+| | | | | | | | | | | |____test_filelist.py
+| | | | | | | | | | | |____test_core.py
+| | | | | | | | | | | |____test_cmd.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____test_sysconfig.py
+| | | | | | | | | | | |____test_util.py
+| | | | | | | | | | | |____test_modified.py
+| | | | | | | | | | | |____test_build_clib.py
+| | | | | | | | | | | |____test_log.py
+| | | | | | | | | | | |____test_build.py
+| | | | | | | | | | | |____test_install_scripts.py
+| | | | | | | | | | | |____test_build_ext.py
+| | | | | | | | | | | |____test_dir_util.py
+| | | | | | | | | | | |____unix_compat.py
+| | | | | | | | | | | |____test_install_headers.py
+| | | | | | | | | | | |____test_clean.py
+| | | | | | | | | | | |____test_check.py
+| | | | | | | | | | | |____test_versionpredicate.py
+| | | | | | | | | | | |____test_build_scripts.py
+| | | | | | | | | | | |____test_bdist_dumb.py
+| | | | | | | | | | | |____test_file_util.py
+| | | | | | | | | | | |____test_dist.py
+| | | | | | | | | | | |____test_install.py
+| | | | | | | | | | | |____test_config_cmd.py
+| | | | | | | | | | | |____test_sdist.py
+| | | | | | | | | | | |____test_archive_util.py
+| | | | | | | | | | |____versionpredicate.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____file_util.py
+| | | | | | | | | | |____core.py
+| | | | | | | | | | |____cygwinccompiler.py
+| | | | | | | | | | |____zosccompiler.py
+| | | | | | | | | | |____extension.py
+| | | | | | | | | | |____debug.py
+| | | | | | | | | | |____spawn.py
+| | | | | | | | | | |____text_file.py
+| | | | | | | | | | |____errors.py
+| | | | | | | | | | |____dep_util.py
+| | | | | | | | | | |____command
+| | | | | | | | | | | |____build.py
+| | | | | | | | | | | |____build_ext.py
+| | | | | | | | | | | |____config.py
+| | | | | | | | | | | |____clean.py
+| | | | | | | | | | | |____check.py
+| | | | | | | | | | | |____install_scripts.py
+| | | | | | | | | | | |_____framework_compat.py
+| | | | | | | | | | | |____install_headers.py
+| | | | | | | | | | | |____install_lib.py
+| | | | | | | | | | | |____build_py.py
+| | | | | | | | | | | |____bdist_dumb.py
+| | | | | | | | | | | |______init__.py
+| | | | | | | | | | | |____sdist.py
+| | | | | | | | | | | |____bdist.py
+| | | | | | | | | | | |____build_scripts.py
+| | | | | | | | | | | |____bdist_rpm.py
+| | | | | | | | | | | |____build_clib.py
+| | | | | | | | | | | |____install.py
+| | | | | | | | | | | |____install_egg_info.py
+| | | | | | | | | | | |____install_data.py
+| | | | | | | | | | |____dir_util.py
+| | | | | | | | | | |____compilers
+| | | | | | | | | | | |____C
+| | | | | | | | | | | | |____unix.py
+| | | | | | | | | | | | |____zos.py
+| | | | | | | | | | | | |____tests
+| | | | | | | | | | | | | |____test_unix.py
+| | | | | | | | | | | | | |____test_cygwin.py
+| | | | | | | | | | | | | |____test_mingw.py
+| | | | | | | | | | | | | |____test_base.py
+| | | | | | | | | | | | | |____test_msvc.py
+| | | | | | | | | | | | |____cygwin.py
+| | | | | | | | | | | | |____errors.py
+| | | | | | | | | | | | |____msvc.py
+| | | | | | | | | | | | |____base.py
+| | | | | | | | | | |____sysconfig.py
+| | | | | | | | | | |_____macos_compat.py
+| | | | | | | | | | |____dist.py
+| | | | | | | | | | |_____log.py
+| | | | | | | | | |____wheel.py
+| | | | | | | | | |____gui-arm64.exe
+| | | | | | | | | |____namespaces.py
+| | | | | | | | | |____script (dev).tmpl
+| | | | | | | | | |_____shutil.py
+| | | | | | | | |____pkg_resources
+| | | | | | | | | |____tests
+| | | | | | | | | | |____test_resources.py
+| | | | | | | | | | |____test_integration_zope_interface.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____test_markers.py
+| | | | | | | | | | |____test_working_set.py
+| | | | | | | | | | |____test_find_distributions.py
+| | | | | | | | | | |____data
+| | | | | | | | | | | |____my-test-package-zip
+| | | | | | | | | | | | |____my-test-package.zip
+| | | | | | | | | | | |____my-test-package_zipped-egg
+| | | | | | | | | | | | |____my_test_package-1.0-py3.7.egg
+| | | | | | | | | | | |____my-test-package_unpacked-egg
+| | | | | | | | | | | | |____my_test_package-1.0-py3.7.egg
+| | | | | | | | | | | | | |____EGG-INFO
+| | | | | | | | | | | | | | |____PKG-INFO
+| | | | | | | | | | | | | | |____zip-safe
+| | | | | | | | | | | | | | |____SOURCES.txt
+| | | | | | | | | | | | | | |____top_level.txt
+| | | | | | | | | | | | | | |____dependency_links.txt
+| | | | | | | | | | | |____my-test-package-source
+| | | | | | | | | | | | |____setup.py
+| | | | | | | | | | | | |____setup.cfg
+| | | | | | | | | | |____test_pkg_resources.py
+| | | | | | | | | |______init__.py
+| | | | | | | | | |____py.typed
+| | | | | | | | | |____api_tests.txt
+| | | | | | | | |_____distutils_hack
+| | | | | | | | | |______init__.py
+| | | | | | | | | |____override.py
+| | | | | | | | |____iniconfig
+| | | | | | | | | |_____version.py
+| | | | | | | | | |______init__.py
+| | | | | | | | | |_____parse.py
+| | | | | | | | | |____py.typed
+| | | | | | | | | |____exceptions.py
+| | | | | | | | |____iniconfig-2.1.0.dist-info
+| | | | | | | | | |____RECORD
+| | | | | | | | | |____licenses
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____WHEEL
+| | | | | | | | | |____INSTALLER
+| | | | | | | | | |____METADATA
+| | | | | | | | |____py.py
+| | | | | | | | |_____pytest
+| | | | | | | | | |____skipping.py
+| | | | | | | | | |____logging.py
+| | | | | | | | | |____unittest.py
+| | | | | | | | | |____runner.py
+| | | | | | | | | |____helpconfig.py
+| | | | | | | | | |____pastebin.py
+| | | | | | | | | |____compat.py
+| | | | | | | | | |_____version.py
+| | | | | | | | | |____terminal.py
+| | | | | | | | | |____config
+| | | | | | | | | | |____compat.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____findpaths.py
+| | | | | | | | | | |____exceptions.py
+| | | | | | | | | | |____argparsing.py
+| | | | | | | | | |____tracemalloc.py
+| | | | | | | | | |____warnings.py
+| | | | | | | | | |____pytester_assertions.py
+| | | | | | | | | |____deprecated.py
+| | | | | | | | | |____recwarn.py
+| | | | | | | | | |____mark
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____structures.py
+| | | | | | | | | | |____expression.py
+| | | | | | | | | |____tmpdir.py
+| | | | | | | | | |______init__.py
+| | | | | | | | | |____stash.py
+| | | | | | | | | |_____code
+| | | | | | | | | | |____code.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____source.py
+| | | | | | | | | |____debugging.py
+| | | | | | | | | |____assertion
+| | | | | | | | | | |____truncate.py
+| | | | | | | | | | |____util.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____rewrite.py
+| | | | | | | | | |____python_api.py
+| | | | | | | | | |_____argcomplete.py
+| | | | | | | | | |____unraisableexception.py
+| | | | | | | | | |____capture.py
+| | | | | | | | | |____hookspec.py
+| | | | | | | | | |____timing.py
+| | | | | | | | | |_____io
+| | | | | | | | | | |____wcwidth.py
+| | | | | | | | | | |____saferepr.py
+| | | | | | | | | | |____terminalwriter.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____pprint.py
+| | | | | | | | | |____pytester.py
+| | | | | | | | | |____faulthandler.py
+| | | | | | | | | |____outcomes.py
+| | | | | | | | | |____stepwise.py
+| | | | | | | | | |____junitxml.py
+| | | | | | | | | |____python.py
+| | | | | | | | | |____reports.py
+| | | | | | | | | |____py.typed
+| | | | | | | | | |____doctest.py
+| | | | | | | | | |____setuponly.py
+| | | | | | | | | |____raises.py
+| | | | | | | | | |____nodes.py
+| | | | | | | | | |____threadexception.py
+| | | | | | | | | |____main.py
+| | | | | | | | | |_____py
+| | | | | | | | | | |____error.py
+| | | | | | | | | | |______init__.py
+| | | | | | | | | | |____path.py
+| | | | | | | | | |____monkeypatch.py
+| | | | | | | | | |____legacypath.py
+| | | | | | | | | |____setupplan.py
+| | | | | | | | | |____pathlib.py
+| | | | | | | | | |____scope.py
+| | | | | | | | | |____freeze_support.py
+| | | | | | | | | |____fixtures.py
+| | | | | | | | | |____cacheprovider.py
+| | | | | | | | | |____warning_types.py
+| | | |____main
+| | | | |____python
+| | | | | |____advert
+| | | | | | |____advert_types.py
+| | | | | | |______pycache__
+| | | | | | | |____advert_types.cpython-311.pyc
+| | | | | | | |____advert.cpython-311.pyc
+| | | | | | |____advert.py
+|____env
+| |____bin
+| | |____Activate.ps1
+| | |____python3
+| | |____pytest
+| | |____python
+| | |____pip3
+| | |____activate.fish
+| | |____python3.11
+| | |____pip
+| | |____pip3.11
+| | |____pygmentize
+| | |____activate
+| | |____py.test
+| | |____activate.csh
+| |____include
+| | |____python3.11
+| |____pyvenv.cfg
+| |____lib
+| | |____python3.11
+| | | |____site-packages
+| | | | |____packaging
+| | | | | |____tags.py
+| | | | | |_____musllinux.py
+| | | | | |____metadata.py
+| | | | | |____version.py
+| | | | | |____licenses
+| | | | | | |______init__.py
+| | | | | | |_____spdx.py
+| | | | | | |______pycache__
+| | | | | | | |_____spdx.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | |______init__.py
+| | | | | |______pycache__
+| | | | | | |____markers.cpython-311.pyc
+| | | | | | |____requirements.cpython-311.pyc
+| | | | | | |_____musllinux.cpython-311.pyc
+| | | | | | |____tags.cpython-311.pyc
+| | | | | | |____utils.cpython-311.pyc
+| | | | | | |____metadata.cpython-311.pyc
+| | | | | | |_____tokenizer.cpython-311.pyc
+| | | | | | |_____manylinux.cpython-311.pyc
+| | | | | | |_____parser.cpython-311.pyc
+| | | | | | |_____elffile.cpython-311.pyc
+| | | | | | |____version.cpython-311.pyc
+| | | | | | |____specifiers.cpython-311.pyc
+| | | | | | |______init__.cpython-311.pyc
+| | | | | | |_____structures.cpython-311.pyc
+| | | | | |_____parser.py
+| | | | | |____utils.py
+| | | | | |____requirements.py
+| | | | | |_____structures.py
+| | | | | |____markers.py
+| | | | | |____py.typed
+| | | | | |_____manylinux.py
+| | | | | |_____tokenizer.py
+| | | | | |____specifiers.py
+| | | | | |_____elffile.py
+| | | | |____pip-25.2.dist-info
+| | | | | |____RECORD
+| | | | | |____licenses
+| | | | | | |____LICENSE.txt
+| | | | | | |____AUTHORS.txt
+| | | | | | |____src
+| | | | | | | |____pip
+| | | | | | | | |_____vendor
+| | | | | | | | | |____packaging
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | | |____LICENSE.APACHE
+| | | | | | | | | | |____LICENSE.BSD
+| | | | | | | | | |____truststore
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____msgpack
+| | | | | | | | | | |____COPYING
+| | | | | | | | | |____dependency_groups
+| | | | | | | | | | |____LICENSE.txt
+| | | | | | | | | |____pygments
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____distlib
+| | | | | | | | | | |____LICENSE.txt
+| | | | | | | | | |____distro
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____cachecontrol
+| | | | | | | | | | |____LICENSE.txt
+| | | | | | | | | |____idna
+| | | | | | | | | | |____LICENSE.md
+| | | | | | | | | |____requests
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____tomli
+| | | | | | | | | | |____LICENSE-HEADER
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____certifi
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____pyproject_hooks
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____rich
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____tomli_w
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____urllib3
+| | | | | | | | | | |____LICENSE.txt
+| | | | | | | | | |____pkg_resources
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____resolvelib
+| | | | | | | | | | |____LICENSE
+| | | | | | | | | |____platformdirs
+| | | | | | | | | | |____LICENSE
+| | | | | |____WHEEL
+| | | | | |____entry_points.txt
+| | | | | |____top_level.txt
+| | | | | |____REQUESTED
+| | | | | |____INSTALLER
+| | | | | |____METADATA
+| | | | |____pygments
+| | | | | |____filters
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | |____modeline.py
+| | | | | |____console.py
+| | | | | |____scanner.py
+| | | | | |____formatter.py
+| | | | | |____lexers
+| | | | | | |____soong.py
+| | | | | | |____c_like.py
+| | | | | | |____ampl.py
+| | | | | | |____agile.py
+| | | | | | |____graphics.py
+| | | | | | |____hdl.py
+| | | | | | |____ecl.py
+| | | | | | |____futhark.py
+| | | | | | |____ada.py
+| | | | | | |_____postgres_builtins.py
+| | | | | | |____console.py
+| | | | | | |____mime.py
+| | | | | | |_____lua_builtins.py
+| | | | | | |____capnproto.py
+| | | | | | |____nimrod.py
+| | | | | | |____rebol.py
+| | | | | | |____objective.py
+| | | | | | |____sas.py
+| | | | | | |_____qlik_builtins.py
+| | | | | | |____phix.py
+| | | | | | |____graphql.py
+| | | | | | |____usd.py
+| | | | | | |____crystal.py
+| | | | | | |____verifpal.py
+| | | | | | |_____sourcemod_builtins.py
+| | | | | | |____web.py
+| | | | | | |____ldap.py
+| | | | | | |____verification.py
+| | | | | | |____erlang.py
+| | | | | | |_____sql_builtins.py
+| | | | | | |____apdlexer.py
+| | | | | | |____slash.py
+| | | | | | |____boa.py
+| | | | | | |____elpi.py
+| | | | | | |____maxima.py
+| | | | | | |____chapel.py
+| | | | | | |____configs.py
+| | | | | | |____clean.py
+| | | | | | |____mojo.py
+| | | | | | |____jslt.py
+| | | | | | |____ul4.py
+| | | | | | |____numbair.py
+| | | | | | |____qvt.py
+| | | | | | |____tablegen.py
+| | | | | | |____inferno.py
+| | | | | | |____tlb.py
+| | | | | | |____nix.py
+| | | | | | |____wren.py
+| | | | | | |____parasail.py
+| | | | | | |____smithy.py
+| | | | | | |_____css_builtins.py
+| | | | | | |____graphviz.py
+| | | | | | |____r.py
+| | | | | | |____pawn.py
+| | | | | | |____dns.py
+| | | | | | |____maple.py
+| | | | | | |____idl.py
+| | | | | | |____iolang.py
+| | | | | | |____amdgpu.py
+| | | | | | |____dsls.py
+| | | | | | |____supercollider.py
+| | | | | | |____comal.py
+| | | | | | |____solidity.py
+| | | | | | |_____scilab_builtins.py
+| | | | | | |_____lilypond_builtins.py
+| | | | | | |____hare.py
+| | | | | | |____lisp.py
+| | | | | | |____j.py
+| | | | | | |____blueprint.py
+| | | | | | |____mosel.py
+| | | | | | |_____googlesql_builtins.py
+| | | | | | |_____vbscript_builtins.py
+| | | | | | |_____openedge_builtins.py
+| | | | | | |____smalltalk.py
+| | | | | | |____spice.py
+| | | | | | |____monte.py
+| | | | | | |_____luau_builtins.py
+| | | | | | |____webmisc.py
+| | | | | | |____teal.py
+| | | | | | |____c_cpp.py
+| | | | | | |____perl.py
+| | | | | | |____robotframework.py
+| | | | | | |____textfmts.py
+| | | | | | |____jsonnet.py
+| | | | | | |____cplint.py
+| | | | | | |____jsx.py
+| | | | | | |____prolog.py
+| | | | | | |____rnc.py
+| | | | | | |____wowtoc.py
+| | | | | | |_____julia_builtins.py
+| | | | | | |____algebra.py
+| | | | | | |____typoscript.py
+| | | | | | |____automation.py
+| | | | | | |____sieve.py
+| | | | | | |____esoteric.py
+| | | | | | |____graph.py
+| | | | | | |____html.py
+| | | | | | |_____php_builtins.py
+| | | | | | |____shell.py
+| | | | | | |____scripting.py
+| | | | | | |____gsql.py
+| | | | | | |____gdscript.py
+| | | | | | |____ambient.py
+| | | | | | |____arrow.py
+| | | | | | |____oberon.py
+| | | | | | |_____stata_builtins.py
+| | | | | | |____floscript.py
+| | | | | | |____resource.py
+| | | | | | |______init__.py
+| | | | | | |____d.py
+| | | | | | |____ruby.py
+| | | | | | |____other.py
+| | | | | | |____pony.py
+| | | | | | |____matlab.py
+| | | | | | |____felix.py
+| | | | | | |____tnt.py
+| | | | | | |_____vim_builtins.py
+| | | | | | |____freefem.py
+| | | | | | |____thingsdb.py
+| | | | | | |____teraterm.py
+| | | | | | |____parsers.py
+| | | | | | |____jmespath.py
+| | | | | | |____carbon.py
+| | | | | | |____theorem.py
+| | | | | | |____compiled.py
+| | | | | | |____int_fiction.py
+| | | | | | |_____cocoa_builtins.py
+| | | | | | |______pycache__
+| | | | | | | |____lean.cpython-311.pyc
+| | | | | | | |____blueprint.cpython-311.pyc
+| | | | | | | |____bqn.cpython-311.pyc
+| | | | | | | |____maple.cpython-311.pyc
+| | | | | | | |____xorg.cpython-311.pyc
+| | | | | | | |____json5.cpython-311.pyc
+| | | | | | | |____typst.cpython-311.pyc
+| | | | | | | |____webidl.cpython-311.pyc
+| | | | | | | |____make.cpython-311.pyc
+| | | | | | | |____email.cpython-311.pyc
+| | | | | | | |____web.cpython-311.pyc
+| | | | | | | |____jslt.cpython-311.pyc
+| | | | | | | |____nit.cpython-311.pyc
+| | | | | | | |____verifpal.cpython-311.pyc
+| | | | | | | |____pony.cpython-311.pyc
+| | | | | | | |____mojo.cpython-311.pyc
+| | | | | | | |____dsls.cpython-311.pyc
+| | | | | | | |____foxpro.cpython-311.pyc
+| | | | | | | |____yara.cpython-311.pyc
+| | | | | | | |____forth.cpython-311.pyc
+| | | | | | | |____freefem.cpython-311.pyc
+| | | | | | | |____x10.cpython-311.pyc
+| | | | | | | |____sophia.cpython-311.pyc
+| | | | | | | |____thingsdb.cpython-311.pyc
+| | | | | | | |____verification.cpython-311.pyc
+| | | | | | | |____trafficscript.cpython-311.pyc
+| | | | | | | |____pascal.cpython-311.pyc
+| | | | | | | |____rita.cpython-311.pyc
+| | | | | | | |_____cocoa_builtins.cpython-311.pyc
+| | | | | | | |____pointless.cpython-311.pyc
+| | | | | | | |_____sql_builtins.cpython-311.pyc
+| | | | | | | |____hdl.cpython-311.pyc
+| | | | | | | |____factor.cpython-311.pyc
+| | | | | | | |____prolog.cpython-311.pyc
+| | | | | | | |____html.cpython-311.pyc
+| | | | | | | |____ruby.cpython-311.pyc
+| | | | | | | |____nimrod.cpython-311.pyc
+| | | | | | | |_____usd_builtins.cpython-311.pyc
+| | | | | | | |____templates.cpython-311.pyc
+| | | | | | | |____elpi.cpython-311.pyc
+| | | | | | | |____hexdump.cpython-311.pyc
+| | | | | | | |____teal.cpython-311.pyc
+| | | | | | | |____maxima.cpython-311.pyc
+| | | | | | | |____basic.cpython-311.pyc
+| | | | | | | |____igor.cpython-311.pyc
+| | | | | | | |____soong.cpython-311.pyc
+| | | | | | | |_____vim_builtins.cpython-311.pyc
+| | | | | | | |____lilypond.cpython-311.pyc
+| | | | | | | |____openscad.cpython-311.pyc
+| | | | | | | |____inferno.cpython-311.pyc
+| | | | | | | |____int_fiction.cpython-311.pyc
+| | | | | | | |____asn1.cpython-311.pyc
+| | | | | | | |____numbair.cpython-311.pyc
+| | | | | | | |____arturo.cpython-311.pyc
+| | | | | | | |____slash.cpython-311.pyc
+| | | | | | | |____urbi.cpython-311.pyc
+| | | | | | | |____csound.cpython-311.pyc
+| | | | | | | |____apdlexer.cpython-311.pyc
+| | | | | | | |____asc.cpython-311.pyc
+| | | | | | | |____data.cpython-311.pyc
+| | | | | | | |____wren.cpython-311.pyc
+| | | | | | | |____tal.cpython-311.pyc
+| | | | | | | |____ada.cpython-311.pyc
+| | | | | | | |____idl.cpython-311.pyc
+| | | | | | | |____dalvik.cpython-311.pyc
+| | | | | | | |____procfile.cpython-311.pyc
+| | | | | | | |____sgf.cpython-311.pyc
+| | | | | | | |____qvt.cpython-311.pyc
+| | | | | | | |____functional.cpython-311.pyc
+| | | | | | | |____installers.cpython-311.pyc
+| | | | | | | |____ecl.cpython-311.pyc
+| | | | | | | |____ptx.cpython-311.pyc
+| | | | | | | |_____stan_builtins.cpython-311.pyc
+| | | | | | | |____shell.cpython-311.pyc
+| | | | | | | |____testing.cpython-311.pyc
+| | | | | | | |____sql.cpython-311.pyc
+| | | | | | | |____iolang.cpython-311.pyc
+| | | | | | | |____boa.cpython-311.pyc
+| | | | | | | |____modeling.cpython-311.pyc
+| | | | | | | |_____qlik_builtins.cpython-311.pyc
+| | | | | | | |____c_cpp.cpython-311.pyc
+| | | | | | | |____dns.cpython-311.pyc
+| | | | | | | |____capnproto.cpython-311.pyc
+| | | | | | | |____ooc.cpython-311.pyc
+| | | | | | | |____special.cpython-311.pyc
+| | | | | | | |_____luau_builtins.cpython-311.pyc
+| | | | | | | |____macaulay2.cpython-311.pyc
+| | | | | | | |____cddl.cpython-311.pyc
+| | | | | | | |____floscript.cpython-311.pyc
+| | | | | | | |____compiled.cpython-311.pyc
+| | | | | | | |____bibtex.cpython-311.pyc
+| | | | | | | |____ul4.cpython-311.pyc
+| | | | | | | |____whiley.cpython-311.pyc
+| | | | | | | |____asm.cpython-311.pyc
+| | | | | | | |_____lilypond_builtins.cpython-311.pyc
+| | | | | | | |____perl.cpython-311.pyc
+| | | | | | | |____jsonnet.cpython-311.pyc
+| | | | | | | |____mips.cpython-311.pyc
+| | | | | | | |_____ada_builtins.cpython-311.pyc
+| | | | | | | |____stata.cpython-311.pyc
+| | | | | | | |____srcinfo.cpython-311.pyc
+| | | | | | | |____graphics.cpython-311.pyc
+| | | | | | | |____gsql.cpython-311.pyc
+| | | | | | | |_____lasso_builtins.cpython-311.pyc
+| | | | | | | |____agile.cpython-311.pyc
+| | | | | | | |____r.cpython-311.pyc
+| | | | | | | |____qlik.cpython-311.pyc
+| | | | | | | |____esoteric.cpython-311.pyc
+| | | | | | | |____spice.cpython-311.pyc
+| | | | | | | |_____scilab_builtins.cpython-311.pyc
+| | | | | | | |____rego.cpython-311.pyc
+| | | | | | | |____teraterm.cpython-311.pyc
+| | | | | | | |____gleam.cpython-311.pyc
+| | | | | | | |____futhark.cpython-311.pyc
+| | | | | | | |____diff.cpython-311.pyc
+| | | | | | | |____scripting.cpython-311.pyc
+| | | | | | | |_____mysql_builtins.cpython-311.pyc
+| | | | | | | |____rnc.cpython-311.pyc
+| | | | | | | |____minecraft.cpython-311.pyc
+| | | | | | | |____tact.cpython-311.pyc
+| | | | | | | |____ampl.cpython-311.pyc
+| | | | | | | |_____cl_builtins.cpython-311.pyc
+| | | | | | | |____bare.cpython-311.pyc
+| | | | | | | |____graphviz.cpython-311.pyc
+| | | | | | | |_____lua_builtins.cpython-311.pyc
+| | | | | | | |____chapel.cpython-311.pyc
+| | | | | | | |____arrow.cpython-311.pyc
+| | | | | | | |____elm.cpython-311.pyc
+| | | | | | | |____graph.cpython-311.pyc
+| | | | | | | |____gcodelexer.cpython-311.pyc
+| | | | | | | |____text.cpython-311.pyc
+| | | | | | | |____tablegen.cpython-311.pyc
+| | | | | | | |____go.cpython-311.pyc
+| | | | | | | |____kusto.cpython-311.pyc
+| | | | | | | |____praat.cpython-311.pyc
+| | | | | | | |_____postgres_builtins.cpython-311.pyc
+| | | | | | | |____mime.cpython-311.pyc
+| | | | | | | |____resource.cpython-311.pyc
+| | | | | | | |_____julia_builtins.cpython-311.pyc
+| | | | | | | |____tls.cpython-311.pyc
+| | | | | | | |____prql.cpython-311.pyc
+| | | | | | | |____haskell.cpython-311.pyc
+| | | | | | | |____j.cpython-311.pyc
+| | | | | | | |____ml.cpython-311.pyc
+| | | | | | | |____algebra.cpython-311.pyc
+| | | | | | | |____fift.cpython-311.pyc
+| | | | | | | |____c_like.cpython-311.pyc
+| | | | | | | |____ambient.cpython-311.pyc
+| | | | | | | |____usd.cpython-311.pyc
+| | | | | | | |____yang.cpython-311.pyc
+| | | | | | | |____automation.cpython-311.pyc
+| | | | | | | |____ncl.cpython-311.pyc
+| | | | | | | |____objective.cpython-311.pyc
+| | | | | | | |____supercollider.cpython-311.pyc
+| | | | | | | |____jvm.cpython-311.pyc
+| | | | | | | |____robotframework.cpython-311.pyc
+| | | | | | | |____savi.cpython-311.pyc
+| | | | | | | |____mosel.cpython-311.pyc
+| | | | | | | |____smv.cpython-311.pyc
+| | | | | | | |____textedit.cpython-311.pyc
+| | | | | | | |____parsers.cpython-311.pyc
+| | | | | | | |____modula2.cpython-311.pyc
+| | | | | | | |____css.cpython-311.pyc
+| | | | | | | |____berry.cpython-311.pyc
+| | | | | | | |____meson.cpython-311.pyc
+| | | | | | | |____fortran.cpython-311.pyc
+| | | | | | | |____solidity.cpython-311.pyc
+| | | | | | | |____sas.cpython-311.pyc
+| | | | | | | |____scdoc.cpython-311.pyc
+| | | | | | | |____julia.cpython-311.pyc
+| | | | | | | |____archetype.cpython-311.pyc
+| | | | | | | |____markup.cpython-311.pyc
+| | | | | | | |____bdd.cpython-311.pyc
+| | | | | | | |____ldap.cpython-311.pyc
+| | | | | | | |____haxe.cpython-311.pyc
+| | | | | | | |____oberon.cpython-311.pyc
+| | | | | | | |____varnish.cpython-311.pyc
+| | | | | | | |____gdscript.cpython-311.pyc
+| | | | | | | |____snobol.cpython-311.pyc
+| | | | | | | |____tcl.cpython-311.pyc
+| | | | | | | |____webassembly.cpython-311.pyc
+| | | | | | | |____codeql.cpython-311.pyc
+| | | | | | | |____matlab.cpython-311.pyc
+| | | | | | | |____rebol.cpython-311.pyc
+| | | | | | | |____ride.cpython-311.pyc
+| | | | | | | |____cplint.cpython-311.pyc
+| | | | | | | |____graphql.cpython-311.pyc
+| | | | | | | |_____sourcemod_builtins.cpython-311.pyc
+| | | | | | | |____amdgpu.cpython-311.pyc
+| | | | | | | |____nix.cpython-311.pyc
+| | | | | | | |____rust.cpython-311.pyc
+| | | | | | | |_____csound_builtins.cpython-311.pyc
+| | | | | | | |____comal.cpython-311.pyc
+| | | | | | | |_____stata_builtins.cpython-311.pyc
+| | | | | | | |____lisp.cpython-311.pyc
+| | | | | | | |____rdf.cpython-311.pyc
+| | | | | | | |____theorem.cpython-311.pyc
+| | | | | | | |____wgsl.cpython-311.pyc
+| | | | | | | |____zig.cpython-311.pyc
+| | | | | | | |_____vbscript_builtins.cpython-311.pyc
+| | | | | | | |____monte.cpython-311.pyc
+| | | | | | | |____func.cpython-311.pyc
+| | | | | | | |_____openedge_builtins.cpython-311.pyc
+| | | | | | | |____business.cpython-311.pyc
+| | | | | | | |____math.cpython-311.pyc
+| | | | | | | |____jmespath.cpython-311.pyc
+| | | | | | | |____eiffel.cpython-311.pyc
+| | | | | | | |_____tsql_builtins.cpython-311.pyc
+| | | | | | | |____python.cpython-311.pyc
+| | | | | | | |____typoscript.cpython-311.pyc
+| | | | | | | |_____php_builtins.cpython-311.pyc
+| | | | | | | |____webmisc.cpython-311.pyc
+| | | | | | | |____actionscript.cpython-311.pyc
+| | | | | | | |_____mapping.cpython-311.pyc
+| | | | | | | |____phix.cpython-311.pyc
+| | | | | | | |____javascript.cpython-311.pyc
+| | | | | | | |____devicetree.cpython-311.pyc
+| | | | | | | |____php.cpython-311.pyc
+| | | | | | | |____pawn.cpython-311.pyc
+| | | | | | | |____erlang.cpython-311.pyc
+| | | | | | | |____tnt.cpython-311.pyc
+| | | | | | | |____vyper.cpython-311.pyc
+| | | | | | | |____unicon.cpython-311.pyc
+| | | | | | | |____dotnet.cpython-311.pyc
+| | | | | | | |____promql.cpython-311.pyc
+| | | | | | | |____smalltalk.cpython-311.pyc
+| | | | | | | |____tlb.cpython-311.pyc
+| | | | | | | |____clean.cpython-311.pyc
+| | | | | | | |____smithy.cpython-311.pyc
+| | | | | | | |____apl.cpython-311.pyc
+| | | | | | | |____console.cpython-311.pyc
+| | | | | | | |____vip.cpython-311.pyc
+| | | | | | | |____textfmts.cpython-311.pyc
+| | | | | | | |____jsx.cpython-311.pyc
+| | | | | | | |____pddl.cpython-311.pyc
+| | | | | | | |_____googlesql_builtins.cpython-311.pyc
+| | | | | | | |____dax.cpython-311.pyc
+| | | | | | | |____hare.cpython-311.pyc
+| | | | | | | |____kuin.cpython-311.pyc
+| | | | | | | |____q.cpython-311.pyc
+| | | | | | | |____wowtoc.cpython-311.pyc
+| | | | | | | |____grammar_notation.cpython-311.pyc
+| | | | | | | |____sieve.cpython-311.pyc
+| | | | | | | |_____scheme_builtins.cpython-311.pyc
+| | | | | | | |____dylan.cpython-311.pyc
+| | | | | | | |____fantom.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____parasail.cpython-311.pyc
+| | | | | | | |____other.cpython-311.pyc
+| | | | | | | |____configs.cpython-311.pyc
+| | | | | | | |____felix.cpython-311.pyc
+| | | | | | | |____carbon.cpython-311.pyc
+| | | | | | | |____ezhil.cpython-311.pyc
+| | | | | | | |_____mql_builtins.cpython-311.pyc
+| | | | | | | |_____asy_builtins.cpython-311.pyc
+| | | | | | | |____roboconf.cpython-311.pyc
+| | | | | | | |_____css_builtins.cpython-311.pyc
+| | | | | | | |____crystal.cpython-311.pyc
+| | | | | | | |____d.cpython-311.pyc
+| | | | | | |____ncl.py
+| | | | | | |____vyper.py
+| | | | | | |____lilypond.py
+| | | | | | |____markup.py
+| | | | | | |____pddl.py
+| | | | | | |_____asy_builtins.py
+| | | | | | |____igor.py
+| | | | | | |____ml.py
+| | | | | | |____savi.py
+| | | | | | |____bqn.py
+| | | | | | |____tal.py
+| | | | | | |____tls.py
+| | | | | | |____templates.py
+| | | | | | |____forth.py
+| | | | | | |____css.py
+| | | | | | |____asm.py
+| | | | | | |____roboconf.py
+| | | | | | |_____lasso_builtins.py
+| | | | | | |____pascal.py
+| | | | | | |____csound.py
+| | | | | | |____typst.py
+| | | | | | |____ptx.py
+| | | | | | |____sgf.py
+| | | | | | |____kusto.py
+| | | | | | |____webassembly.py
+| | | | | | |____procfile.py
+| | | | | | |____functional.py
+| | | | | | |____codeql.py
+| | | | | | |____textedit.py
+| | | | | | |____installers.py
+| | | | | | |____business.py
+| | | | | | |____tcl.py
+| | | | | | |____minecraft.py
+| | | | | | |____vip.py
+| | | | | | |____mips.py
+| | | | | | |____meson.py
+| | | | | | |____basic.py
+| | | | | | |_____stan_builtins.py
+| | | | | | |____prql.py
+| | | | | | |____eiffel.py
+| | | | | | |____scdoc.py
+| | | | | | |____dax.py
+| | | | | | |____rdf.py
+| | | | | | |____gleam.py
+| | | | | | |____email.py
+| | | | | | |____sophia.py
+| | | | | | |____modula2.py
+| | | | | | |____nit.py
+| | | | | | |____actionscript.py
+| | | | | | |____qlik.py
+| | | | | | |____text.py
+| | | | | | |____apl.py
+| | | | | | |_____cl_builtins.py
+| | | | | | |_____mql_builtins.py
+| | | | | | |____srcinfo.py
+| | | | | | |____rego.py
+| | | | | | |____archetype.py
+| | | | | | |____python.py
+| | | | | | |_____csound_builtins.py
+| | | | | | |____factor.py
+| | | | | | |____dalvik.py
+| | | | | | |____go.py
+| | | | | | |____berry.py
+| | | | | | |____unicon.py
+| | | | | | |_____usd_builtins.py
+| | | | | | |____cddl.py
+| | | | | | |____dylan.py
+| | | | | | |____make.py
+| | | | | | |____diff.py
+| | | | | | |____xorg.py
+| | | | | | |____trafficscript.py
+| | | | | | |____kuin.py
+| | | | | | |____jvm.py
+| | | | | | |____smv.py
+| | | | | | |____math.py
+| | | | | | |____tact.py
+| | | | | | |____promql.py
+| | | | | | |____php.py
+| | | | | | |____sql.py
+| | | | | | |____x10.py
+| | | | | | |____json5.py
+| | | | | | |_____mapping.py
+| | | | | | |____gcodelexer.py
+| | | | | | |____praat.py
+| | | | | | |____lean.py
+| | | | | | |____bibtex.py
+| | | | | | |____whiley.py
+| | | | | | |____q.py
+| | | | | | |____snobol.py
+| | | | | | |_____mysql_builtins.py
+| | | | | | |____webidl.py
+| | | | | | |____rita.py
+| | | | | | |____haskell.py
+| | | | | | |____testing.py
+| | | | | | |____fortran.py
+| | | | | | |____modeling.py
+| | | | | | |____arturo.py
+| | | | | | |____varnish.py
+| | | | | | |____elm.py
+| | | | | | |____asc.py
+| | | | | | |____javascript.py
+| | | | | | |____ooc.py
+| | | | | | |____bdd.py
+| | | | | | |____julia.py
+| | | | | | |____hexdump.py
+| | | | | | |____foxpro.py
+| | | | | | |____stata.py
+| | | | | | |____zig.py
+| | | | | | |____grammar_notation.py
+| | | | | | |____bare.py
+| | | | | | |____openscad.py
+| | | | | | |____dotnet.py
+| | | | | | |____fantom.py
+| | | | | | |____special.py
+| | | | | | |____yang.py
+| | | | | | |____fift.py
+| | | | | | |____ezhil.py
+| | | | | | |____ride.py
+| | | | | | |_____scheme_builtins.py
+| | | | | | |____devicetree.py
+| | | | | | |____macaulay2.py
+| | | | | | |____urbi.py
+| | | | | | |____haxe.py
+| | | | | | |____func.py
+| | | | | | |____data.py
+| | | | | | |_____ada_builtins.py
+| | | | | | |____yara.py
+| | | | | | |____pointless.py
+| | | | | | |____asn1.py
+| | | | | | |_____tsql_builtins.py
+| | | | | | |____wgsl.py
+| | | | | | |____rust.py
+| | | | | |____token.py
+| | | | | |____style.py
+| | | | | |____util.py
+| | | | | |____sphinxext.py
+| | | | | |____cmdline.py
+| | | | | |______init__.py
+| | | | | |____formatters
+| | | | | | |____terminal.py
+| | | | | | |____html.py
+| | | | | | |____irc.py
+| | | | | | |______init__.py
+| | | | | | |____other.py
+| | | | | | |______pycache__
+| | | | | | | |____pangomarkup.cpython-311.pyc
+| | | | | | | |____html.cpython-311.pyc
+| | | | | | | |____svg.cpython-311.pyc
+| | | | | | | |____groff.cpython-311.pyc
+| | | | | | | |____img.cpython-311.pyc
+| | | | | | | |____bbcode.cpython-311.pyc
+| | | | | | | |____latex.cpython-311.pyc
+| | | | | | | |____terminal.cpython-311.pyc
+| | | | | | | |____irc.cpython-311.pyc
+| | | | | | | |____terminal256.cpython-311.pyc
+| | | | | | | |_____mapping.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____other.cpython-311.pyc
+| | | | | | | |____rtf.cpython-311.pyc
+| | | | | | |____img.py
+| | | | | | |____terminal256.py
+| | | | | | |____rtf.py
+| | | | | | |____svg.py
+| | | | | | |____bbcode.py
+| | | | | | |____pangomarkup.py
+| | | | | | |_____mapping.py
+| | | | | | |____groff.py
+| | | | | | |____latex.py
+| | | | | |______pycache__
+| | | | | | |____scanner.cpython-311.pyc
+| | | | | | |____regexopt.cpython-311.pyc
+| | | | | | |____formatter.cpython-311.pyc
+| | | | | | |____plugin.cpython-311.pyc
+| | | | | | |____lexer.cpython-311.pyc
+| | | | | | |____style.cpython-311.pyc
+| | | | | | |____token.cpython-311.pyc
+| | | | | | |____modeline.cpython-311.pyc
+| | | | | | |____unistring.cpython-311.pyc
+| | | | | | |____cmdline.cpython-311.pyc
+| | | | | | |____util.cpython-311.pyc
+| | | | | | |____filter.cpython-311.pyc
+| | | | | | |____sphinxext.cpython-311.pyc
+| | | | | | |____console.cpython-311.pyc
+| | | | | | |______init__.cpython-311.pyc
+| | | | | | |______main__.cpython-311.pyc
+| | | | | |____styles
+| | | | | | |____sas.py
+| | | | | | |____material.py
+| | | | | | |____friendly_grayscale.py
+| | | | | | |____pastie.py
+| | | | | | |____onedark.py
+| | | | | | |____inkpot.py
+| | | | | | |____xcode.py
+| | | | | | |____gruvbox.py
+| | | | | | |____monokai.py
+| | | | | | |____tango.py
+| | | | | | |____friendly.py
+| | | | | | |____staroffice.py
+| | | | | | |____paraiso_dark.py
+| | | | | | |____solarized.py
+| | | | | | |______init__.py
+| | | | | | |____algol_nu.py
+| | | | | | |____gh_dark.py
+| | | | | | |____native.py
+| | | | | | |______pycache__
+| | | | | | | |____borland.cpython-311.pyc
+| | | | | | | |____colorful.cpython-311.pyc
+| | | | | | | |____algol.cpython-311.pyc
+| | | | | | | |____xcode.cpython-311.pyc
+| | | | | | | |____igor.cpython-311.pyc
+| | | | | | | |____manni.cpython-311.pyc
+| | | | | | | |____gh_dark.cpython-311.pyc
+| | | | | | | |____lilypond.cpython-311.pyc
+| | | | | | | |____algol_nu.cpython-311.pyc
+| | | | | | | |____lightbulb.cpython-311.pyc
+| | | | | | | |____fruity.cpython-311.pyc
+| | | | | | | |____stata_dark.cpython-311.pyc
+| | | | | | | |____onedark.cpython-311.pyc
+| | | | | | | |____arduino.cpython-311.pyc
+| | | | | | | |____coffee.cpython-311.pyc
+| | | | | | | |____gruvbox.cpython-311.pyc
+| | | | | | | |____inkpot.cpython-311.pyc
+| | | | | | | |____nord.cpython-311.pyc
+| | | | | | | |____vs.cpython-311.pyc
+| | | | | | | |____lovelace.cpython-311.pyc
+| | | | | | | |____murphy.cpython-311.pyc
+| | | | | | | |____material.cpython-311.pyc
+| | | | | | | |____pastie.cpython-311.pyc
+| | | | | | | |____paraiso_dark.cpython-311.pyc
+| | | | | | | |____autumn.cpython-311.pyc
+| | | | | | | |____rrt.cpython-311.pyc
+| | | | | | | |____stata_light.cpython-311.pyc
+| | | | | | | |____zenburn.cpython-311.pyc
+| | | | | | | |____paraiso_light.cpython-311.pyc
+| | | | | | | |____friendly_grayscale.cpython-311.pyc
+| | | | | | | |____dracula.cpython-311.pyc
+| | | | | | | |____sas.cpython-311.pyc
+| | | | | | | |____rainbow_dash.cpython-311.pyc
+| | | | | | | |____tango.cpython-311.pyc
+| | | | | | | |____default.cpython-311.pyc
+| | | | | | | |____emacs.cpython-311.pyc
+| | | | | | | |____native.cpython-311.pyc
+| | | | | | | |____solarized.cpython-311.pyc
+| | | | | | | |____vim.cpython-311.pyc
+| | | | | | | |____monokai.cpython-311.pyc
+| | | | | | | |____friendly.cpython-311.pyc
+| | | | | | | |_____mapping.cpython-311.pyc
+| | | | | | | |____perldoc.cpython-311.pyc
+| | | | | | | |____abap.cpython-311.pyc
+| | | | | | | |____bw.cpython-311.pyc
+| | | | | | | |____staroffice.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____trac.cpython-311.pyc
+| | | | | | |____colorful.py
+| | | | | | |____lilypond.py
+| | | | | | |____igor.py
+| | | | | | |____zenburn.py
+| | | | | | |____bw.py
+| | | | | | |____emacs.py
+| | | | | | |____dracula.py
+| | | | | | |____vs.py
+| | | | | | |____default.py
+| | | | | | |____paraiso_light.py
+| | | | | | |____lovelace.py
+| | | | | | |____stata_dark.py
+| | | | | | |____vim.py
+| | | | | | |____borland.py
+| | | | | | |____coffee.py
+| | | | | | |_____mapping.py
+| | | | | | |____murphy.py
+| | | | | | |____lightbulb.py
+| | | | | | |____fruity.py
+| | | | | | |____abap.py
+| | | | | | |____rainbow_dash.py
+| | | | | | |____manni.py
+| | | | | | |____autumn.py
+| | | | | | |____rrt.py
+| | | | | | |____perldoc.py
+| | | | | | |____trac.py
+| | | | | | |____algol.py
+| | | | | | |____arduino.py
+| | | | | | |____nord.py
+| | | | | | |____stata_light.py
+| | | | | |____unistring.py
+| | | | | |____lexer.py
+| | | | | |____regexopt.py
+| | | | | |____plugin.py
+| | | | | |____filter.py
+| | | | | |______main__.py
+| | | | |____pytest
+| | | | | |______init__.py
+| | | | | |______pycache__
+| | | | | | |______init__.cpython-311.pyc
+| | | | | | |______main__.cpython-311.pyc
+| | | | | |____py.typed
+| | | | | |______main__.py
+| | | | |____setuptools-80.7.1.dist-info
+| | | | | |____RECORD
+| | | | | |____licenses
+| | | | | | |____LICENSE
+| | | | | |____WHEEL
+| | | | | |____entry_points.txt
+| | | | | |____top_level.txt
+| | | | | |____REQUESTED
+| | | | | |____INSTALLER
+| | | | | |____METADATA
+| | | | |____pytest-8.4.1.dist-info
+| | | | | |____RECORD
+| | | | | |____licenses
+| | | | | | |____LICENSE
+| | | | | | |____AUTHORS
+| | | | | |____WHEEL
+| | | | | |____entry_points.txt
+| | | | | |____top_level.txt
+| | | | | |____REQUESTED
+| | | | | |____INSTALLER
+| | | | | |____METADATA
+| | | | |______pycache__
+| | | | | |____py.cpython-311.pyc
+| | | | |____pip
+| | | | | |_____internal
+| | | | | | |____configuration.py
+| | | | | | |____pyproject.py
+| | | | | | |____network
+| | | | | | | |____auth.py
+| | | | | | | |____xmlrpc.py
+| | | | | | | |____download.py
+| | | | | | | |____session.py
+| | | | | | | |____cache.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____session.cpython-311.pyc
+| | | | | | | | |____download.cpython-311.pyc
+| | | | | | | | |____utils.cpython-311.pyc
+| | | | | | | | |____xmlrpc.cpython-311.pyc
+| | | | | | | | |____cache.cpython-311.pyc
+| | | | | | | | |____auth.cpython-311.pyc
+| | | | | | | | |____lazy_wheel.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____utils.py
+| | | | | | | |____lazy_wheel.py
+| | | | | | |____cache.py
+| | | | | | |______init__.py
+| | | | | | |____utils
+| | | | | | | |____logging.py
+| | | | | | | |____misc.py
+| | | | | | | |____egg_link.py
+| | | | | | | |____compat.py
+| | | | | | | |____deprecation.py
+| | | | | | | |____subprocess.py
+| | | | | | | |____filesystem.py
+| | | | | | | |____direct_url_helpers.py
+| | | | | | | |______init__.py
+| | | | | | | |_____jaraco_text.py
+| | | | | | | |______pycache__
+| | | | | | | | |_____jaraco_text.cpython-311.pyc
+| | | | | | | | |____temp_dir.cpython-311.pyc
+| | | | | | | | |____glibc.cpython-311.pyc
+| | | | | | | | |____filetypes.cpython-311.pyc
+| | | | | | | | |____deprecation.cpython-311.pyc
+| | | | | | | | |____compat.cpython-311.pyc
+| | | | | | | | |____appdirs.cpython-311.pyc
+| | | | | | | | |____logging.cpython-311.pyc
+| | | | | | | | |____packaging.cpython-311.pyc
+| | | | | | | | |____unpacking.cpython-311.pyc
+| | | | | | | | |____setuptools_build.cpython-311.pyc
+| | | | | | | | |____urls.cpython-311.pyc
+| | | | | | | | |____filesystem.cpython-311.pyc
+| | | | | | | | |____misc.cpython-311.pyc
+| | | | | | | | |____compatibility_tags.cpython-311.pyc
+| | | | | | | | |____wheel.cpython-311.pyc
+| | | | | | | | |____egg_link.cpython-311.pyc
+| | | | | | | | |____datetime.cpython-311.pyc
+| | | | | | | | |____direct_url_helpers.cpython-311.pyc
+| | | | | | | | |____hashes.cpython-311.pyc
+| | | | | | | | |____entrypoints.cpython-311.pyc
+| | | | | | | | |____subprocess.cpython-311.pyc
+| | | | | | | | |____retry.cpython-311.pyc
+| | | | | | | | |_____log.cpython-311.pyc
+| | | | | | | | |____virtualenv.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____temp_dir.py
+| | | | | | | |____retry.py
+| | | | | | | |____appdirs.py
+| | | | | | | |____setuptools_build.py
+| | | | | | | |____packaging.py
+| | | | | | | |____entrypoints.py
+| | | | | | | |____filetypes.py
+| | | | | | | |____compatibility_tags.py
+| | | | | | | |____datetime.py
+| | | | | | | |____urls.py
+| | | | | | | |____hashes.py
+| | | | | | | |____virtualenv.py
+| | | | | | | |_____log.py
+| | | | | | | |____glibc.py
+| | | | | | | |____wheel.py
+| | | | | | | |____unpacking.py
+| | | | | | |____models
+| | | | | | | |____link.py
+| | | | | | | |____selection_prefs.py
+| | | | | | | |____direct_url.py
+| | | | | | | |____index.py
+| | | | | | | |____target_python.py
+| | | | | | | |____pylock.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____target_python.cpython-311.pyc
+| | | | | | | | |____link.cpython-311.pyc
+| | | | | | | | |____pylock.cpython-311.pyc
+| | | | | | | | |____candidate.cpython-311.pyc
+| | | | | | | | |____installation_report.cpython-311.pyc
+| | | | | | | | |____selection_prefs.cpython-311.pyc
+| | | | | | | | |____wheel.cpython-311.pyc
+| | | | | | | | |____search_scope.cpython-311.pyc
+| | | | | | | | |____format_control.cpython-311.pyc
+| | | | | | | | |____index.cpython-311.pyc
+| | | | | | | | |____scheme.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____direct_url.cpython-311.pyc
+| | | | | | | |____search_scope.py
+| | | | | | | |____candidate.py
+| | | | | | | |____format_control.py
+| | | | | | | |____installation_report.py
+| | | | | | | |____scheme.py
+| | | | | | | |____wheel.py
+| | | | | | |______pycache__
+| | | | | | | |____main.cpython-311.pyc
+| | | | | | | |____build_env.cpython-311.pyc
+| | | | | | | |____self_outdated_check.cpython-311.pyc
+| | | | | | | |____pyproject.cpython-311.pyc
+| | | | | | | |____configuration.cpython-311.pyc
+| | | | | | | |____cache.cpython-311.pyc
+| | | | | | | |____exceptions.cpython-311.pyc
+| | | | | | | |____wheel_builder.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____cli
+| | | | | | | |____cmdoptions.py
+| | | | | | | |______init__.py
+| | | | | | | |____index_command.py
+| | | | | | | |____status_codes.py
+| | | | | | | |______pycache__
+| | | | | | | | |____req_command.cpython-311.pyc
+| | | | | | | | |____main.cpython-311.pyc
+| | | | | | | | |____main_parser.cpython-311.pyc
+| | | | | | | | |____base_command.cpython-311.pyc
+| | | | | | | | |____cmdoptions.cpython-311.pyc
+| | | | | | | | |____autocompletion.cpython-311.pyc
+| | | | | | | | |____status_codes.cpython-311.pyc
+| | | | | | | | |____progress_bars.cpython-311.pyc
+| | | | | | | | |____index_command.cpython-311.pyc
+| | | | | | | | |____command_context.cpython-311.pyc
+| | | | | | | | |____parser.cpython-311.pyc
+| | | | | | | | |____spinners.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____parser.py
+| | | | | | | |____command_context.py
+| | | | | | | |____spinners.py
+| | | | | | | |____autocompletion.py
+| | | | | | | |____base_command.py
+| | | | | | | |____main_parser.py
+| | | | | | | |____progress_bars.py
+| | | | | | | |____main.py
+| | | | | | | |____req_command.py
+| | | | | | |____operations
+| | | | | | | |____install
+| | | | | | | | |____editable_legacy.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____wheel.cpython-311.pyc
+| | | | | | | | | |____editable_legacy.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____wheel.py
+| | | | | | | |____check.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____check.cpython-311.pyc
+| | | | | | | | |____freeze.cpython-311.pyc
+| | | | | | | | |____prepare.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____freeze.py
+| | | | | | | |____build
+| | | | | | | | |____wheel_legacy.py
+| | | | | | | | |____metadata.py
+| | | | | | | | |____metadata_editable.py
+| | | | | | | | |____wheel_editable.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____wheel_legacy.cpython-311.pyc
+| | | | | | | | | |____metadata.cpython-311.pyc
+| | | | | | | | | |____wheel_editable.cpython-311.pyc
+| | | | | | | | | |____metadata_legacy.cpython-311.pyc
+| | | | | | | | | |____wheel.cpython-311.pyc
+| | | | | | | | | |____metadata_editable.cpython-311.pyc
+| | | | | | | | | |____build_tracker.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____metadata_legacy.py
+| | | | | | | | |____wheel.py
+| | | | | | | | |____build_tracker.py
+| | | | | | | |____prepare.py
+| | | | | | |____req
+| | | | | | | |____req_install.py
+| | | | | | | |____req_set.py
+| | | | | | | |____req_uninstall.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____constructors.cpython-311.pyc
+| | | | | | | | |____req_install.cpython-311.pyc
+| | | | | | | | |____req_set.cpython-311.pyc
+| | | | | | | | |____req_dependency_group.cpython-311.pyc
+| | | | | | | | |____req_uninstall.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____req_file.cpython-311.pyc
+| | | | | | | |____req_dependency_group.py
+| | | | | | | |____req_file.py
+| | | | | | | |____constructors.py
+| | | | | | |____resolution
+| | | | | | | |____legacy
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____resolver.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____resolver.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____base.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____base.py
+| | | | | | | |____resolvelib
+| | | | | | | | |____provider.py
+| | | | | | | | |____found_candidates.py
+| | | | | | | | |____reporter.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____reporter.cpython-311.pyc
+| | | | | | | | | |____resolver.cpython-311.pyc
+| | | | | | | | | |____base.cpython-311.pyc
+| | | | | | | | | |____requirements.cpython-311.pyc
+| | | | | | | | | |____provider.cpython-311.pyc
+| | | | | | | | | |____candidates.cpython-311.pyc
+| | | | | | | | | |____factory.cpython-311.pyc
+| | | | | | | | | |____found_candidates.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____factory.py
+| | | | | | | | |____requirements.py
+| | | | | | | | |____resolver.py
+| | | | | | | | |____candidates.py
+| | | | | | | | |____base.py
+| | | | | | |____vcs
+| | | | | | | |____git.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____versioncontrol.cpython-311.pyc
+| | | | | | | | |____subversion.cpython-311.pyc
+| | | | | | | | |____bazaar.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____mercurial.cpython-311.pyc
+| | | | | | | | |____git.cpython-311.pyc
+| | | | | | | |____mercurial.py
+| | | | | | | |____bazaar.py
+| | | | | | | |____versioncontrol.py
+| | | | | | | |____subversion.py
+| | | | | | |____locations
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____base.cpython-311.pyc
+| | | | | | | | |_____distutils.cpython-311.pyc
+| | | | | | | | |_____sysconfig.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |_____sysconfig.py
+| | | | | | | |_____distutils.py
+| | | | | | | |____base.py
+| | | | | | |____index
+| | | | | | | |____collector.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____sources.cpython-311.pyc
+| | | | | | | | |____collector.cpython-311.pyc
+| | | | | | | | |____package_finder.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____sources.py
+| | | | | | | |____package_finder.py
+| | | | | | |____exceptions.py
+| | | | | | |____commands
+| | | | | | | |____configuration.py
+| | | | | | | |____show.py
+| | | | | | | |____list.py
+| | | | | | | |____check.py
+| | | | | | | |____index.py
+| | | | | | | |____completion.py
+| | | | | | | |____download.py
+| | | | | | | |____cache.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____search.cpython-311.pyc
+| | | | | | | | |____check.cpython-311.pyc
+| | | | | | | | |____download.cpython-311.pyc
+| | | | | | | | |____list.cpython-311.pyc
+| | | | | | | | |____show.cpython-311.pyc
+| | | | | | | | |____debug.cpython-311.pyc
+| | | | | | | | |____hash.cpython-311.pyc
+| | | | | | | | |____freeze.cpython-311.pyc
+| | | | | | | | |____configuration.cpython-311.pyc
+| | | | | | | | |____install.cpython-311.pyc
+| | | | | | | | |____help.cpython-311.pyc
+| | | | | | | | |____cache.cpython-311.pyc
+| | | | | | | | |____wheel.cpython-311.pyc
+| | | | | | | | |____index.cpython-311.pyc
+| | | | | | | | |____completion.cpython-311.pyc
+| | | | | | | | |____uninstall.cpython-311.pyc
+| | | | | | | | |____inspect.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____lock.cpython-311.pyc
+| | | | | | | |____hash.py
+| | | | | | | |____inspect.py
+| | | | | | | |____debug.py
+| | | | | | | |____uninstall.py
+| | | | | | | |____lock.py
+| | | | | | | |____freeze.py
+| | | | | | | |____search.py
+| | | | | | | |____install.py
+| | | | | | | |____help.py
+| | | | | | | |____wheel.py
+| | | | | | |____main.py
+| | | | | | |____wheel_builder.py
+| | | | | | |____metadata
+| | | | | | | |_____json.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____base.cpython-311.pyc
+| | | | | | | | |____pkg_resources.cpython-311.pyc
+| | | | | | | | |_____json.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____pkg_resources.py
+| | | | | | | |____importlib
+| | | | | | | | |_____dists.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |_____compat.cpython-311.pyc
+| | | | | | | | | |_____envs.cpython-311.pyc
+| | | | | | | | | |_____dists.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |_____compat.py
+| | | | | | | | |_____envs.py
+| | | | | | | |____base.py
+| | | | | | |____distributions
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____base.cpython-311.pyc
+| | | | | | | | |____installed.cpython-311.pyc
+| | | | | | | | |____wheel.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____sdist.cpython-311.pyc
+| | | | | | | |____sdist.py
+| | | | | | | |____installed.py
+| | | | | | | |____base.py
+| | | | | | | |____wheel.py
+| | | | | | |____self_outdated_check.py
+| | | | | | |____build_env.py
+| | | | | |_____vendor
+| | | | | | |____packaging
+| | | | | | | |____tags.py
+| | | | | | | |_____musllinux.py
+| | | | | | | |____metadata.py
+| | | | | | | |____version.py
+| | | | | | | |____licenses
+| | | | | | | | |______init__.py
+| | | | | | | | |_____spdx.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |_____spdx.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____markers.cpython-311.pyc
+| | | | | | | | |____requirements.cpython-311.pyc
+| | | | | | | | |_____musllinux.cpython-311.pyc
+| | | | | | | | |____tags.cpython-311.pyc
+| | | | | | | | |____utils.cpython-311.pyc
+| | | | | | | | |____metadata.cpython-311.pyc
+| | | | | | | | |_____tokenizer.cpython-311.pyc
+| | | | | | | | |_____manylinux.cpython-311.pyc
+| | | | | | | | |_____parser.cpython-311.pyc
+| | | | | | | | |_____elffile.cpython-311.pyc
+| | | | | | | | |____version.cpython-311.pyc
+| | | | | | | | |____specifiers.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |_____structures.cpython-311.pyc
+| | | | | | | |_____parser.py
+| | | | | | | |____utils.py
+| | | | | | | |____requirements.py
+| | | | | | | |_____structures.py
+| | | | | | | |____markers.py
+| | | | | | | |____py.typed
+| | | | | | | |_____manylinux.py
+| | | | | | | |_____tokenizer.py
+| | | | | | | |____specifiers.py
+| | | | | | | |_____elffile.py
+| | | | | | |____vendor.txt
+| | | | | | |____truststore
+| | | | | | | |_____openssl.py
+| | | | | | | |_____api.py
+| | | | | | | |_____macos.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |_____windows.cpython-311.pyc
+| | | | | | | | |_____macos.cpython-311.pyc
+| | | | | | | | |_____api.cpython-311.pyc
+| | | | | | | | |_____openssl.cpython-311.pyc
+| | | | | | | | |_____ssl_constants.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |_____ssl_constants.py
+| | | | | | | |____py.typed
+| | | | | | | |_____windows.py
+| | | | | | |____msgpack
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____fallback.cpython-311.pyc
+| | | | | | | | |____exceptions.cpython-311.pyc
+| | | | | | | | |____ext.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____exceptions.py
+| | | | | | | |____fallback.py
+| | | | | | | |____ext.py
+| | | | | | |____dependency_groups
+| | | | | | | |_____lint_dependency_groups.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |_____implementation.cpython-311.pyc
+| | | | | | | | |_____toml_compat.cpython-311.pyc
+| | | | | | | | |_____pip_wrapper.cpython-311.pyc
+| | | | | | | | |_____lint_dependency_groups.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |______main__.cpython-311.pyc
+| | | | | | | |_____pip_wrapper.py
+| | | | | | | |_____implementation.py
+| | | | | | | |____py.typed
+| | | | | | | |_____toml_compat.py
+| | | | | | | |______main__.py
+| | | | | | |____pygments
+| | | | | | | |____filters
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____modeline.py
+| | | | | | | |____console.py
+| | | | | | | |____scanner.py
+| | | | | | | |____formatter.py
+| | | | | | | |____lexers
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____python.cpython-311.pyc
+| | | | | | | | | |_____mapping.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____python.py
+| | | | | | | | |_____mapping.py
+| | | | | | | |____token.py
+| | | | | | | |____style.py
+| | | | | | | |____util.py
+| | | | | | | |____sphinxext.py
+| | | | | | | |______init__.py
+| | | | | | | |____formatters
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |_____mapping.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |_____mapping.py
+| | | | | | | |______pycache__
+| | | | | | | | |____scanner.cpython-311.pyc
+| | | | | | | | |____regexopt.cpython-311.pyc
+| | | | | | | | |____formatter.cpython-311.pyc
+| | | | | | | | |____plugin.cpython-311.pyc
+| | | | | | | | |____lexer.cpython-311.pyc
+| | | | | | | | |____style.cpython-311.pyc
+| | | | | | | | |____token.cpython-311.pyc
+| | | | | | | | |____modeline.cpython-311.pyc
+| | | | | | | | |____unistring.cpython-311.pyc
+| | | | | | | | |____util.cpython-311.pyc
+| | | | | | | | |____filter.cpython-311.pyc
+| | | | | | | | |____sphinxext.cpython-311.pyc
+| | | | | | | | |____console.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |______main__.cpython-311.pyc
+| | | | | | | |____styles
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |_____mapping.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |_____mapping.py
+| | | | | | | |____unistring.py
+| | | | | | | |____lexer.py
+| | | | | | | |____regexopt.py
+| | | | | | | |____plugin.py
+| | | | | | | |____filter.py
+| | | | | | | |______main__.py
+| | | | | | |____distlib
+| | | | | | | |____w64-arm.exe
+| | | | | | | |____w32.exe
+| | | | | | | |____compat.py
+| | | | | | | |____util.py
+| | | | | | | |____t32.exe
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____compat.cpython-311.pyc
+| | | | | | | | |____resources.cpython-311.pyc
+| | | | | | | | |____scripts.cpython-311.pyc
+| | | | | | | | |____util.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____w64.exe
+| | | | | | | |____resources.py
+| | | | | | | |____t64-arm.exe
+| | | | | | | |____scripts.py
+| | | | | | | |____t64.exe
+| | | | | | |____distro
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____distro.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |______main__.cpython-311.pyc
+| | | | | | | |____py.typed
+| | | | | | | |____distro.py
+| | | | | | | |______main__.py
+| | | | | | |____cachecontrol
+| | | | | | | |____serialize.py
+| | | | | | | |____wrapper.py
+| | | | | | | |____controller.py
+| | | | | | | |____filewrapper.py
+| | | | | | | |____heuristics.py
+| | | | | | | |____adapter.py
+| | | | | | | |____cache.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____controller.cpython-311.pyc
+| | | | | | | | |____serialize.cpython-311.pyc
+| | | | | | | | |____filewrapper.cpython-311.pyc
+| | | | | | | | |_____cmd.cpython-311.pyc
+| | | | | | | | |____adapter.cpython-311.pyc
+| | | | | | | | |____cache.cpython-311.pyc
+| | | | | | | | |____wrapper.cpython-311.pyc
+| | | | | | | | |____heuristics.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____py.typed
+| | | | | | | |_____cmd.py
+| | | | | | | |____caches
+| | | | | | | | |____file_cache.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____file_cache.cpython-311.pyc
+| | | | | | | | | |____redis_cache.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____redis_cache.py
+| | | | | | |____idna
+| | | | | | | |____intranges.py
+| | | | | | | |____package_data.py
+| | | | | | | |____compat.py
+| | | | | | | |____idnadata.py
+| | | | | | | |______init__.py
+| | | | | | | |____core.py
+| | | | | | | |______pycache__
+| | | | | | | | |____codec.cpython-311.pyc
+| | | | | | | | |____core.cpython-311.pyc
+| | | | | | | | |____compat.cpython-311.pyc
+| | | | | | | | |____idnadata.cpython-311.pyc
+| | | | | | | | |____package_data.cpython-311.pyc
+| | | | | | | | |____uts46data.cpython-311.pyc
+| | | | | | | | |____intranges.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____py.typed
+| | | | | | | |____codec.py
+| | | | | | | |____uts46data.py
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____requests
+| | | | | | | |____cookies.py
+| | | | | | | |____auth.py
+| | | | | | | |____sessions.py
+| | | | | | | |____hooks.py
+| | | | | | | |____compat.py
+| | | | | | | |____models.py
+| | | | | | | |____certs.py
+| | | | | | | |______init__.py
+| | | | | | | |____status_codes.py
+| | | | | | | |____packages.py
+| | | | | | | |______version__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____api.cpython-311.pyc
+| | | | | | | | |______version__.cpython-311.pyc
+| | | | | | | | |____adapters.cpython-311.pyc
+| | | | | | | | |____compat.cpython-311.pyc
+| | | | | | | | |_____internal_utils.cpython-311.pyc
+| | | | | | | | |____cookies.cpython-311.pyc
+| | | | | | | | |____status_codes.cpython-311.pyc
+| | | | | | | | |____utils.cpython-311.pyc
+| | | | | | | | |____hooks.cpython-311.pyc
+| | | | | | | | |____sessions.cpython-311.pyc
+| | | | | | | | |____help.cpython-311.pyc
+| | | | | | | | |____models.cpython-311.pyc
+| | | | | | | | |____exceptions.cpython-311.pyc
+| | | | | | | | |____auth.cpython-311.pyc
+| | | | | | | | |____packages.cpython-311.pyc
+| | | | | | | | |____certs.cpython-311.pyc
+| | | | | | | | |____structures.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____api.py
+| | | | | | | |_____internal_utils.py
+| | | | | | | |____utils.py
+| | | | | | | |____exceptions.py
+| | | | | | | |____structures.py
+| | | | | | | |____help.py
+| | | | | | | |____adapters.py
+| | | | | | |____tomli
+| | | | | | | |_____types.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |_____types.cpython-311.pyc
+| | | | | | | | |_____re.cpython-311.pyc
+| | | | | | | | |_____parser.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |_____parser.py
+| | | | | | | |_____re.py
+| | | | | | | |____py.typed
+| | | | | | |____certifi
+| | | | | | | |______init__.py
+| | | | | | | |____core.py
+| | | | | | | |______pycache__
+| | | | | | | | |____core.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |______main__.cpython-311.pyc
+| | | | | | | |____py.typed
+| | | | | | | |____cacert.pem
+| | | | | | | |______main__.py
+| | | | | | |____pyproject_hooks
+| | | | | | | |_____impl.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |_____impl.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |_____in_process
+| | | | | | | | |_____in_process.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |_____in_process.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____py.typed
+| | | | | | |____rich
+| | | | | | | |____themes.py
+| | | | | | | |____screen.py
+| | | | | | | |____logging.py
+| | | | | | | |____measure.py
+| | | | | | | |____tree.py
+| | | | | | | |____console.py
+| | | | | | | |____live_render.py
+| | | | | | | |_____emoji_codes.py
+| | | | | | | |____box.py
+| | | | | | | |____color.py
+| | | | | | | |_____timer.py
+| | | | | | | |_____fileno.py
+| | | | | | | |____align.py
+| | | | | | | |____theme.py
+| | | | | | | |____style.py
+| | | | | | | |____default_styles.py
+| | | | | | | |_____wrap.py
+| | | | | | | |_____log_render.py
+| | | | | | | |____emoji.py
+| | | | | | | |____layout.py
+| | | | | | | |____containers.py
+| | | | | | | |_____emoji_replace.py
+| | | | | | | |____traceback.py
+| | | | | | | |____region.py
+| | | | | | | |____protocol.py
+| | | | | | | |_____loop.py
+| | | | | | | |____control.py
+| | | | | | | |____filesize.py
+| | | | | | | |_____null_file.py
+| | | | | | | |_____palettes.py
+| | | | | | | |______init__.py
+| | | | | | | |_____pick.py
+| | | | | | | |____file_proxy.py
+| | | | | | | |______pycache__
+| | | | | | | | |____theme.cpython-311.pyc
+| | | | | | | | |____color.cpython-311.pyc
+| | | | | | | | |____segment.cpython-311.pyc
+| | | | | | | | |_____emoji_replace.cpython-311.pyc
+| | | | | | | | |____highlighter.cpython-311.pyc
+| | | | | | | | |_____emoji_codes.cpython-311.pyc
+| | | | | | | | |____layout.cpython-311.pyc
+| | | | | | | | |_____ratio.cpython-311.pyc
+| | | | | | | | |____ansi.cpython-311.pyc
+| | | | | | | | |____file_proxy.cpython-311.pyc
+| | | | | | | | |____cells.cpython-311.pyc
+| | | | | | | | |____containers.cpython-311.pyc
+| | | | | | | | |____rule.cpython-311.pyc
+| | | | | | | | |____constrain.cpython-311.pyc
+| | | | | | | | |_____windows.cpython-311.pyc
+| | | | | | | | |_____log_render.cpython-311.pyc
+| | | | | | | | |____style.cpython-311.pyc
+| | | | | | | | |_____palettes.cpython-311.pyc
+| | | | | | | | |____terminal_theme.cpython-311.pyc
+| | | | | | | | |_____cell_widths.cpython-311.pyc
+| | | | | | | | |____logging.cpython-311.pyc
+| | | | | | | | |_____loop.cpython-311.pyc
+| | | | | | | | |____pretty.cpython-311.pyc
+| | | | | | | | |____abc.cpython-311.pyc
+| | | | | | | | |____scope.cpython-311.pyc
+| | | | | | | | |____default_styles.cpython-311.pyc
+| | | | | | | | |_____spinners.cpython-311.pyc
+| | | | | | | | |____bar.cpython-311.pyc
+| | | | | | | | |____errors.cpython-311.pyc
+| | | | | | | | |____progress.cpython-311.pyc
+| | | | | | | | |____prompt.cpython-311.pyc
+| | | | | | | | |_____fileno.cpython-311.pyc
+| | | | | | | | |____text.cpython-311.pyc
+| | | | | | | | |____live_render.cpython-311.pyc
+| | | | | | | | |____filesize.cpython-311.pyc
+| | | | | | | | |_____inspect.cpython-311.pyc
+| | | | | | | | |____control.cpython-311.pyc
+| | | | | | | | |_____stack.cpython-311.pyc
+| | | | | | | | |____emoji.cpython-311.pyc
+| | | | | | | | |____themes.cpython-311.pyc
+| | | | | | | | |____region.cpython-311.pyc
+| | | | | | | | |____palette.cpython-311.pyc
+| | | | | | | | |____screen.cpython-311.pyc
+| | | | | | | | |____measure.cpython-311.pyc
+| | | | | | | | |_____extension.cpython-311.pyc
+| | | | | | | | |____tree.cpython-311.pyc
+| | | | | | | | |____repr.cpython-311.pyc
+| | | | | | | | |____status.cpython-311.pyc
+| | | | | | | | |____protocol.cpython-311.pyc
+| | | | | | | | |____markup.cpython-311.pyc
+| | | | | | | | |_____windows_renderer.cpython-311.pyc
+| | | | | | | | |____jupyter.cpython-311.pyc
+| | | | | | | | |____align.cpython-311.pyc
+| | | | | | | | |____live.cpython-311.pyc
+| | | | | | | | |_____wrap.cpython-311.pyc
+| | | | | | | | |____table.cpython-311.pyc
+| | | | | | | | |____panel.cpython-311.pyc
+| | | | | | | | |____syntax.cpython-311.pyc
+| | | | | | | | |____progress_bar.cpython-311.pyc
+| | | | | | | | |____pager.cpython-311.pyc
+| | | | | | | | |_____export_format.cpython-311.pyc
+| | | | | | | | |____json.cpython-311.pyc
+| | | | | | | | |____styled.cpython-311.pyc
+| | | | | | | | |____spinner.cpython-311.pyc
+| | | | | | | | |_____timer.cpython-311.pyc
+| | | | | | | | |_____pick.cpython-311.pyc
+| | | | | | | | |____padding.cpython-311.pyc
+| | | | | | | | |____color_triplet.cpython-311.pyc
+| | | | | | | | |____console.cpython-311.pyc
+| | | | | | | | |_____win32_console.cpython-311.pyc
+| | | | | | | | |_____null_file.cpython-311.pyc
+| | | | | | | | |____traceback.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____diagnose.cpython-311.pyc
+| | | | | | | | |____columns.cpython-311.pyc
+| | | | | | | | |____box.cpython-311.pyc
+| | | | | | | | |______main__.cpython-311.pyc
+| | | | | | | |____palette.py
+| | | | | | | |____markup.py
+| | | | | | | |_____ratio.py
+| | | | | | | |____repr.py
+| | | | | | | |____constrain.py
+| | | | | | | |____pretty.py
+| | | | | | | |____diagnose.py
+| | | | | | | |____columns.py
+| | | | | | | |____rule.py
+| | | | | | | |_____inspect.py
+| | | | | | | |____pager.py
+| | | | | | | |____text.py
+| | | | | | | |____highlighter.py
+| | | | | | | |_____spinners.py
+| | | | | | | |____terminal_theme.py
+| | | | | | | |____bar.py
+| | | | | | | |____live.py
+| | | | | | | |____py.typed
+| | | | | | | |____syntax.py
+| | | | | | | |____table.py
+| | | | | | | |_____export_format.py
+| | | | | | | |____progress_bar.py
+| | | | | | | |____errors.py
+| | | | | | | |____prompt.py
+| | | | | | | |____segment.py
+| | | | | | | |____ansi.py
+| | | | | | | |____progress.py
+| | | | | | | |_____stack.py
+| | | | | | | |_____windows.py
+| | | | | | | |_____cell_widths.py
+| | | | | | | |____cells.py
+| | | | | | | |_____win32_console.py
+| | | | | | | |____panel.py
+| | | | | | | |____styled.py
+| | | | | | | |____spinner.py
+| | | | | | | |_____windows_renderer.py
+| | | | | | | |____json.py
+| | | | | | | |____padding.py
+| | | | | | | |______main__.py
+| | | | | | | |____scope.py
+| | | | | | | |_____extension.py
+| | | | | | | |____status.py
+| | | | | | | |____abc.py
+| | | | | | | |____jupyter.py
+| | | | | | | |____color_triplet.py
+| | | | | | |____tomli_w
+| | | | | | | |_____writer.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |_____writer.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____py.typed
+| | | | | | |____urllib3
+| | | | | | | |____filepost.py
+| | | | | | | |____fields.py
+| | | | | | | |____util
+| | | | | | | | |____queue.py
+| | | | | | | | |____ssltransport.py
+| | | | | | | | |____proxy.py
+| | | | | | | | |____wait.py
+| | | | | | | | |____request.py
+| | | | | | | | |____timeout.py
+| | | | | | | | |______init__.py
+| | | | | | | | |____response.py
+| | | | | | | | |____ssl_.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____wait.cpython-311.pyc
+| | | | | | | | | |____queue.cpython-311.pyc
+| | | | | | | | | |____ssltransport.cpython-311.pyc
+| | | | | | | | | |____response.cpython-311.pyc
+| | | | | | | | | |____ssl_match_hostname.cpython-311.pyc
+| | | | | | | | | |____proxy.cpython-311.pyc
+| | | | | | | | | |____timeout.cpython-311.pyc
+| | | | | | | | | |____connection.cpython-311.pyc
+| | | | | | | | | |____url.cpython-311.pyc
+| | | | | | | | | |____retry.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | | |____request.cpython-311.pyc
+| | | | | | | | | |____ssl_.cpython-311.pyc
+| | | | | | | | |____retry.py
+| | | | | | | | |____url.py
+| | | | | | | | |____connection.py
+| | | | | | | | |____ssl_match_hostname.py
+| | | | | | | |_____version.py
+| | | | | | | |____request.py
+| | | | | | | |______init__.py
+| | | | | | | |____poolmanager.py
+| | | | | | | |____response.py
+| | | | | | | |______pycache__
+| | | | | | | | |____poolmanager.cpython-311.pyc
+| | | | | | | | |____filepost.cpython-311.pyc
+| | | | | | | | |____fields.cpython-311.pyc
+| | | | | | | | |____connectionpool.cpython-311.pyc
+| | | | | | | | |____response.cpython-311.pyc
+| | | | | | | | |_____version.cpython-311.pyc
+| | | | | | | | |____exceptions.cpython-311.pyc
+| | | | | | | | |____connection.cpython-311.pyc
+| | | | | | | | |_____collections.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____request.cpython-311.pyc
+| | | | | | | |____contrib
+| | | | | | | | |____securetransport.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____securetransport.cpython-311.pyc
+| | | | | | | | | |____pyopenssl.cpython-311.pyc
+| | | | | | | | | |____ntlmpool.cpython-311.pyc
+| | | | | | | | | |____appengine.cpython-311.pyc
+| | | | | | | | | |_____appengine_environ.cpython-311.pyc
+| | | | | | | | | |____socks.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____socks.py
+| | | | | | | | |_____appengine_environ.py
+| | | | | | | | |____pyopenssl.py
+| | | | | | | | |____appengine.py
+| | | | | | | | |_____securetransport
+| | | | | | | | | |______init__.py
+| | | | | | | | | |______pycache__
+| | | | | | | | | | |____bindings.cpython-311.pyc
+| | | | | | | | | | |____low_level.cpython-311.pyc
+| | | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | | |____low_level.py
+| | | | | | | | | |____bindings.py
+| | | | | | | | |____ntlmpool.py
+| | | | | | | |____connection.py
+| | | | | | | |_____collections.py
+| | | | | | | |____packages
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____six.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____backports
+| | | | | | | | | |______init__.py
+| | | | | | | | | |______pycache__
+| | | | | | | | | | |____weakref_finalize.cpython-311.pyc
+| | | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | | | |____makefile.cpython-311.pyc
+| | | | | | | | | |____makefile.py
+| | | | | | | | | |____weakref_finalize.py
+| | | | | | | | |____six.py
+| | | | | | | |____exceptions.py
+| | | | | | | |____connectionpool.py
+| | | | | | |____pkg_resources
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____resolvelib
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____reporters.cpython-311.pyc
+| | | | | | | | |____providers.cpython-311.pyc
+| | | | | | | | |____structs.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____resolvers
+| | | | | | | | |____abstract.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____criterion.cpython-311.pyc
+| | | | | | | | | |____exceptions.cpython-311.pyc
+| | | | | | | | | |____abstract.cpython-311.pyc
+| | | | | | | | | |____resolution.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____exceptions.py
+| | | | | | | | |____criterion.py
+| | | | | | | | |____resolution.py
+| | | | | | | |____providers.py
+| | | | | | | |____structs.py
+| | | | | | | |____reporters.py
+| | | | | | | |____py.typed
+| | | | | | |____platformdirs
+| | | | | | | |____macos.py
+| | | | | | | |____unix.py
+| | | | | | | |____version.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____api.cpython-311.pyc
+| | | | | | | | |____android.cpython-311.pyc
+| | | | | | | | |____windows.cpython-311.pyc
+| | | | | | | | |____macos.cpython-311.pyc
+| | | | | | | | |____unix.cpython-311.pyc
+| | | | | | | | |____version.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |______main__.cpython-311.pyc
+| | | | | | | |____api.py
+| | | | | | | |____android.py
+| | | | | | | |____py.typed
+| | | | | | | |____windows.py
+| | | | | | | |______main__.py
+| | | | | |______init__.py
+| | | | | |______pycache__
+| | | | | | |______pip-runner__.cpython-311.pyc
+| | | | | | |______init__.cpython-311.pyc
+| | | | | | |______main__.cpython-311.pyc
+| | | | | |____py.typed
+| | | | | |______pip-runner__.py
+| | | | | |______main__.py
+| | | | |____distutils-precedence.pth
+| | | | |____packaging-25.0.dist-info
+| | | | | |____RECORD
+| | | | | |____licenses
+| | | | | | |____LICENSE
+| | | | | | |____LICENSE.APACHE
+| | | | | | |____LICENSE.BSD
+| | | | | |____WHEEL
+| | | | | |____INSTALLER
+| | | | | |____METADATA
+| | | | |____pluggy
+| | | | | |_____tracing.py
+| | | | | |_____version.py
+| | | | | |_____callers.py
+| | | | | |______init__.py
+| | | | | |_____warnings.py
+| | | | | |_____hooks.py
+| | | | | |_____result.py
+| | | | | |______pycache__
+| | | | | | |_____warnings.cpython-311.pyc
+| | | | | | |_____result.cpython-311.pyc
+| | | | | | |_____manager.cpython-311.pyc
+| | | | | | |_____hooks.cpython-311.pyc
+| | | | | | |_____version.cpython-311.pyc
+| | | | | | |_____tracing.cpython-311.pyc
+| | | | | | |_____callers.cpython-311.pyc
+| | | | | | |______init__.cpython-311.pyc
+| | | | | |____py.typed
+| | | | | |_____manager.py
+| | | | |____pluggy-1.6.0.dist-info
+| | | | | |____RECORD
+| | | | | |____licenses
+| | | | | | |____LICENSE
+| | | | | |____WHEEL
+| | | | | |____top_level.txt
+| | | | | |____INSTALLER
+| | | | | |____METADATA
+| | | | |____pygments-2.19.2.dist-info
+| | | | | |____RECORD
+| | | | | |____licenses
+| | | | | | |____LICENSE
+| | | | | | |____AUTHORS
+| | | | | |____WHEEL
+| | | | | |____entry_points.txt
+| | | | | |____INSTALLER
+| | | | | |____METADATA
+| | | | |____setuptools
+| | | | | |_____path.py
+| | | | | |____cli-arm64.exe
+| | | | | |____logging.py
+| | | | | |____windows_support.py
+| | | | | |_____normalization.py
+| | | | | |____compat
+| | | | | | |____py39.py
+| | | | | | |______init__.py
+| | | | | | |____py312.py
+| | | | | | |______pycache__
+| | | | | | | |____py312.cpython-311.pyc
+| | | | | | | |____py310.cpython-311.pyc
+| | | | | | | |____py39.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____py311.cpython-311.pyc
+| | | | | | |____py311.py
+| | | | | | |____py310.py
+| | | | | |____archive_util.py
+| | | | | |_____imp.py
+| | | | | |____version.py
+| | | | | |____modified.py
+| | | | | |_____vendor
+| | | | | | |____packaging
+| | | | | | | |____tags.py
+| | | | | | | |_____musllinux.py
+| | | | | | | |____metadata.py
+| | | | | | | |____version.py
+| | | | | | | |____licenses
+| | | | | | | | |______init__.py
+| | | | | | | | |_____spdx.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |_____spdx.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____markers.cpython-311.pyc
+| | | | | | | | |____requirements.cpython-311.pyc
+| | | | | | | | |_____musllinux.cpython-311.pyc
+| | | | | | | | |____tags.cpython-311.pyc
+| | | | | | | | |____utils.cpython-311.pyc
+| | | | | | | | |____metadata.cpython-311.pyc
+| | | | | | | | |_____tokenizer.cpython-311.pyc
+| | | | | | | | |_____manylinux.cpython-311.pyc
+| | | | | | | | |_____parser.cpython-311.pyc
+| | | | | | | | |_____elffile.cpython-311.pyc
+| | | | | | | | |____version.cpython-311.pyc
+| | | | | | | | |____specifiers.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |_____structures.cpython-311.pyc
+| | | | | | | |_____parser.py
+| | | | | | | |____utils.py
+| | | | | | | |____requirements.py
+| | | | | | | |_____structures.py
+| | | | | | | |____markers.py
+| | | | | | | |____py.typed
+| | | | | | | |_____manylinux.py
+| | | | | | | |_____tokenizer.py
+| | | | | | | |____specifiers.py
+| | | | | | | |_____elffile.py
+| | | | | | |____jaraco.text-3.12.1.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____top_level.txt
+| | | | | | | |____REQUESTED
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____jaraco.collections-5.1.0.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____top_level.txt
+| | | | | | | |____REQUESTED
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____importlib_metadata-8.0.0.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____top_level.txt
+| | | | | | | |____REQUESTED
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____inflect
+| | | | | | | |____compat
+| | | | | | | | |____py38.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____py38.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____py.typed
+| | | | | | |____jaraco
+| | | | | | | |______pycache__
+| | | | | | | | |____context.cpython-311.pyc
+| | | | | | | |____context.py
+| | | | | | | |____functools
+| | | | | | | | |______init__.pyi
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____py.typed
+| | | | | | | |____text
+| | | | | | | | |____to-qwerty.py
+| | | | | | | | |____show-newlines.py
+| | | | | | | | |____to-dvorak.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____strip-prefix.cpython-311.pyc
+| | | | | | | | | |____show-newlines.cpython-311.pyc
+| | | | | | | | | |____to-qwerty.cpython-311.pyc
+| | | | | | | | | |____layouts.cpython-311.pyc
+| | | | | | | | | |____to-dvorak.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____strip-prefix.py
+| | | | | | | | |____Lorem ipsum.txt
+| | | | | | | | |____layouts.py
+| | | | | | | |____collections
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____py.typed
+| | | | | | |____jaraco.functools-4.0.1.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____top_level.txt
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____jaraco.context-5.3.0.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____top_level.txt
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____inflect-7.3.1.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____top_level.txt
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____importlib_metadata
+| | | | | | | |_____meta.py
+| | | | | | | |____compat
+| | | | | | | | |____py39.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____py39.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | | |____py311.cpython-311.pyc
+| | | | | | | | |____py311.py
+| | | | | | | |_____text.py
+| | | | | | | |______init__.py
+| | | | | | | |_____functools.py
+| | | | | | | |______pycache__
+| | | | | | | | |_____functools.cpython-311.pyc
+| | | | | | | | |_____compat.cpython-311.pyc
+| | | | | | | | |_____text.cpython-311.pyc
+| | | | | | | | |_____meta.cpython-311.pyc
+| | | | | | | | |_____adapters.cpython-311.pyc
+| | | | | | | | |_____itertools.cpython-311.pyc
+| | | | | | | | |_____collections.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____diagnose.cpython-311.pyc
+| | | | | | | |____diagnose.py
+| | | | | | | |_____collections.py
+| | | | | | | |_____itertools.py
+| | | | | | | |____py.typed
+| | | | | | | |_____adapters.py
+| | | | | | | |_____compat.py
+| | | | | | |____wheel
+| | | | | | | |____metadata.py
+| | | | | | | |____macosx_libfile.py
+| | | | | | | |____util.py
+| | | | | | | |_____setuptools_logging.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |_____bdist_wheel.cpython-311.pyc
+| | | | | | | | |____metadata.cpython-311.pyc
+| | | | | | | | |____bdist_wheel.cpython-311.pyc
+| | | | | | | | |____macosx_libfile.cpython-311.pyc
+| | | | | | | | |____util.cpython-311.pyc
+| | | | | | | | |_____setuptools_logging.cpython-311.pyc
+| | | | | | | | |____wheelfile.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |______main__.cpython-311.pyc
+| | | | | | | |____cli
+| | | | | | | | |____pack.py
+| | | | | | | | |____tags.py
+| | | | | | | | |____convert.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____pack.cpython-311.pyc
+| | | | | | | | | |____tags.cpython-311.pyc
+| | | | | | | | | |____unpack.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | | |____convert.cpython-311.pyc
+| | | | | | | | |____unpack.py
+| | | | | | | |____bdist_wheel.py
+| | | | | | | |____vendored
+| | | | | | | | |____packaging
+| | | | | | | | | |____tags.py
+| | | | | | | | | |_____musllinux.py
+| | | | | | | | | |____version.py
+| | | | | | | | | |____LICENSE
+| | | | | | | | | |____LICENSE.APACHE
+| | | | | | | | | |______init__.py
+| | | | | | | | | |______pycache__
+| | | | | | | | | | |____markers.cpython-311.pyc
+| | | | | | | | | | |____requirements.cpython-311.pyc
+| | | | | | | | | | |_____musllinux.cpython-311.pyc
+| | | | | | | | | | |____tags.cpython-311.pyc
+| | | | | | | | | | |____utils.cpython-311.pyc
+| | | | | | | | | | |_____tokenizer.cpython-311.pyc
+| | | | | | | | | | |_____manylinux.cpython-311.pyc
+| | | | | | | | | | |_____parser.cpython-311.pyc
+| | | | | | | | | | |_____elffile.cpython-311.pyc
+| | | | | | | | | | |____version.cpython-311.pyc
+| | | | | | | | | | |____specifiers.cpython-311.pyc
+| | | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | | | |_____structures.cpython-311.pyc
+| | | | | | | | | |_____parser.py
+| | | | | | | | | |____LICENSE.BSD
+| | | | | | | | | |____utils.py
+| | | | | | | | | |____requirements.py
+| | | | | | | | | |_____structures.py
+| | | | | | | | | |____markers.py
+| | | | | | | | | |_____manylinux.py
+| | | | | | | | | |_____tokenizer.py
+| | | | | | | | | |____specifiers.py
+| | | | | | | | | |_____elffile.py
+| | | | | | | | |____vendor.txt
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |_____bdist_wheel.py
+| | | | | | | |____wheelfile.py
+| | | | | | | |______main__.py
+| | | | | | |____zipp
+| | | | | | | |____compat
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____py310.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____py310.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____glob.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____glob.py
+| | | | | | |____autocommand-2.2.2.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____top_level.txt
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |______pycache__
+| | | | | | | |____typing_extensions.cpython-311.pyc
+| | | | | | |____more_itertools
+| | | | | | | |______init__.pyi
+| | | | | | | |____more.pyi
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____more.cpython-311.pyc
+| | | | | | | | |____recipes.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____more.py
+| | | | | | | |____recipes.py
+| | | | | | | |____py.typed
+| | | | | | | |____recipes.pyi
+| | | | | | |____backports
+| | | | | | | |____tarfile
+| | | | | | | | |____compat
+| | | | | | | | | |____py38.py
+| | | | | | | | | |______init__.py
+| | | | | | | | | |______pycache__
+| | | | | | | | | | |____py38.cpython-311.pyc
+| | | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | | |______main__.cpython-311.pyc
+| | | | | | | | |______main__.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____autocommand
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____autocommand.cpython-311.pyc
+| | | | | | | | |____automain.cpython-311.pyc
+| | | | | | | | |____errors.cpython-311.pyc
+| | | | | | | | |____autoasync.cpython-311.pyc
+| | | | | | | | |____autoparse.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____automain.py
+| | | | | | | |____errors.py
+| | | | | | | |____autocommand.py
+| | | | | | | |____autoasync.py
+| | | | | | | |____autoparse.py
+| | | | | | |____tomli
+| | | | | | | |_____types.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |_____types.cpython-311.pyc
+| | | | | | | | |_____re.cpython-311.pyc
+| | | | | | | | |_____parser.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |_____parser.py
+| | | | | | | |_____re.py
+| | | | | | | |____py.typed
+| | | | | | |____backports.tarfile-1.2.0.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____top_level.txt
+| | | | | | | |____REQUESTED
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____typeguard-4.3.0.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____entry_points.txt
+| | | | | | | |____top_level.txt
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____packaging-24.2.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____LICENSE.APACHE
+| | | | | | | |____WHEEL
+| | | | | | | |____LICENSE.BSD
+| | | | | | | |____REQUESTED
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____wheel-0.45.1.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____WHEEL
+| | | | | | | |____entry_points.txt
+| | | | | | | |____LICENSE.txt
+| | | | | | | |____REQUESTED
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____zipp-3.19.2.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____top_level.txt
+| | | | | | | |____REQUESTED
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____tomli-2.0.1.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____REQUESTED
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____typing_extensions-4.12.2.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____more_itertools-10.3.0.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____REQUESTED
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____platformdirs-4.2.2.dist-info
+| | | | | | | |____RECORD
+| | | | | | | |____licenses
+| | | | | | | | |____LICENSE
+| | | | | | | |____WHEEL
+| | | | | | | |____REQUESTED
+| | | | | | | |____INSTALLER
+| | | | | | | |____METADATA
+| | | | | | |____typeguard
+| | | | | | | |_____checkers.py
+| | | | | | | |_____suppression.py
+| | | | | | | |_____importhook.py
+| | | | | | | |_____pytest_plugin.py
+| | | | | | | |_____functions.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |_____suppression.cpython-311.pyc
+| | | | | | | | |_____config.cpython-311.pyc
+| | | | | | | | |_____union_transformer.cpython-311.pyc
+| | | | | | | | |_____memo.cpython-311.pyc
+| | | | | | | | |_____decorators.cpython-311.pyc
+| | | | | | | | |_____exceptions.cpython-311.pyc
+| | | | | | | | |_____utils.cpython-311.pyc
+| | | | | | | | |_____pytest_plugin.cpython-311.pyc
+| | | | | | | | |_____checkers.cpython-311.pyc
+| | | | | | | | |_____transformer.cpython-311.pyc
+| | | | | | | | |_____importhook.cpython-311.pyc
+| | | | | | | | |_____functions.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |_____decorators.py
+| | | | | | | |_____memo.py
+| | | | | | | |_____transformer.py
+| | | | | | | |____py.typed
+| | | | | | | |_____union_transformer.py
+| | | | | | | |_____config.py
+| | | | | | | |_____exceptions.py
+| | | | | | | |_____utils.py
+| | | | | | |____typing_extensions.py
+| | | | | | |____platformdirs
+| | | | | | | |____macos.py
+| | | | | | | |____unix.py
+| | | | | | | |____version.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____api.cpython-311.pyc
+| | | | | | | | |____android.cpython-311.pyc
+| | | | | | | | |____windows.cpython-311.pyc
+| | | | | | | | |____macos.cpython-311.pyc
+| | | | | | | | |____unix.cpython-311.pyc
+| | | | | | | | |____version.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |______main__.cpython-311.pyc
+| | | | | | | |____api.py
+| | | | | | | |____android.py
+| | | | | | | |____py.typed
+| | | | | | | |____windows.py
+| | | | | | | |______main__.py
+| | | | | |____discovery.py
+| | | | | |____config
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |____expand.cpython-311.pyc
+| | | | | | | |_____apply_pyprojecttoml.cpython-311.pyc
+| | | | | | | |____setupcfg.cpython-311.pyc
+| | | | | | | |____pyprojecttoml.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | |_____validate_pyproject
+| | | | | | | |____fastjsonschema_exceptions.py
+| | | | | | | |____extra_validations.py
+| | | | | | | |____error_reporting.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____formats.cpython-311.pyc
+| | | | | | | | |____extra_validations.cpython-311.pyc
+| | | | | | | | |____fastjsonschema_validations.cpython-311.pyc
+| | | | | | | | |____fastjsonschema_exceptions.cpython-311.pyc
+| | | | | | | | |____error_reporting.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____NOTICE
+| | | | | | | |____fastjsonschema_validations.py
+| | | | | | | |____formats.py
+| | | | | | |____NOTICE
+| | | | | | |____setupcfg.py
+| | | | | | |____setuptools.schema.json
+| | | | | | |_____apply_pyprojecttoml.py
+| | | | | | |____distutils.schema.json
+| | | | | | |____pyprojecttoml.py
+| | | | | | |____expand.py
+| | | | | |_____static.py
+| | | | | |____warnings.py
+| | | | | |____cli-64.exe
+| | | | | |_____reqs.py
+| | | | | |____tests
+| | | | | | |____test_bdist_deprecations.py
+| | | | | | |____test_build_py.py
+| | | | | | |____test_build_meta.py
+| | | | | | |____test_warnings.py
+| | | | | | |____compat
+| | | | | | | |____py39.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____py39.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____textwrap.py
+| | | | | | |____test_logging.py
+| | | | | | |____test_virtualenv.py
+| | | | | | |____test_namespaces.py
+| | | | | | |____test_shutil_wrapper.py
+| | | | | | |____script-with-bom.py
+| | | | | | |____test_distutils_adoption.py
+| | | | | | |____config
+| | | | | | | |____test_pyprojecttoml_dynamic_deps.py
+| | | | | | | |______init__.py
+| | | | | | | |____test_expand.py
+| | | | | | | |______pycache__
+| | | | | | | | |____test_pyprojecttoml_dynamic_deps.cpython-311.pyc
+| | | | | | | | |____test_expand.cpython-311.pyc
+| | | | | | | | |____test_pyprojecttoml_dynamic_deps.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_setupcfg.cpython-311.pyc
+| | | | | | | | |____test_expand.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_pyprojecttoml.cpython-311.pyc
+| | | | | | | | |____test_apply_pyprojecttoml.cpython-311.pyc
+| | | | | | | | |____test_pyprojecttoml.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_setupcfg.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_apply_pyprojecttoml.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____setupcfg_examples.txt
+| | | | | | | |____test_setupcfg.py
+| | | | | | | |____test_pyprojecttoml.py
+| | | | | | | |____downloads
+| | | | | | | | |____preload.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____preload.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____test_apply_pyprojecttoml.py
+| | | | | | |____test_depends.py
+| | | | | | |____integration
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____helpers.cpython-311.pyc
+| | | | | | | | |____test_pbr.cpython-311.pyc
+| | | | | | | | |____test_pip_install_sdist.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_pip_install_sdist.cpython-311.pyc
+| | | | | | | | |____test_pbr.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____test_pbr.py
+| | | | | | | |____helpers.py
+| | | | | | | |____test_pip_install_sdist.py
+| | | | | | |____test_core_metadata.py
+| | | | | | |____test_extern.py
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |____test_config_discovery.cpython-311.pyc
+| | | | | | | |____test_install_scripts.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_config_discovery.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_manifest.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_virtualenv.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_dist.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_install_scripts.cpython-311.pyc
+| | | | | | | |____test_bdist_deprecations.cpython-311.pyc
+| | | | | | | |____script-with-bom.cpython-311.pyc
+| | | | | | | |____test_bdist_egg.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_shutil_wrapper.cpython-311.pyc
+| | | | | | | |____test_build.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_logging.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_build_meta.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_sdist.cpython-311.pyc
+| | | | | | | |____test_archive_util.cpython-311.pyc
+| | | | | | | |____test_glob.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_build_py.cpython-311.pyc
+| | | | | | | |____test_egg_info.cpython-311.pyc
+| | | | | | | |____test_bdist_egg.cpython-311.pyc
+| | | | | | | |____namespaces.cpython-311.pyc
+| | | | | | | |____test_manifest.cpython-311.pyc
+| | | | | | | |____test_distutils_adoption.cpython-311.pyc
+| | | | | | | |____test_bdist_deprecations.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_scripts.cpython-311.pyc
+| | | | | | | |____test_wheel.cpython-311.pyc
+| | | | | | | |____test_namespaces.cpython-311.pyc
+| | | | | | | |____test_editable_install.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_setopt.cpython-311.pyc
+| | | | | | | |____test_shutil_wrapper.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_build_clib.cpython-311.pyc
+| | | | | | | |____textwrap.cpython-311.pyc
+| | | | | | | |____test_core_metadata.cpython-311.pyc
+| | | | | | | |____test_warnings.cpython-311.pyc
+| | | | | | | |____test_sdist.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_bdist_wheel.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_depends.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____contexts.cpython-311.pyc
+| | | | | | | |____test_bdist_wheel.cpython-311.pyc
+| | | | | | | |____test_find_packages.cpython-311.pyc
+| | | | | | | |____test_windows_wrappers.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____environment.cpython-311.pyc
+| | | | | | | |____test_build_ext.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_core_metadata.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_find_py_modules.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_unicode_utils.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____text.cpython-311.pyc
+| | | | | | | |____test_build_py.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_find_packages.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_depends.cpython-311.pyc
+| | | | | | | |____test_setopt.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_virtualenv.cpython-311.pyc
+| | | | | | | |____fixtures.cpython-311.pyc
+| | | | | | | |____test_dist_info.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_setuptools.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_extern.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_setuptools.cpython-311.pyc
+| | | | | | | |____test_dist_info.cpython-311.pyc
+| | | | | | | |____test_dist.cpython-311.pyc
+| | | | | | | |____test_warnings.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_scripts.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_wheel.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_build_meta.cpython-311.pyc
+| | | | | | | |____test_extern.cpython-311.pyc
+| | | | | | | |____test_build.cpython-311.pyc
+| | | | | | | |____test_develop.cpython-311.pyc
+| | | | | | | |____test_archive_util.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_distutils_adoption.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_unicode_utils.cpython-311.pyc
+| | | | | | | |____test_editable_install.cpython-311.pyc
+| | | | | | | |____test_find_py_modules.cpython-311.pyc
+| | | | | | | |____test_namespaces.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_egg_info.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_glob.cpython-311.pyc
+| | | | | | | |____test_develop.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____mod_with_constant.cpython-311.pyc
+| | | | | | | |____test_windows_wrappers.cpython-311.pyc
+| | | | | | | |____test_logging.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____test_build_clib.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_build_ext.cpython-311.pyc
+| | | | | | |____test_manifest.py
+| | | | | | |____test_build_clib.py
+| | | | | | |____test_setopt.py
+| | | | | | |____test_wheel.py
+| | | | | | |____test_egg_info.py
+| | | | | | |____test_build.py
+| | | | | | |____test_install_scripts.py
+| | | | | | |____test_find_py_modules.py
+| | | | | | |____test_build_ext.py
+| | | | | | |____test_unicode_utils.py
+| | | | | | |____text.py
+| | | | | | |____test_bdist_egg.py
+| | | | | | |____test_glob.py
+| | | | | | |____environment.py
+| | | | | | |____test_config_discovery.py
+| | | | | | |____test_windows_wrappers.py
+| | | | | | |____mod_with_constant.py
+| | | | | | |____test_find_packages.py
+| | | | | | |____contexts.py
+| | | | | | |____test_setuptools.py
+| | | | | | |____test_dist.py
+| | | | | | |____test_scripts.py
+| | | | | | |____test_bdist_wheel.py
+| | | | | | |____test_develop.py
+| | | | | | |____test_editable_install.py
+| | | | | | |____fixtures.py
+| | | | | | |____namespaces.py
+| | | | | | |____test_sdist.py
+| | | | | | |____test_archive_util.py
+| | | | | | |____indexes
+| | | | | | | |____test_links_priority
+| | | | | | | | |____external.html
+| | | | | | | | |____simple
+| | | | | | | | | |____foobar
+| | | | | | | | | | |____index.html
+| | | | | | |____test_dist_info.py
+| | | | | |____gui-64.exe
+| | | | | |____depends.py
+| | | | | |______init__.py
+| | | | | |______pycache__
+| | | | | | |____discovery.cpython-311.pyc
+| | | | | | |____modified.cpython-311.pyc
+| | | | | | |____dist.cpython-311.pyc
+| | | | | | |_____normalization.cpython-311.pyc
+| | | | | | |_____entry_points.cpython-311.pyc
+| | | | | | |____windows_support.cpython-311.pyc
+| | | | | | |____msvc.cpython-311.pyc
+| | | | | | |____namespaces.cpython-311.pyc
+| | | | | | |____launch.cpython-311.pyc
+| | | | | | |____unicode_utils.cpython-311.pyc
+| | | | | | |_____core_metadata.cpython-311.pyc
+| | | | | | |____glob.cpython-311.pyc
+| | | | | | |____logging.cpython-311.pyc
+| | | | | | |____errors.cpython-311.pyc
+| | | | | | |_____path.cpython-311.pyc
+| | | | | | |____warnings.cpython-311.pyc
+| | | | | | |_____importlib.cpython-311.pyc
+| | | | | | |____wheel.cpython-311.pyc
+| | | | | | |_____reqs.cpython-311.pyc
+| | | | | | |____archive_util.cpython-311.pyc
+| | | | | | |____extension.cpython-311.pyc
+| | | | | | |_____static.cpython-311.pyc
+| | | | | | |_____imp.cpython-311.pyc
+| | | | | | |____installer.cpython-311.pyc
+| | | | | | |____monkey.cpython-311.pyc
+| | | | | | |____depends.cpython-311.pyc
+| | | | | | |____build_meta.cpython-311.pyc
+| | | | | | |_____itertools.cpython-311.pyc
+| | | | | | |_____shutil.cpython-311.pyc
+| | | | | | |____version.cpython-311.pyc
+| | | | | | |______init__.cpython-311.pyc
+| | | | | | |_____scripts.cpython-311.pyc
+| | | | | |____installer.py
+| | | | | |____glob.py
+| | | | | |____script.tmpl
+| | | | | |____launch.py
+| | | | | |____extension.py
+| | | | | |_____core_metadata.py
+| | | | | |____unicode_utils.py
+| | | | | |_____itertools.py
+| | | | | |____monkey.py
+| | | | | |____build_meta.py
+| | | | | |____cli.exe
+| | | | | |____errors.py
+| | | | | |____command
+| | | | | | |____build.py
+| | | | | | |____bdist_egg.py
+| | | | | | |____alias.py
+| | | | | | |____build_ext.py
+| | | | | | |____easy_install.py
+| | | | | | |____editable_wheel.py
+| | | | | | |____launcher manifest.xml
+| | | | | | |____install_scripts.py
+| | | | | | |____dist_info.py
+| | | | | | |____install_lib.py
+| | | | | | |____build_py.py
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |____editable_wheel.cpython-311.pyc
+| | | | | | | |____rotate.cpython-311.pyc
+| | | | | | | |____setopt.cpython-311.pyc
+| | | | | | | |____develop.cpython-311.pyc
+| | | | | | | |____saveopts.cpython-311.pyc
+| | | | | | | |____easy_install.cpython-311.pyc
+| | | | | | | |____build_clib.cpython-311.pyc
+| | | | | | | |____dist_info.cpython-311.pyc
+| | | | | | | |____alias.cpython-311.pyc
+| | | | | | | |____bdist_rpm.cpython-311.pyc
+| | | | | | | |____install_lib.cpython-311.pyc
+| | | | | | | |____build_ext.cpython-311.pyc
+| | | | | | | |____test.cpython-311.pyc
+| | | | | | | |____build.cpython-311.pyc
+| | | | | | | |_____requirestxt.cpython-311.pyc
+| | | | | | | |____bdist_egg.cpython-311.pyc
+| | | | | | | |____install.cpython-311.pyc
+| | | | | | | |____bdist_wheel.cpython-311.pyc
+| | | | | | | |____install_egg_info.cpython-311.pyc
+| | | | | | | |____install_scripts.cpython-311.pyc
+| | | | | | | |____egg_info.cpython-311.pyc
+| | | | | | | |____build_py.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____sdist.cpython-311.pyc
+| | | | | | |____sdist.py
+| | | | | | |____test.py
+| | | | | | |____saveopts.py
+| | | | | | |____bdist_rpm.py
+| | | | | | |____build_clib.py
+| | | | | | |____bdist_wheel.py
+| | | | | | |____egg_info.py
+| | | | | | |_____requirestxt.py
+| | | | | | |____install.py
+| | | | | | |____develop.py
+| | | | | | |____rotate.py
+| | | | | | |____install_egg_info.py
+| | | | | | |____setopt.py
+| | | | | |____msvc.py
+| | | | | |_____importlib.py
+| | | | | |_____scripts.py
+| | | | | |_____entry_points.py
+| | | | | |____cli-32.exe
+| | | | | |____gui-32.exe
+| | | | | |____gui.exe
+| | | | | |____dist.py
+| | | | | |_____distutils
+| | | | | | |_____msvccompiler.py
+| | | | | | |_____modified.py
+| | | | | | |____unixccompiler.py
+| | | | | | |____filelist.py
+| | | | | | |____ccompiler.py
+| | | | | | |____compat
+| | | | | | | |____py39.py
+| | | | | | | |______init__.py
+| | | | | | | |____numpy.py
+| | | | | | | |______pycache__
+| | | | | | | | |____numpy.cpython-311.pyc
+| | | | | | | | |____py39.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____archive_util.py
+| | | | | | |____cmd.py
+| | | | | | |____version.py
+| | | | | | |____log.py
+| | | | | | |____util.py
+| | | | | | |____fancy_getopt.py
+| | | | | | |____tests
+| | | | | | | |____test_bdist.py
+| | | | | | | |____test_text_file.py
+| | | | | | | |____test_version.py
+| | | | | | | |____test_install_lib.py
+| | | | | | | |____test_build_py.py
+| | | | | | | |____test_extension.py
+| | | | | | | |____compat
+| | | | | | | | |____py39.py
+| | | | | | | | |______init__.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____py39.cpython-311.pyc
+| | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | |____test_spawn.py
+| | | | | | | |____support.py
+| | | | | | | |____test_bdist_rpm.py
+| | | | | | | |____test_install_data.py
+| | | | | | | |____test_filelist.py
+| | | | | | | |____test_core.py
+| | | | | | | |____test_cmd.py
+| | | | | | | |______init__.py
+| | | | | | | |____test_sysconfig.py
+| | | | | | | |______pycache__
+| | | | | | | | |____test_install_scripts.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_bdist_rpm.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_build_scripts.cpython-311.pyc
+| | | | | | | | |____test_dist.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_file_util.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_install_scripts.cpython-311.pyc
+| | | | | | | | |____unix_compat.cpython-311.pyc
+| | | | | | | | |____test_extension.cpython-311.pyc
+| | | | | | | | |____test_build.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_extension.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_clean.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_sdist.cpython-311.pyc
+| | | | | | | | |____test_archive_util.cpython-311.pyc
+| | | | | | | | |____test_install.cpython-311.pyc
+| | | | | | | | |____test_bdist.cpython-311.pyc
+| | | | | | | | |____test_build_py.cpython-311.pyc
+| | | | | | | | |____test_check.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_modified.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_util.cpython-311.pyc
+| | | | | | | | |____test_util.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_clean.cpython-311.pyc
+| | | | | | | | |____test_build_scripts.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_build_clib.cpython-311.pyc
+| | | | | | | | |____test_version.cpython-311.pyc
+| | | | | | | | |____test_sdist.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_install_headers.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_versionpredicate.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_text_file.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_build_ext.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_log.cpython-311.pyc
+| | | | | | | | |____test_build_py.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_config_cmd.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_config_cmd.cpython-311.pyc
+| | | | | | | | |____test_version.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____support.cpython-311.pyc
+| | | | | | | | |____test_dist.cpython-311.pyc
+| | | | | | | | |____test_dir_util.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_log.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_dir_util.cpython-311.pyc
+| | | | | | | | |____test_bdist.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_filelist.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_core.cpython-311.pyc
+| | | | | | | | |____test_build.cpython-311.pyc
+| | | | | | | | |____test_bdist_dumb.cpython-311.pyc
+| | | | | | | | |____test_install.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_archive_util.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_install_lib.cpython-311.pyc
+| | | | | | | | |____test_core.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_cmd.cpython-311.pyc
+| | | | | | | | |____test_modified.cpython-311.pyc
+| | | | | | | | |____test_install_headers.cpython-311.pyc
+| | | | | | | | |____test_file_util.cpython-311.pyc
+| | | | | | | | |____test_sysconfig.cpython-311.pyc
+| | | | | | | | |____test_text_file.cpython-311.pyc
+| | | | | | | | |____test_cmd.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_install_data.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_spawn.cpython-311.pyc
+| | | | | | | | |____test_sysconfig.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_bdist_dumb.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_install_lib.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_versionpredicate.cpython-311.pyc
+| | | | | | | | |____test_install_data.cpython-311.pyc
+| | | | | | | | |____test_check.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____test_bdist_rpm.cpython-311.pyc
+| | | | | | | | |____test_filelist.cpython-311.pyc
+| | | | | | | | |____test_build_clib.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_spawn.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |____test_build_ext.cpython-311.pyc
+| | | | | | | |____test_util.py
+| | | | | | | |____test_modified.py
+| | | | | | | |____test_build_clib.py
+| | | | | | | |____test_log.py
+| | | | | | | |____test_build.py
+| | | | | | | |____test_install_scripts.py
+| | | | | | | |____test_build_ext.py
+| | | | | | | |____test_dir_util.py
+| | | | | | | |____unix_compat.py
+| | | | | | | |____test_install_headers.py
+| | | | | | | |____test_clean.py
+| | | | | | | |____test_check.py
+| | | | | | | |____test_versionpredicate.py
+| | | | | | | |____test_build_scripts.py
+| | | | | | | |____test_bdist_dumb.py
+| | | | | | | |____test_file_util.py
+| | | | | | | |____test_dist.py
+| | | | | | | |____test_install.py
+| | | | | | | |____test_config_cmd.py
+| | | | | | | |____test_sdist.py
+| | | | | | | |____test_archive_util.py
+| | | | | | |____versionpredicate.py
+| | | | | | |______init__.py
+| | | | | | |____file_util.py
+| | | | | | |____core.py
+| | | | | | |______pycache__
+| | | | | | | |____fancy_getopt.cpython-311.pyc
+| | | | | | | |____cmd.cpython-311.pyc
+| | | | | | | |____dist.cpython-311.pyc
+| | | | | | | |____core.cpython-311.pyc
+| | | | | | | |____filelist.cpython-311.pyc
+| | | | | | | |_____macos_compat.cpython-311.pyc
+| | | | | | | |____spawn.cpython-311.pyc
+| | | | | | | |____dir_util.cpython-311.pyc
+| | | | | | | |____ccompiler.cpython-311.pyc
+| | | | | | | |____zosccompiler.cpython-311.pyc
+| | | | | | | |____text_file.cpython-311.pyc
+| | | | | | | |____versionpredicate.cpython-311.pyc
+| | | | | | | |____debug.cpython-311.pyc
+| | | | | | | |_____msvccompiler.cpython-311.pyc
+| | | | | | | |____errors.cpython-311.pyc
+| | | | | | | |____file_util.cpython-311.pyc
+| | | | | | | |____sysconfig.cpython-311.pyc
+| | | | | | | |_____modified.cpython-311.pyc
+| | | | | | | |____unixccompiler.cpython-311.pyc
+| | | | | | | |____cygwinccompiler.cpython-311.pyc
+| | | | | | | |____archive_util.cpython-311.pyc
+| | | | | | | |____dep_util.cpython-311.pyc
+| | | | | | | |____extension.cpython-311.pyc
+| | | | | | | |____log.cpython-311.pyc
+| | | | | | | |____util.cpython-311.pyc
+| | | | | | | |____version.cpython-311.pyc
+| | | | | | | |_____log.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____cygwinccompiler.py
+| | | | | | |____zosccompiler.py
+| | | | | | |____extension.py
+| | | | | | |____debug.py
+| | | | | | |____spawn.py
+| | | | | | |____text_file.py
+| | | | | | |____errors.py
+| | | | | | |____dep_util.py
+| | | | | | |____command
+| | | | | | | |____build.py
+| | | | | | | |____build_ext.py
+| | | | | | | |____config.py
+| | | | | | | |____clean.py
+| | | | | | | |____check.py
+| | | | | | | |____install_scripts.py
+| | | | | | | |_____framework_compat.py
+| | | | | | | |____install_headers.py
+| | | | | | | |____install_lib.py
+| | | | | | | |____build_py.py
+| | | | | | | |____bdist_dumb.py
+| | | | | | | |______init__.py
+| | | | | | | |______pycache__
+| | | | | | | | |____install_headers.cpython-311.pyc
+| | | | | | | | |_____framework_compat.cpython-311.pyc
+| | | | | | | | |____check.cpython-311.pyc
+| | | | | | | | |____build_clib.cpython-311.pyc
+| | | | | | | | |____config.cpython-311.pyc
+| | | | | | | | |____install_data.cpython-311.pyc
+| | | | | | | | |____bdist_rpm.cpython-311.pyc
+| | | | | | | | |____install_lib.cpython-311.pyc
+| | | | | | | | |____build_ext.cpython-311.pyc
+| | | | | | | | |____build.cpython-311.pyc
+| | | | | | | | |____install.cpython-311.pyc
+| | | | | | | | |____install_egg_info.cpython-311.pyc
+| | | | | | | | |____bdist_dumb.cpython-311.pyc
+| | | | | | | | |____install_scripts.cpython-311.pyc
+| | | | | | | | |____clean.cpython-311.pyc
+| | | | | | | | |____build_py.cpython-311.pyc
+| | | | | | | | |____bdist.cpython-311.pyc
+| | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |____build_scripts.cpython-311.pyc
+| | | | | | | | |____sdist.cpython-311.pyc
+| | | | | | | |____sdist.py
+| | | | | | | |____bdist.py
+| | | | | | | |____build_scripts.py
+| | | | | | | |____bdist_rpm.py
+| | | | | | | |____build_clib.py
+| | | | | | | |____install.py
+| | | | | | | |____install_egg_info.py
+| | | | | | | |____install_data.py
+| | | | | | |____dir_util.py
+| | | | | | |____compilers
+| | | | | | | |____C
+| | | | | | | | |____unix.py
+| | | | | | | | |____zos.py
+| | | | | | | | |____tests
+| | | | | | | | | |____test_unix.py
+| | | | | | | | | |____test_cygwin.py
+| | | | | | | | | |______pycache__
+| | | | | | | | | | |____test_cygwin.cpython-311.pyc
+| | | | | | | | | | |____test_msvc.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | | | |____test_unix.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | | | |____test_unix.cpython-311.pyc
+| | | | | | | | | | |____test_cygwin.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | | | |____test_mingw.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | | | |____test_base.cpython-311.pyc
+| | | | | | | | | | |____test_msvc.cpython-311.pyc
+| | | | | | | | | | |____test_mingw.cpython-311.pyc
+| | | | | | | | | | |____test_base.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | | |____test_mingw.py
+| | | | | | | | | |____test_base.py
+| | | | | | | | | |____test_msvc.py
+| | | | | | | | |______pycache__
+| | | | | | | | | |____zos.cpython-311.pyc
+| | | | | | | | | |____base.cpython-311.pyc
+| | | | | | | | | |____msvc.cpython-311.pyc
+| | | | | | | | | |____cygwin.cpython-311.pyc
+| | | | | | | | | |____errors.cpython-311.pyc
+| | | | | | | | | |____unix.cpython-311.pyc
+| | | | | | | | |____cygwin.py
+| | | | | | | | |____errors.py
+| | | | | | | | |____msvc.py
+| | | | | | | | |____base.py
+| | | | | | |____sysconfig.py
+| | | | | | |_____macos_compat.py
+| | | | | | |____dist.py
+| | | | | | |_____log.py
+| | | | | |____wheel.py
+| | | | | |____gui-arm64.exe
+| | | | | |____namespaces.py
+| | | | | |____script (dev).tmpl
+| | | | | |_____shutil.py
+| | | | |____pkg_resources
+| | | | | |____tests
+| | | | | | |____test_resources.py
+| | | | | | |____test_integration_zope_interface.py
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |____test_working_set.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_working_set.cpython-311.pyc
+| | | | | | | |____test_markers.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_integration_zope_interface.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_resources.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_pkg_resources.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |____test_pkg_resources.cpython-311.pyc
+| | | | | | | |____test_find_distributions.cpython-311.pyc
+| | | | | | | |____test_markers.cpython-311.pyc
+| | | | | | | |____test_integration_zope_interface.cpython-311.pyc
+| | | | | | | |____test_resources.cpython-311.pyc
+| | | | | | | |____test_find_distributions.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____test_markers.py
+| | | | | | |____test_working_set.py
+| | | | | | |____test_find_distributions.py
+| | | | | | |____data
+| | | | | | | |____my-test-package-zip
+| | | | | | | | |____my-test-package.zip
+| | | | | | | |____my-test-package_zipped-egg
+| | | | | | | | |____my_test_package-1.0-py3.7.egg
+| | | | | | | |____my-test-package_unpacked-egg
+| | | | | | | | |____my_test_package-1.0-py3.7.egg
+| | | | | | | | | |____EGG-INFO
+| | | | | | | | | | |____PKG-INFO
+| | | | | | | | | | |____zip-safe
+| | | | | | | | | | |____SOURCES.txt
+| | | | | | | | | | |____top_level.txt
+| | | | | | | | | | |____dependency_links.txt
+| | | | | | | |____my-test-package-source
+| | | | | | | | |______pycache__
+| | | | | | | | | |____setup.cpython-311.pyc
+| | | | | | | | |____setup.py
+| | | | | | | | |____setup.cfg
+| | | | | | |____test_pkg_resources.py
+| | | | | |______init__.py
+| | | | | |______pycache__
+| | | | | | |______init__.cpython-311.pyc
+| | | | | |____py.typed
+| | | | | |____api_tests.txt
+| | | | |_____distutils_hack
+| | | | | |______init__.py
+| | | | | |______pycache__
+| | | | | | |____override.cpython-311.pyc
+| | | | | | |______init__.cpython-311.pyc
+| | | | | |____override.py
+| | | | |____iniconfig
+| | | | | |_____version.py
+| | | | | |______init__.py
+| | | | | |______pycache__
+| | | | | | |_____version.cpython-311.pyc
+| | | | | | |____exceptions.cpython-311.pyc
+| | | | | | |_____parse.cpython-311.pyc
+| | | | | | |______init__.cpython-311.pyc
+| | | | | |_____parse.py
+| | | | | |____py.typed
+| | | | | |____exceptions.py
+| | | | |____iniconfig-2.1.0.dist-info
+| | | | | |____RECORD
+| | | | | |____licenses
+| | | | | | |____LICENSE
+| | | | | |____WHEEL
+| | | | | |____INSTALLER
+| | | | | |____METADATA
+| | | | |____py.py
+| | | | |_____pytest
+| | | | | |____skipping.py
+| | | | | |____logging.py
+| | | | | |____unittest.py
+| | | | | |____runner.py
+| | | | | |____helpconfig.py
+| | | | | |____pastebin.py
+| | | | | |____compat.py
+| | | | | |_____version.py
+| | | | | |____terminal.py
+| | | | | |____config
+| | | | | | |____compat.py
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |____findpaths.cpython-311.pyc
+| | | | | | | |____compat.cpython-311.pyc
+| | | | | | | |____argparsing.cpython-311.pyc
+| | | | | | | |____exceptions.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____findpaths.py
+| | | | | | |____exceptions.py
+| | | | | | |____argparsing.py
+| | | | | |____tracemalloc.py
+| | | | | |____warnings.py
+| | | | | |____pytester_assertions.py
+| | | | | |____deprecated.py
+| | | | | |____recwarn.py
+| | | | | |____mark
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |____expression.cpython-311.pyc
+| | | | | | | |____structures.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____structures.py
+| | | | | | |____expression.py
+| | | | | |____tmpdir.py
+| | | | | |______init__.py
+| | | | | |____stash.py
+| | | | | |_____code
+| | | | | | |____code.py
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |____source.cpython-311.pyc
+| | | | | | | |____code.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____source.py
+| | | | | |______pycache__
+| | | | | | |____pathlib.cpython-311.pyc
+| | | | | | |____freeze_support.cpython-311.pyc
+| | | | | | |____tmpdir.cpython-311.pyc
+| | | | | | |____stepwise.cpython-311.pyc
+| | | | | | |____main.cpython-311.pyc
+| | | | | | |____capture.cpython-311.pyc
+| | | | | | |____setupplan.cpython-311.pyc
+| | | | | | |____warning_types.cpython-311.pyc
+| | | | | | |____setuponly.cpython-311.pyc
+| | | | | | |____compat.cpython-311.pyc
+| | | | | | |____skipping.cpython-311.pyc
+| | | | | | |____unittest.cpython-311.pyc
+| | | | | | |____recwarn.cpython-311.pyc
+| | | | | | |____logging.cpython-311.pyc
+| | | | | | |____cacheprovider.cpython-311.pyc
+| | | | | | |____unraisableexception.cpython-311.pyc
+| | | | | | |____scope.cpython-311.pyc
+| | | | | | |____debugging.cpython-311.pyc
+| | | | | | |____pytester.cpython-311.pyc
+| | | | | | |____runner.cpython-311.pyc
+| | | | | | |____fixtures.cpython-311.pyc
+| | | | | | |____faulthandler.cpython-311.pyc
+| | | | | | |____timing.cpython-311.pyc
+| | | | | | |____legacypath.cpython-311.pyc
+| | | | | | |____deprecated.cpython-311.pyc
+| | | | | | |____warnings.cpython-311.pyc
+| | | | | | |____outcomes.cpython-311.pyc
+| | | | | | |____nodes.cpython-311.pyc
+| | | | | | |____junitxml.cpython-311.pyc
+| | | | | | |_____version.cpython-311.pyc
+| | | | | | |____python_api.cpython-311.pyc
+| | | | | | |____helpconfig.cpython-311.pyc
+| | | | | | |____hookspec.cpython-311.pyc
+| | | | | | |____threadexception.cpython-311.pyc
+| | | | | | |____terminal.cpython-311.pyc
+| | | | | | |____monkeypatch.cpython-311.pyc
+| | | | | | |____pastebin.cpython-311.pyc
+| | | | | | |____raises.cpython-311.pyc
+| | | | | | |____python.cpython-311.pyc
+| | | | | | |____tracemalloc.cpython-311.pyc
+| | | | | | |____reports.cpython-311.pyc
+| | | | | | |_____argcomplete.cpython-311.pyc
+| | | | | | |____pytester_assertions.cpython-311.pyc
+| | | | | | |____doctest.cpython-311.pyc
+| | | | | | |______init__.cpython-311.pyc
+| | | | | | |____stash.cpython-311.pyc
+| | | | | |____debugging.py
+| | | | | |____assertion
+| | | | | | |____truncate.py
+| | | | | | |____util.py
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |____truncate.cpython-311.pyc
+| | | | | | | |____util.cpython-311.pyc
+| | | | | | | |____rewrite.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____rewrite.py
+| | | | | |____python_api.py
+| | | | | |_____argcomplete.py
+| | | | | |____unraisableexception.py
+| | | | | |____capture.py
+| | | | | |____hookspec.py
+| | | | | |____timing.py
+| | | | | |_____io
+| | | | | | |____wcwidth.py
+| | | | | | |____saferepr.py
+| | | | | | |____terminalwriter.py
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |____wcwidth.cpython-311.pyc
+| | | | | | | |____saferepr.cpython-311.pyc
+| | | | | | | |____terminalwriter.cpython-311.pyc
+| | | | | | | |____pprint.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____pprint.py
+| | | | | |____pytester.py
+| | | | | |____faulthandler.py
+| | | | | |____outcomes.py
+| | | | | |____stepwise.py
+| | | | | |____junitxml.py
+| | | | | |____python.py
+| | | | | |____reports.py
+| | | | | |____py.typed
+| | | | | |____doctest.py
+| | | | | |____setuponly.py
+| | | | | |____raises.py
+| | | | | |____nodes.py
+| | | | | |____threadexception.py
+| | | | | |____main.py
+| | | | | |_____py
+| | | | | | |____error.py
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |____path.cpython-311.pyc
+| | | | | | | |____error.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
+| | | | | | |____path.py
+| | | | | |____monkeypatch.py
+| | | | | |____legacypath.py
+| | | | | |____setupplan.py
+| | | | | |____pathlib.py
+| | | | | |____scope.py
+| | | | | |____freeze_support.py
+| | | | | |____fixtures.py
+| | | | | |____cacheprovider.py
+| | | | | |____warning_types.py
+|____project_structure_file_and_folder.py
+|____common
+| |____types
+| | |____src
+| | | |____test
+| | | | |____error
+| | | |____main
+| | | | |____error
+|____.dockerignore
+|____.gitignore
+|____.git
+| |____config
+| |____objects
+| | |____9e
+| | | |____63c6cf042b5245d1f1ecfa0462256b12e292d7
+| | |____6a
+| | | |____41e691618b1a3c9863e1a608a4bd532bad341c
+| | |____33
+| | | |____0873a3b3c3af006967ebfd4b7d2c102bcd9662
+| | |____b2
+| | | |____9b61de542e7edc0d1d7befb62529d8cb8b75d9
+| | |____e5
+| | | |____54e636613ce322403f2f4886b26441fdf2ba43
+| | |____c9
+| | | |____4e238049107cc52b9bf24eee6aee59acfbca11
+| | |____e3
+| | | |____329a3a8727f035cfb3cf79bb4336fd6b76522b
+| | |____ec
+| | | |____def1a84f82abe1c878673a7116175e7e31a92a
+| | |____20
+| | | |____03669ba46e2bc23d7c4c8774021b3d9ed335cb
+| | |____pack
+| | |____80
+| | | |____05841ffce472d8de7a30ae3904c203f70ac0dc
+| | |____7b
+| | | |____7da3d3916b8e707d7466d04cc1497e77f6680f
+| | |____81
+| | | |____709890508719fd0098f1658e119d48063a1d3b
+| | |____44
+| | | |____c79beca78e20d0537a48bd2852137d565e51ba
+| | |____43
+| | | |____00b64fca4f97e044418215cef6201cbe68e886
+| | |____38
+| | | |____eb7ee47a1c725b8eeac12768d41f322cc9ce12
+| | |____info
+| | |____65
+| | | |____6e2227457fd38d4cdeba9c52f76095df6c1d9e
+| | |____0f
+| | | |____b06ce4744758216fdfa5677294bf063081e5c7
+| | |____d3
+| | | |____1dfc00a8fb99caf507493bfe77ce74d056c6fc
+| | |____ba
+| | | |____57bf1b44b8eb527a4cca233e79056283843714
+| | |____e6
+| | | |____9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+| | |____f9
+| | | |____d5a2606ebcff06d7a8b5603c25424a454fd251
+| | |____e9
+| | | |____241e9bf2edfb8cd094bc7c0d18cff120b65fc2
+| | | |____3984975ac44a462c90d9ef8978a1991b025c2a
+| | |____48
+| | | |____ac56e0b26dad6504f59def8213431518817de8
+| | | |____ea52e602e5afaba25c0f925ff447528eb639a6
+| | |____71
+| | | |____17072f18467c6fb1c752ecb2e9d1e6163f6cd7
+| | |____82
+| | | |____5173592b8cb78678c2ad3a820c88a8a889ff5d
+| | |____78
+| | | |____e66e4d365c54d20c0a6e931a2f75fa2ddc330c
+| |____HEAD
+| |____info
+| | |____exclude
+| |____logs
+| | |____HEAD
+| | |____refs
+| | | |____heads
+| | | | |____main
+| |____description
+| |____hooks
+| | |____commit-msg.sample
+| | |____pre-rebase.sample
+| | |____pre-commit.sample
+| | |____applypatch-msg.sample
+| | |____fsmonitor-watchman.sample
+| | |____pre-receive.sample
+| | |____prepare-commit-msg.sample
+| | |____post-update.sample
+| | |____pre-merge-commit.sample
+| | |____pre-applypatch.sample
+| | |____pre-push.sample
+| | |____update.sample
+| | |____push-to-checkout.sample
+| |____refs
+| | |____heads
+| | | |____main
+| | |____tags
+| |____index
+| |____COMMIT_EDITMSG
+|____.vscode
+| |____Microsoft.PowerShell_profile.ps1
+| |____settings.json
+|____tree.txt
