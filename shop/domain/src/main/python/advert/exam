@@ -1,0 +1,36 @@
+При создании агрегата Объявление
+этаж ограничен положительным числом,
+в случае ноля или отрицательного вызвывается исключение.
+Правильно что класс номер_этажа отвечает за проверку введенного значения,
+или агрегат Объявление должен проверять все инварианты?
+вот кусочек кода:
+Advert.create(
+    contact = Contact('+7...'),
+    address = Address('street', 'house'),
+    floor_count = FloorCount.createFromStr('-1'),
+    ...)
+class FloorCount(Count):
+    @classmethod
+    def create(cls, value: Count):
+        if not value.more_zero():
+            raise FloorCountLessOrEqualZero()
+        return FloorCount(value)
+а если создаваемый этаж это допустимое число(строка),
+ведь создается из строки, то при вызове value()
+строка преобразуется в число, то есть:
+@classmethod
+    def createFromStr(cls, value: str):
+        return FloorCount.create(
+            StringAsInt.create(value))
+
+class Count(ValueObject)
+    def value(self)-> int:
+        return self._value
+
+class StringAsInt(Count)
+    try:
+        return int(self._value)
+    except ValueError:
+        raise StringAsIntGetValueError (f"Не возможно преобразовать {self._value} в число")
+
+
