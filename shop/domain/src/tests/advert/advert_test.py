@@ -1,13 +1,13 @@
 from shop.domain.src.main.python.advert.advert import Advert
-from shop.domain.src.main.python.advert.advert_types import Contact, Address
+from shop.domain.src.main.python.advert.advert_types import Contact, Address, Count, FloorCount
 
 
 class TestAdvert():
-    def test_initial(self):
+    def test_create(self):
         assert  Advert.create(
                     contact = Contact('+7...'),
                     address = Address('street', 'house'),
-                    floor_count = '9',
+                    floor_count = FloorCount.createFromStr('-1'),
                     room_count = '2',
                     area = '54.0, 56.1',
                     interior = 'евро',

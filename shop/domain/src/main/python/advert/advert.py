@@ -1,5 +1,5 @@
-
-from shop.domain.src.main.python.advert.advert_types import Contact, Address
+from shop.domain.src.main.python.advert.advert_types import Contact, Address, Count, FloorCount, \
+    FloorCountLessOrEqualZero
 
 
 class AdvertEqualsException(Exception):pass
@@ -8,7 +8,7 @@ class AdvertEqualsException(Exception):pass
 class Advert:
     _contact: Contact
     _address: Address
-    _floor_count: str
+    _floor_count: FloorCount
     _room_count: str
     _area: str
     _interior: str
@@ -20,7 +20,7 @@ class Advert:
     def __init__(self,
                     contact: Contact,
                     address: str,
-                    floor_count: str,
+                    floor_count: FloorCount,
                     room_count: str,
                     area: str,
                     interior: str,
@@ -44,7 +44,7 @@ class Advert:
     def create (cls,
                 contact: Contact,
                 address: Address,
-                floor_count: str,
+                floor_count: FloorCount,
                 room_count: str,
                 area: str,
                 interior: str,
@@ -53,6 +53,8 @@ class Advert:
                 photos: str,
                 source_advert: str
                 ) -> 'Advert':
+        if not floor_count.more_zero():
+            raise FloorCountLessOrEqualZero()
         return Advert(
             contact,
             address,         
