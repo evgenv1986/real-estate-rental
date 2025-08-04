@@ -34,8 +34,7 @@ class FloorCount(Count):
         return FloorCount.create(StringAsInt.create(value))
 
     def more_zero(self):
-        val = self.value.value()
-        return self.value.value() > 0
+        return self.more_zero() > 0
 
 class FloorCountException(Exception):
     def __init__(self, message: str):pass
