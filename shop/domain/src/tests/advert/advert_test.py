@@ -8,7 +8,7 @@ class TestAdvert():
                     contact = Contact('+7...'),
                     address = Address('street', 'house'),
                     floor_count = FloorCount.createFromStr('-1'),
-                    room_count = '2',
+                    room_count = RoomCount('2'),
                     area = '54.0, 56.1',
                     interior = 'евро',
                     flat_floor = '2',

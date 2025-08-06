@@ -5,7 +5,7 @@ from shop.domain.src.main.python.advert.advert_types import Contact, Address, Co
 class AdvertEqualsException(Exception):pass
 
 
-class Advert:
+class Advert (AggregateRoot):
     _contact: Contact
     _address: Address
     _floor_count: FloorCount

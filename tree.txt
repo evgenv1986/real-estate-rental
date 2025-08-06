@@ -1,4 +1,5 @@
 .
+|____.DS_Store
 |____.pytest_cache
 | |____CACHEDIR.TAG
 | |____README.md
@@ -9,8 +10,15 @@
 | | | |____lastfailed
 | | | |____stepwise
 |____shop
+| |______init__.py
+| |______pycache__
+| | |______init__.cpython-311.pyc
 | |____domain
+| | |______init__.py
+| | |______pycache__
+| | | |______init__.cpython-311.pyc
 | | |____src
+| | | |____.DS_Store
 | | | |____tests
 | | | | |____pytest.ini
 | | | | |____requirements.txt
@@ -27,9 +35,11 @@
 | | | | | |______init__.py
 | | | | | |______pycache__
 | | | | | | |____advert_test.cpython-311-pytest-8.4.1.pyc
+| | | | | | |____floor_count_test.cpython-311-pytest-8.4.1.pyc
 | | | | | | |____advert_test.cpython-311-pytest-8.3.5.pyc
 | | | | | | |______init__.cpython-311.pyc
 | | | | | |____advert_test.py
+| | | | | |____floor_count_test.py
 | | | | |____pyproject.toml
 | | | | |______init__.py
 | | | | |______pycache__
@@ -1682,15 +1692,27 @@
 | | | | | | | | | |____fixtures.py
 | | | | | | | | | |____cacheprovider.py
 | | | | | | | | | |____warning_types.py
+| | | |______init__.py
+| | | |______pycache__
+| | | | |______init__.cpython-311.pyc
 | | | |____main
 | | | | |____python
 | | | | | |____.DS_Store
 | | | | | |____advert
 | | | | | | |____advert_types.py
+| | | | | | |______init__.py
 | | | | | | |______pycache__
 | | | | | | | |____advert_types.cpython-311.pyc
 | | | | | | | |____advert.cpython-311.pyc
+| | | | | | | |______init__.cpython-311.pyc
 | | | | | | |____advert.py
+| | | | | | |____exam
+| | | | | |______init__.py
+| | | | | |______pycache__
+| | | | | | |______init__.cpython-311.pyc
+| | | | |______init__.py
+| | | | |______pycache__
+| | | | | |______init__.cpython-311.pyc
 |____env
 | |____bin
 | | |____Activate.ps1
@@ -1800,6 +1822,13 @@
 | | | | | | | | | | |____LICENSE
 | | | | | |____WHEEL
 | | | | | |____entry_points.txt
+| | | | | |____top_level.txt
+| | | | | |____REQUESTED
+| | | | | |____INSTALLER
+| | | | | |____METADATA
+| | | | |____address-0.1.1.dist-info
+| | | | | |____RECORD
+| | | | | |____WHEEL
 | | | | | |____top_level.txt
 | | | | | |____REQUESTED
 | | | | | |____INSTALLER
@@ -3453,6 +3482,15 @@
 | | | | | |______pip-runner__.py
 | | | | | |______main__.py
 | | | | |____distutils-precedence.pth
+| | | | |____address
+| | | | | |____address.py
+| | | | | |____address_list.py
+| | | | | |______init__.py
+| | | | | |______pycache__
+| | | | | | |______init__.cpython-311.pyc
+| | | | | |____cities.csv
+| | | | | |____streets.csv
+| | | | | |____suffixes.csv
 | | | | |____packaging-25.0.dist-info
 | | | | | |____RECORD
 | | | | | |____licenses
@@ -3892,19 +3930,31 @@
 | | | | | | | |_____functions.py
 | | | | | | | |______init__.py
 | | | | | | | |______pycache__
+| | | | | | | | |_____config.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |_____importhook.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |_____decorators.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |_____utils.cpython-311-pytest-8.4.1.pyc
 | | | | | | | | |_____suppression.cpython-311.pyc
 | | | | | | | | |_____config.cpython-311.pyc
+| | | | | | | | |_____checkers.cpython-311-pytest-8.4.1.pyc
 | | | | | | | | |_____union_transformer.cpython-311.pyc
 | | | | | | | | |_____memo.cpython-311.pyc
 | | | | | | | | |_____decorators.cpython-311.pyc
+| | | | | | | | |_____exceptions.cpython-311-pytest-8.4.1.pyc
 | | | | | | | | |_____exceptions.cpython-311.pyc
 | | | | | | | | |_____utils.cpython-311.pyc
 | | | | | | | | |_____pytest_plugin.cpython-311.pyc
 | | | | | | | | |_____checkers.cpython-311.pyc
+| | | | | | | | |_____suppression.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |_____functions.cpython-311-pytest-8.4.1.pyc
 | | | | | | | | |_____transformer.cpython-311.pyc
+| | | | | | | | |_____pytest_plugin.cpython-311-pytest-8.4.1.pyc
+| | | | | | | | |______init__.cpython-311-pytest-8.4.1.pyc
 | | | | | | | | |_____importhook.cpython-311.pyc
+| | | | | | | | |_____memo.cpython-311-pytest-8.4.1.pyc
 | | | | | | | | |_____functions.cpython-311.pyc
 | | | | | | | | |______init__.cpython-311.pyc
+| | | | | | | | |_____transformer.cpython-311-pytest-8.4.1.pyc
 | | | | | | | |_____decorators.py
 | | | | | | | |_____memo.py
 | | | | | | | |_____transformer.py
@@ -4737,110 +4787,297 @@
 | | | | | |____warning_types.py
 |____common
 | |____types
+| | |____.DS_Store
 | | |______init__.py
+| | |______pycache__
+| | | |______init__.cpython-311.pyc
 | | |____src
+| | | |____.DS_Store
 | | | |____test
-| | | | |____error
-| | | |______init__.py
-| | | |____main
 | | | | |______init__.py
+| | | | |______pycache__
+| | | | | |______init__.cpython-311.pyc
+| | | | |____common
+| | | | | |____.pytest_cache
+| | | | | | |____CACHEDIR.TAG
+| | | | | | |____README.md
+| | | | | | |____.gitignore
+| | | | | | |____v
+| | | | | | | |____cache
+| | | | | | | | |____nodeids
+| | | | | | | | |____lastfailed
+| | | | | |______init__.py
+| | | | | |______pycache__
+| | | | | | |____Count_test.cpython-311-pytest-8.4.1.pyc
+| | | | | | |______init__.cpython-311.pyc
+| | | | | |____Count_test.py
 | | | | |____error
+| | | | | |______init__.py
+| | | |______init__.py
+| | | |______pycache__
+| | | | |______init__.cpython-311.pyc
+| | | |____main
+| | | | |____.DS_Store
+| | | | |______init__.py
+| | | | |______pycache__
+| | | | | |______init__.cpython-311.pyc
+| | | | |____common
+| | | | | |____.DS_Store
+| | | | | |______pycache__
+| | | | | |____Count.py
+| | | | |____error
+| | | | | |____base
+| | | | | | |____.pytest_cache
+| | | | | | | |____CACHEDIR.TAG
+| | | | | | | |____README.md
+| | | | | | | |____.gitignore
+| | | | | | | |____v
+| | | | | | | | |____cache
+| | | | | | | | | |____nodeids
+| | | | | | | | | |____lastfailed
+| | | | | | |______init__.py
+| | | | | | |______pycache__
+| | | | | | | |____valueObject_test.cpython-311-pytest-8.4.1.pyc
+| | | | | | | |______init__.cpython-311.pyc
 | | | | |____base
 | | | | | |______init__.py
 | | | | | |______pycache__
-| | | | | | |____valueObject.cpython-311.pyc
-| | | | | |____valueObject.py
+| | | | | | |______init__.cpython-311.pyc
+| | | | | |____ValueObject.py
+| |____.DS_Store
 | |______init__.py
+| |______pycache__
+| | |______init__.cpython-311.pyc
 |____.dockerignore
 |____.gitignore
 |____.git
 | |____config
 | |____objects
+| | |____0c
+| | | |____a2905788ae52f3a45ae5aeba18a3cb65a5e999
 | | |____68
 | | | |____955c05c07587e1f50e32002f10ea7dc0d277e4
+| | |____57
+| | | |____b457fcf1368dcaffc8d36958d231e85ca89aed
+| | | |____912c64d90397969b106b969155708cbbab506f
+| | |____6f
+| | | |____5ff691d0eeb3feb78a27c1d9c6c4a278a3b11f
+| | |____9b
+| | | |____6a5799a3adfc490552ed349b2b17ab6e1e2161
 | | |____9e
 | | | |____63c6cf042b5245d1f1ecfa0462256b12e292d7
 | | |____6a
 | | | |____41e691618b1a3c9863e1a608a4bd532bad341c
+| | |____69
+| | | |____42e7fbec18108421036d91c675ca7de92b103b
+| | | |____89b06678fe3b97939bb5ad596af80421d38f9a
 | | |____51
+| | | |____53aae07fcf120416a5fdfbc6de788970ba6f52
 | | | |____a150db214e38f94b51dc357809e3b9291800ac
 | | |____58
 | | | |____535e74c3a9351248a2179c734a2d0d1752870c
+| | |____67
+| | | |____1e468a3d8d82c2b232029f7ae63c0f4b33c65a
 | | |____60
 | | | |____424612500aa703ddfca3625475f14962e9a839
 | | |____33
 | | | |____0873a3b3c3af006967ebfd4b7d2c102bcd9662
+| | |____05
+| | | |____6bea5f2ef908617c24d11b13aab00a8a2d040a
+| | |____9d
+| | | |____1dcfdaf1a6857c5f83dc27019c7600e1ffaff8
+| | |____a4
+| | | |____19b65009e8a103599a0a45105ea19915717e4d
 | | |____b2
 | | | |____a16a613a83bbf49eee68e0c5fbd78f2de85183
 | | | |____9b61de542e7edc0d1d7befb62529d8cb8b75d9
 | | | |____4b0c12c47b0e012485faae08eecf8724e6c55c
+| | |____bb
+| | | |____e6bc4bc400f0176d3667babeb1313ed248ae20
+| | |____a5
+| | | |____aab365a14ff1df7c3ab01981337ee3c394b278
+| | | |____76057831ab52d673fb3b3fc29de88528a2100e
+| | | |____0063a8e8a2296cd0251d7c425a828ba1e00f14
+| | |____d8
+| | | |____09501c386fda1365c0115c0ed93e5a2c220af4
+| | | |____0828bb4e3d0145d597f5d69c8090f7e0f99198
 | | |____e5
 | | | |____54e636613ce322403f2f4886b26441fdf2ba43
+| | | |____f776808b9e76ff42e5fd35f14f28dc60d7652a
+| | |____f4
+| | | |____f6e6a2ed878f5c3a06eb604b9ab6ad02cef402
+| | | |____c1265c4798ab7186f4f54fdbcf4de9948920a7
+| | |____f3
+| | | |____0ca5b9c8f111cbfe195df205eb50140f437ced
+| | | |____5477edec40a852599584fd11abb23f541fbcde
+| | |____eb
+| | | |____d94c47bd4fd6a5a51d2e518a3cc5bde619f242
+| | |____c0
+| | | |____7f3647ac7abf217044c6c41082707ad342f1f3
 | | |____c9
+| | | |____6a292db1f568ddfdf9aae47bc2fac77dd96894
 | | | |____4e238049107cc52b9bf24eee6aee59acfbca11
+| | |____fd
+| | | |____cf8c1b3f4eb070f44fa5941f6bb151e708b9ec
+| | |____f2
+| | | |____2a543ddb70b8b5639d02da1e1fff59f1ac4e3f
+| | | |____0c6d1862bd7dcde804abc1ccf92c1219ab384c
 | | |____f5
 | | | |____bccc2a104c90bf2f900bd2ce56491bcc13f554
 | | |____e3
+| | | |____a5c5acd8cf50b17f4accedc1933c7d1a21c0b2
 | | | |____329a3a8727f035cfb3cf79bb4336fd6b76522b
+| | |____ed
+| | | |____a48ec410894204f49cb81f3e65bf95a970ba3b
+| | |____c1
+| | | |____8ea0c0e68ebd47095212606b44a26bed057524
 | | |____ec
+| | | |____f284d46f0a8bf464bc18e03d726525ec80b31b
 | | | |____def1a84f82abe1c878673a7116175e7e31a92a
 | | |____20
+| | | |____5b2560a1c1c14b917afdc7b79a484d51ae82ea
 | | | |____03669ba46e2bc23d7c4c8774021b3d9ed335cb
 | | |____4b
 | | | |____4a9b3271e7122be2c2227bfd998427d8f34101
 | | |____pack
+| | |____11
+| | | |____d0c6edd0feccdc84d4981a5b89660b6004410d
 | | |____16
 | | | |____7e6083e969c3cbbf90c5956e4c9c5c1fdcce43
+| | |____89
+| | | |____1ae9c5fbbc006d8bf3194d968735376470f344
+| | |____1f
+| | | |____d522d4315048efa3bbffbd059b4fd2a31ef169
 | | |____80
 | | | |____d9e27dbbfd73f8d5bc0dbf490c868d12063d03
 | | | |____05841ffce472d8de7a30ae3904c203f70ac0dc
+| | |____74
+| | | |____811c7245d823e050ca8d245de98cbeb7d9f604
+| | |____1a
+| | | |____5c7e1558fc133c0028f0d4d02147303d8a61a3
 | | |____7b
 | | | |____7da3d3916b8e707d7466d04cc1497e77f6680f
+| | |____8f
+| | | |____6327a3e304409c2afbdb747d54daa0e2fdc828
+| | |____8a
+| | | |____1cec8b14edbc356a0e80210cc611f32f8dc9a9
+| | |____10
+| | | |____86fe9a8bf06b05b92855ca65acc35dfd5b89e1
+| | |____75
+| | | |____5265aca30e222a8061a9112517ea58c49d3af1
 | | |____81
+| | | |____aae4462bc4ab7fef8614b86481c47711692df3
+| | | |____8c88893c59ba088abec801d44d2693ac18803f
 | | | |____709890508719fd0098f1658e119d48063a1d3b
+| | | |____bfca9d99065283e42cfa0440bf4f31d02f52be
+| | |____86
+| | | |____55d0fd1b52d1ce71bb3932df53133da97fa110
 | | |____44
+| | | |____1b39c599fff9e88416ea7cf37ed8a1ba410be0
 | | | |____c79beca78e20d0537a48bd2852137d565e51ba
 | | |____43
 | | | |____00b64fca4f97e044418215cef6201cbe68e886
 | | |____38
+| | | |____f2576680409ef143ebba6a7ff44d36468ba853
 | | | |____eb7ee47a1c725b8eeac12768d41f322cc9ce12
 | | |____6e
 | | | |____f894a566aee0a7fae19e82948f05ecd39544c0
+| | | |____ebb112ae2110a76378be2a96a9b40a646ef57c
+| | | |____efd124d00d1751ca100bdc144ce70e05fc5d20
+| | |____5c
+| | | |____937ed7fbd6b13617a1f521433bf5561cad077e
 | | |____5d
 | | | |____5e4b403a3eb3ef5e9850c791b79592ccf8c90f
 | | |____info
+| | |____91
+| | | |____9196693b05f8f652aad9c6e4b23eded0ce0da1
 | | |____65
 | | | |____6e2227457fd38d4cdeba9c52f76095df6c1d9e
+| | |____5e
+| | | |____747f2b82a5f247c27dbc1fa95071c45750ab94
+| | |____01
+| | | |____387982293c27edc83076330ec0cd54bf747a74
+| | |____99
+| | | |____6a9226b4d09ed4a0fcefc69febf86fa3af837c
+| | |____52
+| | | |____a995e306983f286f79e0e027950e77e46c1de1
+| | | |____91d1eb314b284607650597912466df44cbcf31
+| | | |____68c041eaf468eb57d7da211ebadae6557c374b
+| | |____55
+| | | |____e81675c78aca497ba364a9f3564d625a7fc7bf
 | | |____97
 | | | |____e9c8469e5a2599b64b3a00a058f0f2f7e8fc4b
+| | |____63
+| | | |____f664d0be4f9461def788a53440ff548c309098
 | | |____0f
 | | | |____b06ce4744758216fdfa5677294bf063081e5c7
 | | |____d3
 | | | |____1dfc00a8fb99caf507493bfe77ce74d056c6fc
 | | |____ba
 | | | |____57bf1b44b8eb527a4cca233e79056283843714
+| | |____a7
+| | | |____6664abd81d6cab9378529d40d9cb83952b742b
+| | |____dc
+| | | |____c176b3427b61dc490a5eb33791bd95213a45f3
+| | |____b6
+| | | |____e9fca7bf61aaeb2779747a95e49a7b62969989
 | | |____a9
 | | | |____63a72fa672f3201bace03a22a3cd222f448cab
+| | |____b7
+| | | |____e5945981ae687b350cf4d3954a27008b6e7514
+| | | |____3818fe39bb56ee8e3f002aea4706ff8d84dd88
+| | |____b0
+| | | |____d8abf033c0e446c2e72b0cd6958289390350c6
+| | |____b9
+| | | |____17d51444c215440ae34cf250b8e7355bd0b6f6
 | | |____a1
 | | | |____b48096029dddd655fd933a16220fc4c580fb52
+| | |____ef
+| | | |____0ad22c31ec1c4eb471ac6bd2d03c3e235a2718
 | | |____c3
 | | | |____10fd0ed1a389aabbe4b7f202bab4b8241f1f27
+| | | |____4c91f2237d991ab012d211791725a52ad276fb
+| | |____ea
+| | | |____af6f5928b34eb997bd0a4b98b98bcecb0321ed
 | | |____e6
 | | | |____9de29bb2d1d6434b8b29ae775ad8c2e48c5391
 | | |____f9
 | | | |____d5a2606ebcff06d7a8b5603c25424a454fd251
+| | |____fa
+| | | |____8ba2bd9deb7e1ded671059bc2a627d9ea183c8
+| | |____c5
+| | | |____b7000f58c523d737118297bcdb8540aa5121c3
 | | |____e9
 | | | |____241e9bf2edfb8cd094bc7c0d18cff120b65fc2
+| | | |____b9a0caa473063b4029402d4b8451ce0f9f6035
 | | | |____3984975ac44a462c90d9ef8978a1991b025c2a
+| | |____cb
+| | | |____11571ac96695048d7ab4bfbac2cc16a017ae32
+| | |____ce
+| | | |____eb519c422e78fc50613c97fc6d47f4d258501b
+| | |____e0
+| | | |____9aacb25dab057afaa1d57bcce6969b2aa04ffc
+| | |____83
+| | | |____a422d59f6b989afc0009d897cfcf908ef4124a
 | | |____48
 | | | |____ac56e0b26dad6504f59def8213431518817de8
 | | | |____ea52e602e5afaba25c0f925ff447528eb639a6
+| | |____85
+| | | |____917e0edd47b182c36cea9d5c09e483c966cb37
+| | |____1d
+| | | |____abfec0fe2ff4b2900eae74dc1c6b8ea708ddec
 | | |____71
 | | | |____17072f18467c6fb1c752ecb2e9d1e6163f6cd7
+| | |____1c
+| | | |____8643b64a220e2778751a92346139bb76570e56
 | | |____82
 | | | |____5173592b8cb78678c2ad3a820c88a8a889ff5d
+| | |____2b
+| | | |____e383669176bebfb5a58b974f407bae0b5e552c
 | | |____78
 | | | |____e66e4d365c54d20c0a6e931a2f75fa2ddc330c
+| | |____25
+| | | |____ce9a9b1841feda0b8c378dbdeec3178c4d3d42
 | |____HEAD
 | |____info
 | | |____exclude
@@ -4848,7 +5085,10 @@
 | | |____HEAD
 | | |____refs
 | | | |____heads
-| | | | |____main
+| | | | |____master
+| | | |____remotes
+| | | | |____origin
+| | | | | |____master
 | |____description
 | |____hooks
 | | |____commit-msg.sample
@@ -4866,11 +5106,23 @@
 | | |____push-to-checkout.sample
 | |____refs
 | | |____heads
-| | | |____main
+| | | |____master
 | | |____tags
+| | |____remotes
+| | | |____origin
+| | | | |____master
 | |____index
 | |____COMMIT_EDITMSG
 |____.vscode
 | |____Microsoft.PowerShell_profile.ps1
 | |____settings.json
 |____tree.txt
+|____.idea
+| |____real_estate_rental.iml
+| |____inspectionProfiles
+| | |____profiles_settings.xml
+| |____vcs.xml
+| |____.gitignore
+| |____workspace.xml
+| |____modules.xml
+| |____misc.xml

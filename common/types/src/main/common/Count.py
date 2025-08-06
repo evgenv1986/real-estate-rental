@@ -1,5 +1,5 @@
-from common.types.src.main.base.valueObject import ValueObject
-from common.types.src.main.base.valueObject import NegativeValueError
+from common.types.src.main.base.ValueObject import ValueObject
+from common.types.src.main.base.ValueObject import NegativeValueError
 
 
 class Count(ValueObject):

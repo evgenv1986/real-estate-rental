@@ -1,7 +1,7 @@
 from enum import Enum
 
-from common.types.src.main.base.valueObject import ValueObject
-from common.types.src.main.common.count import Count, StringAsInt
+from common.types.src.main.base.ValueObject import ValueObject
+from common.types.src.main.common.Count import Count, StringAsInt
 
 
 class Contact (ValueObject):

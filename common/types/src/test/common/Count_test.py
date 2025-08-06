@@ -3,7 +3,7 @@ from unittest.result import failfast
 
 import pytest
 
-from common.types.src.main.common.count import FloorCountLessOrEqualZero
+from common.types.src.main.common.Count import FloorCountLessOrEqualZero
 from shop.domain.src.main.python.advert.advert_types import Count, FloorCount
 
 
