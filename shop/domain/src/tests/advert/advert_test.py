@@ -1,5 +1,5 @@
 from shop.domain.src.main.python.advert.advert import Advert
-from shop.domain.src.main.python.advert.advert_types import Contact, Address, Count, FloorCount
+from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorCount, RoomCount
 
 
 class TestAdvert():
@@ -7,7 +7,7 @@ class TestAdvert():
         assert  Advert.create(
                     contact = Contact('+7...'),
                     address = Address('street', 'house'),
-                    floor_count = FloorCount.createFromStr('-1'),
+                    floor_count = FloorCount.create_from_str('1'),
                     room_count = RoomCount('2'),
                     area = '54.0, 56.1',
                     interior = 'евро',
@@ -19,8 +19,8 @@ class TestAdvert():
                 Advert.create(
                     contact = Contact('+7...'),
                     address = Address('street', 'house'),
-                    floor_count = '9',
-                    room_count = '2',
+                    floor_count = FloorCount.create_from_str('1'),
+                    room_count = RoomCount('2'),
                     area = '54.0, 56.1',
                     interior = 'евро',
                     flat_floor = '2',

@@ -1,5 +1,6 @@
-from shop.domain.src.main.python.advert.advert_types import Contact, Address, Count, FloorCount, \
-    FloorCountLessOrEqualZero
+from common.types.src.main.base.AggregateRoot import AggregateRoot
+from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorCount, \
+    FloorCountLessOrEqualZero, RoomCount
 
 
 class AdvertEqualsException(Exception):pass
@@ -9,7 +10,7 @@ class Advert (AggregateRoot):
     _contact: Contact
     _address: Address
     _floor_count: FloorCount
-    _room_count: str
+    _room_count: RoomCount
     _area: str
     _interior: str
     _flat_floor: str
@@ -19,9 +20,9 @@ class Advert (AggregateRoot):
     
     def __init__(self,
                     contact: Contact,
-                    address: str,
+                    address: Address,
                     floor_count: FloorCount,
-                    room_count: str,
+                    room_count: RoomCount,
                     area: str,
                     interior: str,
                     flat_floor: str,
@@ -45,7 +46,7 @@ class Advert (AggregateRoot):
                 contact: Contact,
                 address: Address,
                 floor_count: FloorCount,
-                room_count: str,
+                room_count: RoomCount,
                 area: str,
                 interior: str,
                 flat_floor: str,
@@ -53,8 +54,6 @@ class Advert (AggregateRoot):
                 photos: str,
                 source_advert: str
                 ) -> 'Advert':
-        if not floor_count.more_zero():
-            raise FloorCountLessOrEqualZero()
         return Advert(
             contact,
             address,         
@@ -74,9 +73,22 @@ class Advert (AggregateRoot):
         if not isinstance(obj, Advert):
             raise AdvertEqualsException('Ошибка при сравнении объявлений, сравниваемый объект не является классом объявления')
         other: Advert = obj
+        otherFC: str = other._floor_count.value()
+        selfFC: str = self._floor_count.value()
+        equalsFC = selfFC == otherFC
         return \
-            other.contact().telephone() == self.contact().telephone() and \
+            (other.contact().telephone() == self.contact().telephone() and \
             other._address._street == self._address._street and \
             other._address._house == self._address._house
+            and other._floor_count.value() == self._floor_count.value()
+            # other._room_count == self._room_count and \
+            # other._area == self._area \
+             # and other._interior == self._interior \
+             # and other._flat_floor == self._flat_floor \
+             # and other._cost == self._cost \
+             # and other._photos == self._photos \
+             # and other._source_advert == self._source_advert
+             )
+
 
             
