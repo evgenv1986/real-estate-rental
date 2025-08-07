@@ -1,5 +1,8 @@
+from abc import ABC, abstractmethod
+
 from common.types.src.main.base.ValueObject import ValueObject
 from common.types.src.main.common.Count import Count, StringAsInt
+from common.types.src.main.common.UID import UID
 from common.types.src.main.error.BusinesError import BusinessError
 
 
@@ -67,3 +70,8 @@ class RoomCountLessOrEqualZero(BusinessError):
     def __init__(self):
         super().__init__(
             f"Количество комнат не может быть меньше либо равно нулю")
+
+
+class AdverIdProvider(ABC):
+    @abstractmethod
+    def id(self)-> UID: pass

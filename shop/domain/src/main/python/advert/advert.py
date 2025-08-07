@@ -1,9 +1,12 @@
 from common.types.src.main.base.AggregateRoot import AggregateRoot
+from common.types.src.main.base.DomainEntity import UID
 from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorCount, \
-    FloorCountLessOrEqualZero, RoomCount
+     RoomCount
 
 
 class AdvertEqualsException(Exception):pass
+
+
 
 
 class Advert (AggregateRoot):
@@ -17,19 +20,12 @@ class Advert (AggregateRoot):
     _cost: str
     _photos: str
     _source_advert: str
+    _id: UID
     
-    def __init__(self,
-                    contact: Contact,
-                    address: Address,
-                    floor_count: FloorCount,
-                    room_count: RoomCount,
-                    area: str,
-                    interior: str,
-                    flat_floor: str,
-                    cost: str,
-                    photos: str,
-                    source_advert: str):
+    def __init__(self, contact: Contact, address: Address, floor_count: FloorCount, room_count: RoomCount, area: str,
+                 interior: str, flat_floor: str, cost: str, photos: str, source_advert: str, id: UID):
         
+        super().__init__(id)
         self._contact = contact
         self._address = address
         self._floor_count = floor_count
@@ -40,6 +36,7 @@ class Advert (AggregateRoot):
         self._cost = cost
         self._photos = photos
         self._source_advert = source_advert
+        self._id = id
 
     @classmethod
     def create (cls,
@@ -52,7 +49,8 @@ class Advert (AggregateRoot):
                 flat_floor: str,
                 cost: str,
                 photos: str,
-                source_advert: str
+                source_advert: str,
+                id: AdverIdProvider
                 ) -> 'Advert':
         return Advert(
             contact,
@@ -64,7 +62,9 @@ class Advert (AggregateRoot):
             flat_floor,         
             cost,         
             photos,         
-            source_advert)
+            source_advert,
+            id
+        )
     
     def contact(self): 
         return self._contact
@@ -77,11 +77,11 @@ class Advert (AggregateRoot):
         selfFC: str = self._floor_count.value()
         equalsFC = selfFC == otherFC
         return \
-            (other.contact().telephone() == self.contact().telephone() and \
-            other._address._street == self._address._street and \
-            other._address._house == self._address._house
-            and other._floor_count.value() == self._floor_count.value()
-            # other._room_count == self._room_count and \
+            (other.contact().telephone() == self.contact().telephone() and
+             other._address._street == self._address._street and
+             other._address._house == self._address._house and
+             other._floor_count.value() == self._floor_count.value() and
+             other._room_count == self._room_count
             # other._area == self._area \
              # and other._interior == self._interior \
              # and other._flat_floor == self._flat_floor \

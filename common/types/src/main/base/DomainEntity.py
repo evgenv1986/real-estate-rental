@@ -1,9 +1,9 @@
 from abc import ABC
-from typing import TypeVar, Generic
 
-UID = TypeVar('UID')
+from common.types.src.main.common.UID import UID
 
-class DomainEntity(ABC, Generic[UID]):
+
+class DomainEntity(ABC):
     _id: UID
     def __init__(self, id: UID):
             self._id = id
