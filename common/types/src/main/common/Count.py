@@ -14,9 +14,10 @@ class Count(ValueObject):
 
     @classmethod
     def create(cls, value: str) -> 'Count':
-        if value < 0:
+        creating: Count = StringAsInt.create(value)
+        if not creating.more_zero():
             raise NegativeValueError()
-        return Count(value)
+        return creating
 
     def __init__(self, value: int):
         self._value = value
