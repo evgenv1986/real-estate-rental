@@ -74,4 +74,4 @@ class RoomCountLessOrEqualZero(BusinessError):
 
 class AdverIdProvider(ABC):
     @abstractmethod
-    def id(self)-> UID: pass
+    def next_id(self)-> UID: pass

@@ -10,13 +10,13 @@ class TestInMemoryAdvertIdProvider(unittest.TestCase):
         assert 0 == provider._last()
         assert 1 == len (provider._list)
 
-    def test_count_in_list_uid(self):
+    def test_next__uid(self):
         provider = InMemoryAdvertIdProvider()
         assert 1 == len (provider._list)
-        provider.id()
+        provider.next_id()
         assert 2 == len (provider._list)
 
 
     def test_next_value(self):
         provider = InMemoryAdvertIdProvider()
-        assert 1 == provider.id().value()
+        assert 1 == provider.next_id().value()
