@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 from common.types.src.main.base.ValueObject import ValueObject
-from common.types.src.main.common.Count import Count, StringAsInt
+from common.types.src.main.common.IntCount import IntCount, CountAsString, Count
 from common.types.src.main.common.UID import UID
 from common.types.src.main.error.BusinesError import BusinessError
 
@@ -27,19 +27,19 @@ class Address(ValueObject):
 
 
 class FloorCount(Count):
-    _value: Count
-    def __init__(self, value: Count):
+    _value: IntCount
+    def __init__(self, value: IntCount):
         self._value = value
         # super(FloorCount, self).__init__(value)
     @classmethod
-    def create(cls, value: Count):
+    def create(cls, value: IntCount):
         if not value.more_zero():
             raise FloorCountLessOrEqualZero()
         return FloorCount(value)
 
     @classmethod
     def create_from_str(cls, value: str):
-        return FloorCount.create(StringAsInt.create(value))
+        return FloorCount.create(CountAsString.create(value))
 
     def more_zero(self):
         return self.more_zero() > 0
@@ -71,6 +71,8 @@ class RoomCount(Count):
 
     def more_zero(self):
         return self._value.more_zero()
+    def value(self):
+        return self._value.value()
 
 class RoomCountLessOrEqualZero(BusinessError):
     def __init__(self):

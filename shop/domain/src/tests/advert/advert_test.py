@@ -1,6 +1,6 @@
-from common.types.src.main.common.Count import Count
+from common.types.src.main.common.IntCount import IntCount
 from shop.domain.src.main.python.advert.advert import Advert
-from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorCount, RoomCount
+from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorIntCount, RoomIntCount
 from shop.persistence.src.main.python.advert.InMemoryAdvertIdProvider import InMemoryAdvertIdProvider
 
 
@@ -9,8 +9,8 @@ class TestAdvert():
         advert = Advert.create(
                     contact = Contact('+7...'),
                     address = Address('street', 'house'),
-                    floor_count = FloorCount.create_from_str('1'),
-                    room_count = RoomCount.create(Count.create('2')),
+                    floor_count = FloorIntCount.create_from_str('1'),
+                    room_count = RoomIntCount.create(IntCount.create('2')),
                     area = '54.0, 56.1',
                     interior = 'евро',
                     flat_floor = '2',
@@ -22,8 +22,8 @@ class TestAdvert():
                 Advert.create(
                     contact = Contact('+7...'),
                     address = Address('street', 'house'),
-                    floor_count = FloorCount.create_from_str('1'),
-                    room_count = RoomCount.create(Count.create('2')),
+                    floor_count = FloorIntCount.create_from_str('1'),
+                    room_count = RoomIntCount.create(IntCount.create('2')),
                     area = '54.0, 56.1',
                     interior = 'евро',
                     flat_floor = '2',

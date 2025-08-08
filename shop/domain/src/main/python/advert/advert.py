@@ -1,7 +1,7 @@
 from common.types.src.main.base.AggregateRoot import AggregateRoot
 from common.types.src.main.base.DomainEntity import UID
-from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorCount, \
-    RoomCount, AdverIdProvider
+from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorIntCount, \
+    RoomIntCount, AdverIdProvider
 
 
 class AdvertEqualsException(Exception):pass
@@ -12,8 +12,8 @@ class AdvertEqualsException(Exception):pass
 class Advert (AggregateRoot):
     _contact: Contact
     _address: Address
-    _floor_count: FloorCount
-    _room_count: RoomCount
+    _floor_count: FloorIntCount
+    _room_count: RoomIntCount
     _area: str
     _interior: str
     _flat_floor: str
@@ -22,7 +22,7 @@ class Advert (AggregateRoot):
     _source_advert: str
     _id: UID
     
-    def __init__(self, contact: Contact, address: Address, floor_count: FloorCount, room_count: RoomCount, area: str,
+    def __init__(self, contact: Contact, address: Address, floor_count: FloorIntCount, room_count: RoomIntCount, area: str,
                  interior: str, flat_floor: str, cost: str, photos: str, source_advert: str, id: UID):
         
         super().__init__(id)
@@ -41,8 +41,8 @@ class Advert (AggregateRoot):
     def create (cls,
                 contact: Contact,
                 address: Address,
-                floor_count: FloorCount,
-                room_count: RoomCount,
+                floor_count: FloorIntCount,
+                room_count: RoomIntCount,
                 area: str,
                 interior: str,
                 flat_floor: str,

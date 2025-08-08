@@ -1,23 +1,32 @@
+from abc import ABC, abstractmethod
+
 from common.types.src.main.base.ValueObject import ValueObject
 from common.types.src.main.base.ValueObject import NegativeValueError
 
-
 class Count(ValueObject):
+    @abstractmethod
+    def value(self)-> int:
+        pass
+    @abstractmethod
+    def more_zero(self):
+        pass
+
+class IntCount(Count):
     _value: int
     def __init__(self, value):
         self._value = value
     @classmethod
-    def create(cls, value: int)-> 'Count':
+    def create(cls, value: int)-> 'IntCount':
         if value < 0:
             raise NegativeValueError()
-        return Count(value)
+        return IntCount(value)
 
-    @classmethod
-    def create(cls, value: str) -> 'Count':
-        creating: Count = StringAsInt.create(value)
-        if not creating.more_zero():
-            raise NegativeValueError()
-        return creating
+    # @classmethod
+    # def create(cls, value: str) -> 'IntCount':
+    #     creating: IntCount = StringAsInt.create(value)
+    #     if not creating.more_zero():
+    #         raise NegativeValueError()
+    #     return creating
 
     def __init__(self, value: int):
         self._value = value
@@ -28,15 +37,15 @@ class Count(ValueObject):
     def more_zero(self):
         return self._value > 0
 
-class StringAsInt(Count):
+class CountAsString(Count):
     _value: str
     def __init__(self, value):
         self._value = value
     @classmethod
     def create(cls, value: str):
         if not value.strip().lstrip('-').isdigit():
-            raise StringNotANumberError(f'невозможно создать число из строки {value}')
-        return StringAsInt(value)
+            raise StringContainsNonNumericCharsError()
+        return CountAsString(value)
 
     def value(self)->int:
         try:
@@ -48,7 +57,12 @@ class StringAsInt(Count):
         return self.value() > 0
 
 
-
+class CountError(Exception):pass
 class StringAsIntError(Exception):pass
 class StringNotANumberError(StringAsIntError):pass
 class StringAsIntGetValueError(StringAsIntError):pass
+class StringContainsNonNumericCharsError(CountError):
+    def __init__(self):
+        super().__init__(
+            f"Не возможно создать строку которая содержит не цифровые символы.")
+
