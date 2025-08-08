@@ -12,7 +12,7 @@ class InMemoryAdvertIdProvider(AdverIdProvider):
             # last_value = self._last().value()
             # new_uid = UID[int](last_value + 1)
             # self._list.append(new_uid)
-        #todo: """ В моем коде проблема для компилятора - Expected type 'int', got 'UID' instead
+        # В моем коде проблема для компилятора - Expected type 'int', got 'UID' instead
         # зато он кратче """
         self._list.append(UID[int](self._last() + 1))
         return UID[int](self._last())

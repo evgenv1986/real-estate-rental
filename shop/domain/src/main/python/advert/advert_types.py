@@ -58,13 +58,19 @@ class FloorCountLessOrEqualZero(FloorCountException):
 
 
 class RoomCount(Count):
+    _value: Count
     def __init__(self, value: Count):
-        super().__init__(value)
+        # super().__init__(value)
+        self._value = value
+
     @classmethod
     def create(cls, value: Count):
         if not value.more_zero():
             raise RoomCountLessOrEqualZero()
         return RoomCount(value)
+
+    def more_zero(self):
+        return self._value.more_zero()
 
 class RoomCountLessOrEqualZero(BusinessError):
     def __init__(self):
