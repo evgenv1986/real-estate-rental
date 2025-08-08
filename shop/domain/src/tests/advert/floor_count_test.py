@@ -2,7 +2,7 @@ import unittest
 
 import pytest
 
-from common.types.src.main.common.IntCount import StringNotANumberError, IntCount, StringContainsNonNumericCharsError
+from common.types.src.main.common.Count import StringNotANumberError, IntCount, StringContainsNonNumericCharsError
 from shop.domain.src.main.python.advert.advert_types import FloorCountException, FloorCountLessOrEqualZero, FloorCount
 
 

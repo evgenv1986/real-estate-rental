@@ -3,7 +3,7 @@ import unittest
 import pytest
 
 from common.types.src.main.base.ValueObject import NegativeValueError
-from common.types.src.main.common.IntCount import CountAsString, StringContainsNonNumericCharsError
+from common.types.src.main.common.Count import CountAsString, StringContainsNonNumericCharsError
 from shop.domain.src.main.python.advert.advert_types import IntCount, FloorIntCount
 
 

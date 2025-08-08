@@ -1,7 +1,7 @@
 from common.types.src.main.base.AggregateRoot import AggregateRoot
 from common.types.src.main.base.DomainEntity import UID
 from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorCount, \
-    RoomCount, AdverIdProvider
+    RoomCount, AdvertIdProvider, FlatArea
 
 
 class AdvertEqualsException(Exception):pass
@@ -14,7 +14,7 @@ class Advert (AggregateRoot):
     _address: Address
     _floor_count: FloorCount
     _room_count: RoomCount
-    _area: str
+    _area: FlatArea
     _interior: str
     _flat_floor: str
     _cost: str
@@ -22,8 +22,18 @@ class Advert (AggregateRoot):
     _source_advert: str
     _id: UID
     
-    def __init__(self, contact: Contact, address: Address, floor_count: FloorCount, room_count: RoomCount, area: str,
-                 interior: str, flat_floor: str, cost: str, photos: str, source_advert: str, id: UID):
+    def __init__(self,
+                 contact: Contact,
+                 address: Address,
+                 floor_count: FloorCount,
+                 room_count: RoomCount,
+                 area: FlatArea,
+                 interior: str,
+                 flat_floor: str,
+                 cost: str,
+                 photos: str,
+                 source_advert: str,
+                 id: UID):
         
         super().__init__(id)
         self._contact = contact
@@ -43,13 +53,13 @@ class Advert (AggregateRoot):
                 address: Address,
                 floor_count: FloorCount,
                 room_count: RoomCount,
-                area: str,
+                area: FlatArea,
                 interior: str,
                 flat_floor: str,
                 cost: str,
                 photos: str,
                 source_advert: str,
-                advert_id_provider: AdverIdProvider
+                advert_id_provider: AdvertIdProvider
                 ) -> 'Advert':
         advert_id: UID = advert_id_provider.next_id()
         return Advert(
@@ -73,9 +83,9 @@ class Advert (AggregateRoot):
         if not isinstance(obj, Advert):
             raise AdvertEqualsException('Ошибка при сравнении объявлений, сравниваемый объект не является классом объявления')
         other: Advert = obj
-        otherFC: str = other._floor_count.value()
-        selfFC: str = self._floor_count.value()
-        equalsFC = selfFC == otherFC
+        other_fc: str = other._floor_count.value()
+        self_fc: str = self._floor_count.value()
+        equalsFC = self_fc == other_fc
         return \
             (other.contact().telephone() == self.contact().telephone() and
              other._address._street == self._address._street and

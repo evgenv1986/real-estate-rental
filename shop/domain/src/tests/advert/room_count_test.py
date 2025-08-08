@@ -2,7 +2,7 @@ import unittest
 
 import pytest
 
-from common.types.src.main.common.IntCount import StringNotANumberError, IntCount, CountAsString
+from common.types.src.main.common.Count import StringNotANumberError, IntCount, CountAsString
 from shop.domain.src.main.python.advert.advert_types import FloorCountException, FloorCountLessOrEqualZero, \
     RoomCount, FloorCount, RoomCountLessOrEqualZero
 

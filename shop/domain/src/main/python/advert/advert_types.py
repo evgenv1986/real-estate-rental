@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 from common.types.src.main.base.ValueObject import ValueObject
-from common.types.src.main.common.IntCount import IntCount, CountAsString, Count
+from common.types.src.main.common.Count import IntCount, CountAsString, Count, CountAsFloat
 from common.types.src.main.common.UID import UID
 from common.types.src.main.error.BusinesError import BusinessError
 
@@ -80,6 +80,70 @@ class RoomCountLessOrEqualZero(BusinessError):
             f"Количество комнат не может быть меньше либо равно нулю")
 
 
-class AdverIdProvider(ABC):
+class AdvertIdProvider(ABC):
     @abstractmethod
     def next_id(self)-> UID: pass
+
+class FlatArea:
+    _living_area: Count
+    _total_area: Count
+    def __init__(self,
+                 living_area: Count,
+                 total_area: Count) -> None:
+        self._living_area = living_area
+        self._total_area = total_area
+    @classmethod
+    def create_from_float(cls,
+                          living_area: float,
+                          total_area: float) -> 'FlatArea':
+        return FlatArea(
+            CountAsFloat(living_area),
+            CountAsFloat(total_area))
+
+
+class Interior(ValueObject):
+    _value: str
+    def __init__(self, value: str):
+        self._value = value
+    @classmethod
+    def create(cls, value: str) -> 'Interior':
+        return Interior(value)
+
+
+
+class Price(ValueObject):
+    def __init__(self, value: float):
+        self._value = value
+    @classmethod
+    def create(cls, value: float) -> 'Price':
+        if value < 0:
+            raise CreatePriceErrorNegativeValue()
+        return Price(value)
+
+
+class CreatePriceErrorNegativeValue(BusinessError):
+    pass
+
+
+class Photo(ValueObject):
+    def __init__(self, file: str):
+        self._file = file
+    @classmethod
+    def create(cls, file: str) -> 'Photo':
+        return Photo(file)
+
+class Photos(ValueObject):
+    def __init__(self, photos: list[Photo]):
+        self._photos = photos
+    @classmethod
+    def create(cls, photos: list[Photo]) -> 'Photos':
+        return Photos(photos)
+
+
+class SourceAdvert:
+    def __init__(self, source: str):
+        self._source = source
+    @classmethod
+    def create(cls, source: str) -> 'SourceAdvert':
+        return SourceAdvert(source)
+

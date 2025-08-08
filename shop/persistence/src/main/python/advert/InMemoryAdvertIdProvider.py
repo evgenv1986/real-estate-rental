@@ -1,9 +1,9 @@
 from common.types.src.main.base.DomainEntity import UID
 
-from shop.domain.src.main.python.advert.advert_types import AdverIdProvider
+from shop.domain.src.main.python.advert.advert_types import AdvertIdProvider
 
 
-class InMemoryAdvertIdProvider(AdverIdProvider):
+class InMemoryAdvertIdProvider(AdvertIdProvider):
     _list: list[UID]
     def __init__(self):
         self._list = [UID[int](0)]
