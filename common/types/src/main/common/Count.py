@@ -57,6 +57,23 @@ class CountAsString(Count):
         return self.value() > 0
 
 
+class CountAsFloat(Count):
+    _value: float
+    def __init__(self, value):
+        self._value = value
+    @classmethod
+    def create(cls, value: float)-> 'Count':
+        return CountAsFloat(value)
+
+    def value(self)->float:
+        try:
+            return float(self._value)
+        except ValueError:
+            raise CountAsFloatError('Ошибка при создании count из вещественного числа')
+
+    def more_zero(self):
+        return self.value() > 0
+
 class CountError(Exception):pass
 class StringAsIntError(Exception):pass
 class StringNotANumberError(StringAsIntError):pass
@@ -65,4 +82,4 @@ class StringContainsNonNumericCharsError(CountError):
     def __init__(self):
         super().__init__(
             f"Не возможно создать строку которая содержит не цифровые символы.")
-
+class CountAsFloatError(CountError):pass
