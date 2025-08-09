@@ -1,4 +1,5 @@
 from abc import abstractmethod
+from typing import Any
 
 from common.types.src.main.base.ValueObject import ValueObject
 from common.types.src.main.base.ValueObject import NegativeValueError
@@ -10,9 +11,33 @@ class Count(ValueObject):
     @abstractmethod
     def more_zero(self):
         pass
-    @abstractmethod
-    def __eq__(self, obj: object) -> bool:pass
-
+    def __eq__(self, obj: object) -> bool:
+        if not isinstance(obj, Count):
+            return False
+        other: Count = obj
+        return other.value() == self.value()
+    @classmethod
+    def _create_from_str(cls, value: str)-> 'Count':
+        if not value.strip().lstrip('-').isdigit():
+            raise StringContainsNonNumericCharsError()
+        return CountAsString(value)
+    @classmethod
+    def create(cls, value: Any) -> 'Count':
+        if isinstance(value, int):
+            return Count._create_from_int(value)
+        if isinstance(value, str):
+            return Count._create_from_str(value)
+        if isinstance(value, float):
+            return Count._create_from_float(value)
+        raise TypeError(f"не возможно создать Count из {value}")
+    @classmethod
+    def _create_from_float(cls, value: float)-> 'Count':
+        return CountAsFloat(value)
+    @classmethod
+    def _create_from_int(cls, value: int)-> 'Count':
+        if value < 0:
+            raise NegativeValueError()
+        return IntCount(value)
 
 class IntCount(Count):
     _value: int
@@ -27,8 +52,8 @@ class IntCount(Count):
         return self._value
     def more_zero(self):
         return self._value > 0
-    def __eq__(self, obj: object) -> bool:
-        pass
+    # def __eq__(self, obj: object) -> bool:
+    #     pass
 
 
 class CountAsString(Count):
@@ -47,8 +72,7 @@ class CountAsString(Count):
             raise StringAsIntGetValueError (f"Не возможно преобразовать {self._value} в число")
     def more_zero(self):
         return self.value() > 0
-    def __eq__(self, obj: object) -> bool:
-        pass
+
 
 
 class CountAsFloat(Count):

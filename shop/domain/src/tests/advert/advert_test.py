@@ -1,6 +1,6 @@
 import unittest
 
-from common.types.src.main.common.Count import CountAsString, IntCount
+from common.types.src.main.common.Count import CountAsString, IntCount, Count
 from shop.domain.src.main.python.advert.advert import Advert
 from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorCount, RoomCount, FlatArea, Interior, \
     Price, Photo, Photos, SourceAdvert
@@ -18,7 +18,7 @@ class TestAdvert(unittest.TestCase):
                         living_area = 54.0,
                         total_area = 56.1),
                     interior = Interior.create('евро'),
-                    flat_floor = IntCount(2),
+                    flat_floor = Count.create(2),
                     cost = Price.create(14800000),
                     photos = Photos.create([
                             Photo('imageKitchen.jpg'),
