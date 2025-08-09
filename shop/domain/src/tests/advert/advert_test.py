@@ -34,11 +34,12 @@ class TestAdvert(unittest.TestCase):
                     area = FlatArea.create(
                         living_area = 54.0,
                         total_area = 56.1),
-                    interior = 'евро',
+                    interior = Interior.create('евро'),
                     flat_floor = '2',
                     cost = '14 800 000',
                     photos = 'imageKitchen, imageRoom',
                     source_advert = 'avito/id=123',
                     advert_id_provider = InMemoryAdvertIdProvider())
             )
-        
+    def test_interior(self):
+        assert Interior.create('евро').__eq__(Interior.create('евро'))

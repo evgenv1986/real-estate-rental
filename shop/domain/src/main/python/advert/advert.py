@@ -89,9 +89,9 @@ class Advert (AggregateRoot):
              other._address.house() == self._address.house() and
              other._floor_count.value() == self._floor_count.value() and
              other._room_count.value() == self._room_count.value() and
-             other._area.living_area().__eq__(self._area.living_area())
-             # and other._interior == self._interior \
-             # and other._flat_floor == self._flat_floor \
+             other._area.living_area().__eq__(self._area.living_area()) and
+             other._interior.__eq__(self._interior) #and
+             # other._flat_floor == self._flat_floor
              # and other._cost == self._cost \
              # and other._photos == self._photos \
              # and other._source_advert == self._source_advert
