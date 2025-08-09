@@ -14,7 +14,7 @@ class TestAdvert(unittest.TestCase):
                     address = Address('street', 'house'),
                     floor_count = FloorCount.create_from_str('1'),
                     room_count = RoomCount.create(CountAsString.create('2')),
-                    area = FlatArea.create_from_float(
+                    area = FlatArea.create(
                         living_area = 54.0,
                         total_area = 56.1),
                     interior = Interior.create('евро'),
@@ -31,7 +31,9 @@ class TestAdvert(unittest.TestCase):
                     address = Address('street', 'house'),
                     floor_count = FloorCount.create_from_str('1'),
                     room_count = RoomCount.create(CountAsString.create('2')),
-                    area = '54.0, 56.1',
+                    area = FlatArea.create(
+                        living_area = 54.0,
+                        total_area = 56.1),
                     interior = 'евро',
                     flat_floor = '2',
                     cost = '14 800 000',

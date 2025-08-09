@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 from common.types.src.main.base.ValueObject import ValueObject
 from common.types.src.main.base.ValueObject import NegativeValueError
@@ -10,7 +10,8 @@ class Count(ValueObject):
     @abstractmethod
     def more_zero(self):
         pass
-
+    @abstractmethod
+    def __eq__(self, obj: object) -> bool:pass
 
 
 class IntCount(Count):
@@ -22,22 +23,13 @@ class IntCount(Count):
         if value < 0:
             raise NegativeValueError()
         return IntCount(value)
-
-    # @classmethod
-    # def create(cls, value: str) -> 'IntCount':
-    #     creating: IntCount = StringAsInt.create(value)
-    #     if not creating.more_zero():
-    #         raise NegativeValueError()
-    #     return creating
-
-    def __init__(self, value: int):
-        self._value = value
-
     def value(self)-> int:
         return self._value
-
     def more_zero(self):
         return self._value > 0
+    def __eq__(self, obj: object) -> bool:
+        pass
+
 
 class CountAsString(Count):
     _value: str
@@ -48,15 +40,15 @@ class CountAsString(Count):
         if not value.strip().lstrip('-').isdigit():
             raise StringContainsNonNumericCharsError()
         return CountAsString(value)
-
     def value(self)->int:
         try:
             return int(self._value)
         except ValueError:
             raise StringAsIntGetValueError (f"Не возможно преобразовать {self._value} в число")
-
     def more_zero(self):
         return self.value() > 0
+    def __eq__(self, obj: object) -> bool:
+        pass
 
 
 class CountAsFloat(Count):
@@ -66,15 +58,20 @@ class CountAsFloat(Count):
     @classmethod
     def create(cls, value: float)-> 'Count':
         return CountAsFloat(value)
-
     def value(self)->float:
         try:
             return float(self._value)
         except ValueError:
             raise CountAsFloatError('Ошибка при создании count из вещественного числа')
-
     def more_zero(self):
         return self.value() > 0
+
+    def __eq__(self, obj: object) -> bool:
+        if not isinstance(obj, Count):
+            return False
+        other: Count = obj
+        return self.value() == other.value()
+
 
 class CountError(Exception):pass
 class StringAsIntError(Exception):pass

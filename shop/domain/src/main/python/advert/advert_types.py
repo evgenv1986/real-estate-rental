@@ -26,7 +26,7 @@ class Address(ValueObject):
         return self._house
 
 
-class FloorCount(Count):
+class FloorCount(ValueObject):
     _value: IntCount
     def __init__(self, value: IntCount):
         self._value = value
@@ -47,7 +47,6 @@ class FloorCount(Count):
         return self._value.value()
 
 class FloorCountException(Exception):
-    # _message: str = f"Этаж не может быть меньше либо равен нолю"
     def __init__(self, message: str):
         super(FloorCountException, self).__init__(message)
 
@@ -57,7 +56,7 @@ class FloorCountLessOrEqualZero(FloorCountException):
         super().__init__(self._message)
 
 
-class RoomCount(Count):
+class RoomCount(ValueObject):
     _value: Count
     def __init__(self, value: Count):
         # super().__init__(value)
@@ -76,15 +75,15 @@ class RoomCount(Count):
 
 class RoomCountLessOrEqualZero(BusinessError):
     def __init__(self):
-        super().__init__(
-            f"Количество комнат не может быть меньше либо равно нулю")
+        self._message = "Количество комнат не может быть меньше либо равно нулю"
+        # super().__init__('Количество комнат не может быть меньше либо равно нулю')
 
 
 class AdvertIdProvider(ABC):
     @abstractmethod
     def next_id(self)-> UID: pass
 
-class FlatArea:
+class FlatArea(ValueObject):
     _living_area: Count
     _total_area: Count
     def __init__(self,
@@ -93,12 +92,15 @@ class FlatArea:
         self._living_area = living_area
         self._total_area = total_area
     @classmethod
-    def create_from_float(cls,
-                          living_area: float,
-                          total_area: float) -> 'FlatArea':
+    def create (cls,
+               living_area: float,
+               total_area: float) -> 'FlatArea':
         return FlatArea(
             CountAsFloat(living_area),
             CountAsFloat(total_area))
+
+    def living_area(self):
+        return self._living_area
 
 
 class Interior(ValueObject):

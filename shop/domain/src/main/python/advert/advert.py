@@ -83,16 +83,13 @@ class Advert (AggregateRoot):
         if not isinstance(obj, Advert):
             raise AdvertEqualsException('Ошибка при сравнении объявлений, сравниваемый объект не является классом объявления')
         other: Advert = obj
-        other_fc: str = other._floor_count.value()
-        self_fc: str = self._floor_count.value()
-        equalsFC = self_fc == other_fc
         return \
             (other.contact().telephone() == self.contact().telephone() and
-             other._address._street == self._address._street and
-             other._address._house == self._address._house and
+             other._address.street() == self._address.street() and
+             other._address.house() == self._address.house() and
              other._floor_count.value() == self._floor_count.value() and
-             other._room_count.value() == self._room_count.value()
-            # other._area == self._area \
+             other._room_count.value() == self._room_count.value() and
+             other._area.living_area().__eq__(self._area.living_area())
              # and other._interior == self._interior \
              # and other._flat_floor == self._flat_floor \
              # and other._cost == self._cost \
