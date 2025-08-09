@@ -1,12 +1,14 @@
 from abc import abstractmethod
-from typing import Any
+from typing import Any, TypeVar, Generic
 
 from common.types.src.main.base.ValueObject import ValueObject
 from common.types.src.main.base.ValueObject import NegativeValueError
 
-class Count(ValueObject):
+T = TypeVar('T', int, float, str)
+
+class Count(ValueObject, Generic[T]):
     @abstractmethod
-    def value(self)-> int:
+    def value(self)-> T:
         pass
     @abstractmethod
     def more_zero(self):
@@ -52,8 +54,6 @@ class IntCount(Count):
         return self._value
     def more_zero(self):
         return self._value > 0
-    # def __eq__(self, obj: object) -> bool:
-    #     pass
 
 
 class CountAsString(Count):
