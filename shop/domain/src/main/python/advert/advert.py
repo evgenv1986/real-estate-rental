@@ -1,7 +1,8 @@
 from common.types.src.main.base.AggregateRoot import AggregateRoot
 from common.types.src.main.base.DomainEntity import UID
+from common.types.src.main.common.Count import Count
 from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorCount, \
-    RoomCount, AdvertIdProvider, FlatArea
+    RoomCount, AdvertIdProvider, FlatArea, SourceAdvert, Photos, Interior, Price
 
 
 class AdvertEqualsException(Exception):pass
@@ -15,11 +16,11 @@ class Advert (AggregateRoot):
     _floor_count: FloorCount
     _room_count: RoomCount
     _area: FlatArea
-    _interior: str
-    _flat_floor: str
-    _cost: str
-    _photos: str
-    _source_advert: str
+    _interior: Interior
+    _flat_floor: Count
+    _price: Price
+    _photos: Photos
+    _source_advert: SourceAdvert
     _id: UID
     
     def __init__(self,
@@ -28,11 +29,11 @@ class Advert (AggregateRoot):
                  floor_count: FloorCount,
                  room_count: RoomCount,
                  area: FlatArea,
-                 interior: str,
-                 flat_floor: str,
-                 cost: str,
-                 photos: str,
-                 source_advert: str,
+                 interior: Interior,
+                 flat_floor: Count,
+                 price: Price,
+                 photos: Photos,
+                 source_advert: SourceAdvert,
                  id: UID):
         
         super().__init__(id)
@@ -43,7 +44,7 @@ class Advert (AggregateRoot):
         self._area = area
         self._interior = interior
         self._flat_floor = flat_floor
-        self._cost = cost
+        self._price = price
         self._photos = photos
         self._source_advert = source_advert
 
@@ -54,11 +55,11 @@ class Advert (AggregateRoot):
                 floor_count: FloorCount,
                 room_count: RoomCount,
                 area: FlatArea,
-                interior: str,
-                flat_floor: str,
-                cost: str,
-                photos: str,
-                source_advert: str,
+                interior: Interior,
+                flat_floor: Count,
+                price: Price,
+                photos: Photos,
+                source_advert: SourceAdvert,
                 advert_id_provider: AdvertIdProvider
                 ) -> 'Advert':
         advert_id: UID = advert_id_provider.next_id()
@@ -70,7 +71,7 @@ class Advert (AggregateRoot):
             area,         
             interior,         
             flat_floor,         
-            cost,         
+            price,
             photos,         
             source_advert,
             advert_id
@@ -92,9 +93,9 @@ class Advert (AggregateRoot):
              other._area.living_area().__eq__(self._area.living_area()) and
              other._interior.__eq__(self._interior) and
              other._flat_floor.__eq__(self._flat_floor) and
-             other._cost == self._cost
-             # and other._photos == self._photos \
-             # and other._source_advert == self._source_advert
+             other._price.__eq__(self._price) and
+             other._photos.__eq__(self._photos) and
+             other._source_advert.__eq__(self._source_advert)
              )
 
 

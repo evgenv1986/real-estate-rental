@@ -148,4 +148,9 @@ class SourceAdvert:
     @classmethod
     def create(cls, source: str) -> 'SourceAdvert':
         return SourceAdvert(source)
+    def __eq__(self, obj: object) -> bool:
+        if not isinstance(obj, SourceAdvert):
+            return False
+        other: SourceAdvert = obj
+        return other._source == self._source
 
