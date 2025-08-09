@@ -1,6 +1,6 @@
 import unittest
 
-from common.types.src.main.common.Count import CountAsString, IntCount, Count
+from common.types.src.main.common.Count import CountAsString, Count
 from shop.domain.src.main.python.advert.advert import Advert
 from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorCount, RoomCount, FlatArea, Interior, \
     Price, Photo, Photos, SourceAdvert
@@ -19,7 +19,7 @@ class TestAdvert(unittest.TestCase):
                         total_area = 56.1),
                     interior = Interior.create('евро'),
                     flat_floor = Count.create(2),
-                    cost = Price.create(14800000),
+                    price= Price.create(14800000),
                     photos = Photos.create([
                             Photo('imageKitchen.jpg'),
                             Photo('imageRoom.jpg')]),
@@ -35,11 +35,19 @@ class TestAdvert(unittest.TestCase):
                         living_area = 54.0,
                         total_area = 56.1),
                     interior = Interior.create('евро'),
-                    flat_floor = '2',
-                    cost = '14 800 000',
-                    photos = 'imageKitchen, imageRoom',
-                    source_advert = 'avito/id=123',
-                    advert_id_provider = InMemoryAdvertIdProvider())
+                    flat_floor=Count.create(2),
+                    price=Price.create(14800000),
+                    photos=Photos.create([
+                        Photo('imageKitchen.jpg'),
+                        Photo('imageRoom.jpg')]),
+                    source_advert=SourceAdvert('avito/id=123'),
+                    advert_id_provider=InMemoryAdvertIdProvider())
             )
     def test_interior(self):
         assert Interior.create('евро').__eq__(Interior.create('евро'))
+        assert not Interior.create('xzcnkdcjkd').__eq__(Interior.create('евро'))
+    def test_cost(self):
+        assert Price.create(14800000).__eq__(Price.create(14800000))
+        assert not Price.create(123).__eq__(Price.create(14800000))
+    def test_source_advert(self):
+        assert not SourceAdvert.create('avito/id=123').__eq__(SourceAdvert.create('avito/id=123000000'))
