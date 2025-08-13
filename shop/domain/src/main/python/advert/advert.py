@@ -22,6 +22,7 @@ class Advert (AggregateRoot):
     _photos: Photos
     _source_advert: SourceAdvert
     _id: UID
+    #TODO: Заменить тип id: UID, AdvertID классом
     
     def __init__(self,
                  contact: Contact,
@@ -97,6 +98,7 @@ class Advert (AggregateRoot):
              other._photos.__eq__(self._photos) and
              other._source_advert.__eq__(self._source_advert)
              )
-
+    def id(self) -> UID:
+        return self._id
 
             

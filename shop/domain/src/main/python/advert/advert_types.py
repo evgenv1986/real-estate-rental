@@ -154,3 +154,5 @@ class SourceAdvert:
         other: SourceAdvert = obj
         return other._source == self._source
 
+class AdvertID:
+    pass
