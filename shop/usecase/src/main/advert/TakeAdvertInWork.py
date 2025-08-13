@@ -10,7 +10,7 @@ from shop.domain.src.main.python.advert.advert_types \
 
 
 
-class TakeAdvertToWork(ABC):
+class TakeAdvertInWork(ABC):
     def invoke(self, advert: 'AdvertData')-> AdvertID:
         pass
 
@@ -27,3 +27,6 @@ class AdvertData(NamedTuple):
     photos: Photos
     source_advert: SourceAdvert
     # advert_id_provider: AdvertIdProvider
+
+class TakeAdvertInWorkUseCaseError:pass
+class AlreadyInWorkUseCaseError(TakeAdvertInWorkUseCaseError):pass

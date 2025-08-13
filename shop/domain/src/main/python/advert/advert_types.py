@@ -156,3 +156,9 @@ class SourceAdvert:
 
 class AdvertID:
     pass
+
+
+class AdvertAlreadyInWork(ABC):
+    @abstractmethod
+    def invoke(self, address: Address)-> bool:pass
+

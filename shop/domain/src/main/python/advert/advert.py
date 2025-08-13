@@ -1,12 +1,10 @@
 from common.types.src.main.base.AggregateRoot import AggregateRoot
 from common.types.src.main.base.DomainEntity import UID
 from common.types.src.main.common.Count import Count
-from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorCount, \
-    RoomCount, AdvertIdProvider, FlatArea, SourceAdvert, Photos, Interior, Price
-
-
-class AdvertEqualsException(Exception):pass
-
+from common.types.src.main.error.BusinesError import BusinessError
+from shop.domain import Contact, Address, FloorCount, \
+    RoomCount, AdvertIdProvider, FlatArea, SourceAdvert, \
+    Photos, Interior, Price, AdvertAlreadyInWork
 
 
 
@@ -61,8 +59,11 @@ class Advert (AggregateRoot):
                 price: Price,
                 photos: Photos,
                 source_advert: SourceAdvert,
-                advert_id_provider: AdvertIdProvider
+                advert_id_provider: AdvertIdProvider,
+                advertAlreadyInWork: AdvertAlreadyInWork
                 ) -> 'Advert':
+        if advertAlreadyInWork.invoke(address):
+            AlreadyInWorkAdvertError()
         advert_id: UID = advert_id_provider.next_id()
         return Advert(
             contact,
@@ -101,4 +102,10 @@ class Advert (AggregateRoot):
     def id(self) -> UID:
         return self._id
 
-            
+
+
+class AdvertEqualsException(Exception):pass
+
+
+class AlreadyInWorkAdvertError(BusinessError):
+    pass

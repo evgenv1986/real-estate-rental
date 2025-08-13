@@ -1,8 +1,8 @@
 import unittest
 
 from common.types.src.main.common.Count import CountAsString, Count
-from shop.domain.src.main.python.advert.advert import Advert
-from shop.domain.src.main.python.advert.advert_types import Contact, Address, FloorCount, RoomCount, FlatArea, Interior, \
+from shop.domain import Advert
+from shop.domain import Contact, Address, FloorCount, RoomCount, FlatArea, Interior, \
     Price, Photo, Photos, SourceAdvert
 from shop.persistence.src.main.python.advert.InMemoryAdvertIdProvider import InMemoryAdvertIdProvider
 
