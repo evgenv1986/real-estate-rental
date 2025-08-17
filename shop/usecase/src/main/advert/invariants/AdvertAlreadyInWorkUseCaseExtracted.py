@@ -7,5 +7,6 @@ class AdvertAlreadyInWorkUseCaseExtracted(AdvertAlreadyInWork):
     def __init__(self, extracted_advert: ExtractedAdvert):
         self.extracted_advert = extracted_advert
     def invoke(self, address: Address) -> bool:
+        return True
         advert: Advert = self.extracted_advert.by_address(address)
         return True if advert else False

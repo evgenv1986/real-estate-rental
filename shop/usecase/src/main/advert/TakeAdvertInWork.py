@@ -2,12 +2,11 @@ from abc import ABC
 from typing import NamedTuple
 
 from shop.domain.src.main.python.advert.advert_types \
-    import (Contact, Address, FloorCount, RoomCount, \
+    import (Address, FloorCount, RoomCount, \
             FlatArea, Interior, Count, Price, \
             Photos, SourceAdvert,
             AdvertID)
-
-
+from shop.domain.src.main.python.advert.Contact import Contact
 
 
 class TakeAdvertInWork(ABC):

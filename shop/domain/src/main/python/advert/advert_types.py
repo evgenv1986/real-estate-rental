@@ -1,17 +1,10 @@
 from abc import ABC, abstractmethod
+from typing import Generic
 
 from common.types.src.main.base.ValueObject import ValueObject
 from common.types.src.main.common.Count import IntCount, CountAsString, Count, CountAsFloat
-from common.types.src.main.common.UID import UID
+from common.types.src.main.common.UID import UID, T
 from common.types.src.main.error.BusinesError import BusinessError
-
-
-class Contact (ValueObject):
-    _telephone: str
-    def __init__(self, telephone: str):
-        self._telephone = telephone
-    def telephone(self):
-        return self._telephone
 
 
 class Address(ValueObject):
@@ -154,9 +147,9 @@ class SourceAdvert:
         other: SourceAdvert = obj
         return other._source == self._source
 
-class AdvertID(UID[int]):
-    def __init__(self, id: UID):
-        super().__init__(id)
+class AdvertID(Generic[T], UID[int]):
+    def __init__(self, _id: int):
+        super().__init__(_id)
 
 
 class AdvertAlreadyInWork(ABC):

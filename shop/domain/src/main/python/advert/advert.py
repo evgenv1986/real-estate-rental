@@ -2,9 +2,10 @@ from common.types.src.main.base.AggregateRoot import AggregateRoot
 from common.types.src.main.base.DomainEntity import UID
 from common.types.src.main.common.Count import Count
 from common.types.src.main.error.BusinesError import BusinessError
-from shop.domain import Contact, Address, FloorCount, \
+from shop.domain.src.main.python.advert.advert_types import Address, FloorCount, \
     RoomCount, AdvertIdProvider, FlatArea, SourceAdvert, \
     Photos, Interior, Price, AdvertAlreadyInWork
+from shop.domain.src.main.python.advert.Contact import Contact
 from shop.domain.src.main.python.advert.advert_types import AdvertID
 
 

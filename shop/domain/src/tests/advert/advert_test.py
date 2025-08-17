@@ -1,10 +1,14 @@
 import unittest
 
 from common.types.src.main.common.Count import CountAsString, Count
-from shop.domain import Advert
-from shop.domain import Contact, Address, FloorCount, RoomCount, FlatArea, Interior, \
-    Price, Photo, Photos, SourceAdvert
+from shop.domain.src.main.python.advert.Contact import Contact
+from shop.domain.src.main.python.advert.advert import Advert
+from shop.domain.src.main.python.advert.advert_types import Address, FloorCount, RoomCount, FlatArea, Interior, Price, \
+    Photos, Photo, SourceAdvert
 from shop.persistence.src.main.python.advert.InMemoryAdvertIdProvider import InMemoryAdvertIdProvider
+from shop.usecase.src.main.advert.access.ExtractedAdvert import ExtractedAdvert
+from shop.usecase.src.main.advert.invariants.AdvertAlreadyInWorkUseCaseExtracted import \
+    AdvertAlreadyInWorkUseCaseExtracted
 
 
 class TestAdvert(unittest.TestCase):
@@ -24,7 +28,12 @@ class TestAdvert(unittest.TestCase):
                             Photo('imageKitchen.jpg'),
                             Photo('imageRoom.jpg')]),
                     source_advert = SourceAdvert('avito/id=123'),
-                    advert_id_provider = InMemoryAdvertIdProvider())
+                    advert_id_provider = InMemoryAdvertIdProvider(),
+                    advertAlreadyInWork =
+                        AdvertAlreadyInWorkUseCaseExtracted(
+                            ExtractedAdvert()
+                        )
+        )
         assert advert.__eq__ (
                 Advert.create(
                     contact = Contact('+7...'),
@@ -41,7 +50,8 @@ class TestAdvert(unittest.TestCase):
                         Photo('imageKitchen.jpg'),
                         Photo('imageRoom.jpg')]),
                     source_advert=SourceAdvert('avito/id=123'),
-                    advert_id_provider=InMemoryAdvertIdProvider())
+                    advert_id_provider=InMemoryAdvertIdProvider(),
+                    advertAlreadyInWork = AdvertAlreadyInWorkUseCaseExtracted(ExtractedAdvert()))
             )
     def test_interior(self):
         assert Interior.create('евро').__eq__(Interior.create('евро'))
