@@ -48,20 +48,20 @@ class Advert (AggregateRoot):
         self._source_advert = source_advert
 
     @classmethod
-    def create (cls,
-                contact: Contact,
-                address: Address,
-                floor_count: FloorCount,
-                room_count: RoomCount,
-                area: FlatArea,
-                interior: Interior,
-                flat_floor: Count,
-                price: Price,
-                photos: Photos,
-                source_advert: SourceAdvert,
-                advert_id_provider: AdvertIdProvider,
-                advertAlreadyInWork: AdvertAlreadyInWork
-                ) -> 'Advert':
+    def write_down (cls,
+                    contact: Contact,
+                    address: Address,
+                    floor_count: FloorCount,
+                    room_count: RoomCount,
+                    area: FlatArea,
+                    interior: Interior,
+                    flat_floor: Count,
+                    price: Price,
+                    photos: Photos,
+                    source_advert: SourceAdvert,
+                    advert_id_provider: AdvertIdProvider,
+                    advertAlreadyInWork: AdvertAlreadyInWork
+                    ) -> 'Advert':
         if advertAlreadyInWork.invoke(address):
             AlreadyInWorkAdvertError()
         advert_id: UID = advert_id_provider.next_id()
@@ -87,7 +87,7 @@ class Advert (AggregateRoot):
             raise AdvertEqualsException('Ошибка при сравнении объявлений, сравниваемый объект не является классом объявления')
         other: Advert = obj
         return \
-            (other.contact().telephone() == self.contact().telephone() and
+            (other.contact().value() == self.contact().value() and
              other._address.street() == self._address.street() and
              other._address.house() == self._address.house() and
              other._floor_count.value() == self._floor_count.value() and

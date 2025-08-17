@@ -1,7 +1,7 @@
 import unittest
 
 from common.types.src.main.common.Count import CountAsString, Count
-from shop.domain.src.main.python.advert.Contact import Contact
+from shop.domain.src.main.python.advert.Contact import Contact, Phone, Email
 from shop.domain.src.main.python.advert.advert import Advert
 from shop.domain.src.main.python.advert.advert_types import Address, FloorCount, RoomCount, FlatArea, Interior, Price, \
     Photos, Photo, SourceAdvert
@@ -13,8 +13,8 @@ from shop.usecase.src.main.advert.invariants.AdvertAlreadyInWorkUseCaseExtracted
 
 class TestAdvert(unittest.TestCase):
     def test_create(self):
-        advert = Advert.create(
-                    contact = Contact('+7...'),
+        advert = Advert.write_down(
+                    contact = Phone('+7...'),
                     address = Address('street', 'house'),
                     floor_count = FloorCount.create_from_str('1'),
                     room_count = RoomCount.create(CountAsString.create('2')),
@@ -35,8 +35,8 @@ class TestAdvert(unittest.TestCase):
                         )
         )
         assert advert.__eq__ (
-                Advert.create(
-                    contact = Contact('+7...'),
+                Advert.write_down(
+                    contact = Phone('+7...'),
                     address = Address('street', 'house'),
                     floor_count = FloorCount.create_from_str('1'),
                     room_count = RoomCount.create(CountAsString.create('2')),
@@ -61,3 +61,11 @@ class TestAdvert(unittest.TestCase):
         assert not Price.create(123).__eq__(Price.create(14800000))
     def test_source_advert(self):
         assert not SourceAdvert.create('avito/id=123').__eq__(SourceAdvert.create('avito/id=123000000'))
+    def test_contact(self):
+        Phone('+7')
+        Email('<EMAIL>')
+        try:
+            class Telegram(Contact):  # Вызовет TypeError
+                pass
+        except TypeError as e:
+            print(e)  # Cannot subclass Telegram. Contact is sealed.

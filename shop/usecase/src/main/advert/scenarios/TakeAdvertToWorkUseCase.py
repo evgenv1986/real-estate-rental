@@ -21,7 +21,7 @@ class TakeAdvertToWorkUseCase(TakeAdvertInWork):
         self._advert_persist = advert_persist
     def invoke(self, advert: 'AdvertData')-> AdvertID:
         try:
-            advert = Advert.create(
+            advert = Advert.write_down(
                 advert.contact,
                 advert.address,
                 advert.address.street,
