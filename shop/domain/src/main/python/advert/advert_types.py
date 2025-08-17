@@ -81,7 +81,7 @@ class RoomCountLessOrEqualZero(BusinessError):
 
 class AdvertIdProvider(ABC):
     @abstractmethod
-    def next_id(self)-> UID: pass
+    def next_id(self)-> 'AdvertID': pass
 
 class FlatArea(ValueObject):
     _living_area: Count
@@ -154,8 +154,9 @@ class SourceAdvert:
         other: SourceAdvert = obj
         return other._source == self._source
 
-class AdvertID:
-    pass
+class AdvertID(UID[int]):
+    def __init__(self, id: UID):
+        super().__init__(id)
 
 
 class AdvertAlreadyInWork(ABC):

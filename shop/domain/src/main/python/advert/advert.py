@@ -5,7 +5,7 @@ from common.types.src.main.error.BusinesError import BusinessError
 from shop.domain import Contact, Address, FloorCount, \
     RoomCount, AdvertIdProvider, FlatArea, SourceAdvert, \
     Photos, Interior, Price, AdvertAlreadyInWork
-
+from shop.domain.src.main.python.advert.advert_types import AdvertID
 
 
 class Advert (AggregateRoot):
@@ -19,9 +19,8 @@ class Advert (AggregateRoot):
     _price: Price
     _photos: Photos
     _source_advert: SourceAdvert
-    _id: UID
-    #TODO: Заменить тип id: UID, AdvertID классом
-    
+    _id: AdvertID
+
     def __init__(self,
                  contact: Contact,
                  address: Address,
@@ -33,7 +32,7 @@ class Advert (AggregateRoot):
                  price: Price,
                  photos: Photos,
                  source_advert: SourceAdvert,
-                 id: UID):
+                 id: AdvertID):
         
         super().__init__(id)
         self._contact = contact
