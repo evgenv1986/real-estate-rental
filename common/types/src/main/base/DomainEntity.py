@@ -1,9 +1,25 @@
-from abc import ABC
+from random import random
+from xmlrpc.client import DateTime
 
 from common.types.src.main.common.UID import UID
 
 
-class DomainEntity(ABC):
+class EventStoreID:
+    def next(self):
+        return UID[int](random())
+
+
+class DomainEvent:
     _id: UID
-    def __init__(self, id: UID):
-            self._id = id
+    _created: DateTime
+    def __init__(self):
+        self._id = EventStoreID().next()
+        self._created = DateTime()
+
+class DomainEntity:
+    _id: UID
+    _events: list[DomainEvent]
+    def __init__(self, _id: UID):
+            self._id = _id
+    def add_event(self, event: DomainEvent):
+        self._events.append(event)
