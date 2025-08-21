@@ -9,7 +9,7 @@ from shop.domain.src.main.python.advert.advert_types \
 from shop.domain.src.main.python.advert.Contact import Contact
 
 
-class TakeAdvertInWork(ABC):
+class TakeAdvertToWork(ABC):
     def invoke(self, advert: 'AdvertData')-> AdvertID:
         pass
 

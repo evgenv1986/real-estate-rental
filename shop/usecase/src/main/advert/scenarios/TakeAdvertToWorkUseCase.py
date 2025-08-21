@@ -2,14 +2,11 @@ from sqlite3 import IntegrityError
 
 from shop.domain.src.main.python.advert.advert import Advert, AlreadyInWorkAdvertError
 from shop.domain.src.main.python.advert.advert_types import AdvertID, AdvertIdProvider, AdvertAlreadyInWork
-from shop.usecase.src.main.advert.TakeAdvertInWork import TakeAdvertInWork, AdvertData, AlreadyInWorkUseCaseError
+from shop.usecase.src.main.advert.TakeAdvertToWork import TakeAdvertToWork, AdvertData, AlreadyInWorkUseCaseError
+from shop.usecase.src.main.advert.access.AdvertPersist import AdvertPersist
 
 
-class AdvertPersist:
-    pass
-
-
-class TakeAdvertToWorkUseCase(TakeAdvertInWork):
+class TakeAdvertToWorkUseCase(TakeAdvertToWork):
     def __init__(
             self,
             advertIdProvider: AdvertIdProvider,

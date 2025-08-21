@@ -1,5 +1,4 @@
 from common.types.src.main.base.AggregateRoot import AggregateRoot
-from common.types.src.main.base.DomainEntity import UID
 from common.types.src.main.common.Count import Count
 from common.types.src.main.error.BusinesError import BusinessError
 from shop.domain.src.main.python.advert.advert_events import AdvertWritedownedToWork
@@ -66,7 +65,7 @@ class Advert (AggregateRoot):
                     ) -> 'Advert':
         if advertAlreadyInWork.invoke(address):
             AlreadyInWorkAdvertError()
-        advert_id: UID = advert_id_provider.next_id()
+        advert_id: AdvertID[int] = advert_id_provider.next_id()
         advert: Advert = Advert(
             contact,
             address,         
@@ -103,7 +102,7 @@ class Advert (AggregateRoot):
              other._photos.__eq__(self._photos) and
              other._source_advert.__eq__(self._source_advert)
              )
-    def id(self) -> UID:
+    def id(self) -> AdvertID:
         return self._id
 
 
