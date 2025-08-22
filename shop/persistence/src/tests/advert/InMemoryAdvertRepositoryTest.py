@@ -1,8 +1,15 @@
 import unittest
+from typing import Type
 
 from shop.domain.src.main.python.advert.advert import Advert
+from shop.domain.src.main.python.advert.advert_events import AdvertWritedownedToWorkEvent
+from shop.domain.src.main.python.advert.advert_types import AdvertID
 from shop.domain.src.teatFixtures.Fixtures import advert_with_test_data
 from shop.in_memory_persistence.InMemoryAdvertRepository import TestPublisher, TestListener, InMemoryAdvertRepository
+
+
+class AnotherEvent:
+    pass
 
 
 class InMemoryAdvertRepositoryTest(unittest.TestCase):
@@ -11,7 +18,6 @@ class InMemoryAdvertRepositoryTest(unittest.TestCase):
         self.assertTrue(len (publisher.storage.items()) == 0)
         listener = TestListener()
         publisher.register(listener)
-        # self.assertTrue(len(publisher.listeners) == 1)
 
         repository = InMemoryAdvertRepository(publisher)
         advert: Advert = advert_with_test_data()
@@ -20,6 +26,17 @@ class InMemoryAdvertRepositoryTest(unittest.TestCase):
 
         stored_advert = repository.storage.get(advert.id)
         self.assertEqual(advert.id, stored_advert.id)
-        # self.assertTrue(len (publisher.storage.items()) == 1)
+        self.assertEqual(listener.event._id.value(), advert.id().value() )
 
+    def test_publish_another_event(self):
+        publisher = TestPublisher()
+        listener = TestListener[AdvertWritedownedToWorkEvent]()
+        publisher.register(listener)
+        publisher.publish([AnotherEvent()])
 
+    def test_contains_event_type(self):
+        self.assertTrue(
+            isinstance(
+                AdvertWritedownedToWorkEvent(AdvertID(1)),
+                TestListener().event_type())
+        )
