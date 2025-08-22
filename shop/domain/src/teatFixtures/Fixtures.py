@@ -13,7 +13,7 @@ from shop.usecase.src.main.advert.invariants.AdvertAlreadyInWorkUseCaseExtracted
 # class AdvertFixture:
 # @pytest.fixture
 def advert_with_test_data()-> Advert:
-    return Advert(
+    return Advert.write_down(
                 contact = Phone('+7...'),
                 address = Address('street', 'house'),
                 floor_count = FloorCount.create_from_str('1'),
@@ -28,5 +28,8 @@ def advert_with_test_data()-> Advert:
                         Photo('imageKitchen.jpg'),
                         Photo('imageRoom.jpg')]),
                 source_advert = SourceAdvert('avito/id=123'),
-                id= InMemoryAdvertIdProvider().next_id()
+                advert_id_provider = InMemoryAdvertIdProvider(),
+                advertAlreadyInWork=
+                    AdvertAlreadyInWorkUseCaseExtracted(
+                        ExtractedAdvert())
     )

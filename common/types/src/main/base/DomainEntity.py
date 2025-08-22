@@ -20,6 +20,11 @@ class DomainEntity:
     _id: UID
     _events: list[DomainEvent]
     def __init__(self, _id: UID):
-            self._id = _id
+        self._id = _id
+        self._events = []
     def add_event(self, event: DomainEvent):
         self._events.append(event)
+    def pop_events(self):
+        events = self._events.copy()
+        self._events = []
+        return events
