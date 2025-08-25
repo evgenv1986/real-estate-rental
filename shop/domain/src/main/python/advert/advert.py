@@ -34,9 +34,9 @@ class Advert (AggregateRoot):
                  price: Price,
                  photos: Photos,
                  source_advert: SourceAdvert,
-                 id: AdvertID):
+                 _id: AdvertID):
         
-        super().__init__(id)
+        super().__init__(_id)
         self._contact = contact
         self._address = address
         self._floor_count = floor_count
@@ -61,9 +61,9 @@ class Advert (AggregateRoot):
                     photos: Photos,
                     source_advert: SourceAdvert,
                     advert_id_provider: AdvertIdProvider,
-                    advertAlreadyInWork: AdvertAlreadyInWork
+                    advert_already_in_work: AdvertAlreadyInWork
                     ) -> 'Advert':
-        if advertAlreadyInWork.invoke(address):
+        if advert_already_in_work.invoke(address):
             AlreadyInWorkAdvertError()
         advert_id: AdvertID[int] = advert_id_provider.next_id()
         advert: Advert = Advert(

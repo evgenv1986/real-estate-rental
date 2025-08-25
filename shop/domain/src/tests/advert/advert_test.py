@@ -1,6 +1,6 @@
 import unittest
 
-from common.types.src.main.common.Count import CountAsString, Count
+from common.types.src.main.common.Count import Count
 from shop.domain.src.main.python.advert.Contact import Contact, Phone, Email
 from shop.domain.src.main.python.advert.advert import Advert
 from shop.domain.src.main.python.advert.advert_types import Address, FloorCount, RoomCount, FlatArea, Interior, Price, \
@@ -16,8 +16,8 @@ class TestAdvert(unittest.TestCase):
         advert = Advert.write_down(
                     contact = Phone('+7...'),
                     address = Address('street', 'house'),
-                    floor_count = FloorCount.create_from_str('1'),
-                    room_count = RoomCount.create(CountAsString.create('2')),
+                    floor_count = FloorCount.create(1),
+                    room_count = RoomCount.create(Count.create(2)),
                     area = FlatArea.create(
                         living_area = 54.0,
                         total_area = 56.1),
@@ -29,7 +29,7 @@ class TestAdvert(unittest.TestCase):
                             Photo('imageRoom.jpg')]),
                     source_advert = SourceAdvert('avito/id=123'),
                     advert_id_provider = InMemoryAdvertIdProvider(),
-                    advertAlreadyInWork =
+                    advert_already_in_work=
                         AdvertAlreadyInWorkUseCaseExtracted(
                             ExtractedAdvert()
                         )
@@ -38,8 +38,8 @@ class TestAdvert(unittest.TestCase):
                 Advert.write_down(
                     contact = Phone('+7...'),
                     address = Address('street', 'house'),
-                    floor_count = FloorCount.create_from_str('1'),
-                    room_count = RoomCount.create(CountAsString.create('2')),
+                    floor_count = FloorCount.create(1),
+                    room_count = RoomCount.create(Count.create(2)),
                     area = FlatArea.create(
                         living_area = 54.0,
                         total_area = 56.1),
@@ -51,7 +51,7 @@ class TestAdvert(unittest.TestCase):
                         Photo('imageRoom.jpg')]),
                     source_advert=SourceAdvert('avito/id=123'),
                     advert_id_provider=InMemoryAdvertIdProvider(),
-                    advertAlreadyInWork = AdvertAlreadyInWorkUseCaseExtracted(ExtractedAdvert()))
+                    advert_already_in_work= AdvertAlreadyInWorkUseCaseExtracted(ExtractedAdvert()))
             )
     def test_interior(self):
         assert Interior.create('евро').__eq__(Interior.create('евро'))

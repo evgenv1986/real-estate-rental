@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import Generic
 
-from common.types.src.main.base.ValueObject import ValueObject
-from common.types.src.main.common.Count import IntCount, CountAsString, Count, CountAsFloat
+from common.types.src.main.base.ValueObject import ValueObject, NegativeValueError
+from common.types.src.main.common.Count import Count
 from common.types.src.main.common.UID import UID, T
 from common.types.src.main.error.BusinesError import BusinessError
 
@@ -20,19 +20,20 @@ class Address(ValueObject):
 
 
 class FloorCount(ValueObject):
-    _value: IntCount
-    def __init__(self, value: IntCount):
+    _value: Count
+    def __init__(self, value: Count):
         self._value = value
         # super(FloorCount, self).__init__(value)
     @classmethod
-    def create(cls, value: IntCount):
-        if not value.more_zero():
-            raise FloorCountLessOrEqualZero()
-        return FloorCount(value)
+    def create(cls, value: int)-> 'FloorCount':
+        count = Count.create(value)
+        # if not value.more_zero():
+        #     raise FloorCountLessOrEqualZero()
+        return FloorCount(count)
 
-    @classmethod
-    def create_from_str(cls, value: str):
-        return FloorCount.create(CountAsString.create(value))
+    # @classmethod
+    # def create_from_str(cls, value: str):
+    #     return FloorCount.create(Count.create(value))
 
     def more_zero(self):
         return self.more_zero() > 0
@@ -77,8 +78,8 @@ class AdvertIdProvider(ABC):
     def next_id(self)-> 'AdvertID': pass
 
 class FlatArea(ValueObject):
-    _living_area: Count
-    _total_area: Count
+    _living_area: float
+    _total_area: float
     def __init__(self,
                  living_area: Count,
                  total_area: Count) -> None:
@@ -88,9 +89,9 @@ class FlatArea(ValueObject):
     def create (cls,
                living_area: float,
                total_area: float) -> 'FlatArea':
-        return FlatArea(
-            CountAsFloat(living_area),
-            CountAsFloat(total_area))
+        if living_area <= 0 or living_area <= 0:
+            raise NegativeValueError()
+        return FlatArea(living_area, total_area)
 
     def living_area(self):
         return self._living_area
@@ -103,7 +104,11 @@ class Interior(ValueObject):
     @classmethod
     def create(cls, value: str) -> 'Interior':
         return Interior(value)
-
+    def __eq__(self, obj: object) -> bool:
+        if not isinstance(obj, Interior):
+            return False
+        other: Interior = obj
+        return self._value == other._value
 
 
 class Price(ValueObject):
@@ -114,6 +119,11 @@ class Price(ValueObject):
         if value < 0:
             raise CreatePriceErrorNegativeValue()
         return Price(value)
+    def __eq__(self, obj: object) -> bool:
+        if not isinstance(obj, Price):
+            return False
+        other: Price = obj
+        return self._value == other._value
 
 
 class CreatePriceErrorNegativeValue(BusinessError):

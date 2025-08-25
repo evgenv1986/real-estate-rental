@@ -29,7 +29,7 @@ def advert_with_test_data()-> Advert:
                         Photo('imageRoom.jpg')]),
                 source_advert = SourceAdvert('avito/id=123'),
                 advert_id_provider = InMemoryAdvertIdProvider(),
-                advertAlreadyInWork=
+                advert_already_in_work=
                     AdvertAlreadyInWorkUseCaseExtracted(
                         ExtractedAdvert())
     )
