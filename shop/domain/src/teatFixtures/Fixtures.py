@@ -1,5 +1,5 @@
 import pytest
-from common.types.src.main.common.Count import CountAsString, Count
+from common.types.src.main.common.Count import Count
 from shop.domain.src.main.python.advert.Contact import Phone
 from shop.domain.src.main.python.advert.advert import Advert
 from shop.domain.src.main.python.advert.advert_types import Address, FloorCount, RoomCount, FlatArea, Interior, Price, \
@@ -16,8 +16,8 @@ def advert_with_test_data()-> Advert:
     return Advert.write_down(
                 contact = Phone('+7...'),
                 address = Address('street', 'house'),
-                floor_count = FloorCount.create_from_str('1'),
-                room_count = RoomCount.create(CountAsString.create('2')),
+                floor_count = FloorCount.create(1),
+                room_count = RoomCount.create(Count.create(2)),
                 area = FlatArea.create(
                     living_area = 54.0,
                     total_area = 56.1),
