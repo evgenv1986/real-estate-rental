@@ -4,7 +4,6 @@ from dataclasses import dataclass
 
 from common.types.src.main.base.ValueObject import ValueObject
 
-
 class Contact(ValueObject):
     """Базовый запечатанный класс для контактов"""
     _allowed_subclasses: ClassVar[FrozenSet[str]] = frozenset({'Phone', 'Email'})
