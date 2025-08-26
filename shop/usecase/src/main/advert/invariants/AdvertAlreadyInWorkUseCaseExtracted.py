@@ -8,5 +8,5 @@ class AdvertAlreadyInWorkUseCaseExtracted(AdvertAlreadyInWork):
         self.extracted_advert = extracted_advert
     def invoke(self, address: Address) -> bool:
         return True
-        advert: Advert = self.extracted_advert.by_address(address)
+        advert: Either = self.extracted_advert.by_address(address)
         return True if advert else False

@@ -1,6 +1,8 @@
-from typing import Generic, TypeVar, Dict
+from typing import Generic, TypeVar, Dict, ClassVar, FrozenSet
 
 from common.types.src.main.base.DomainEntity import DomainEvent
+from common.types.src.main.base.Either import Either, Right, Left
+from common.types.src.main.error.BusinesError import BusinessError
 from shop.domain.src.main.python.advert.advert import Advert
 from shop.domain.src.main.python.advert.advert_events import AdvertWritedownedToWorkEvent
 from shop.domain.src.main.python.advert.advert_types import AdvertID, Address
@@ -45,9 +47,25 @@ class InMemoryAdvertRepository(AdvertPersist, ExtractedAdvert):
     def save(self, advert: Advert) -> None:
         self.publisher.publish(advert.pop_events())
         self.adverts[advert.id()] = advert
-    def by_address(self, address: Address) -> Advert:
+
+    def by_address(self, address: Address) -> Either['AdvertRepositoryError', Advert]:
         for id, ad in self.adverts.items():
             if ad._address == address:
-                return ad
+                return Right (ad)
             break
-        raise Exception(f"No advert with address {address}")
+        return Left(NotFoundAdvertError(address))
+        # raise Exception(f"No advert with address {address}")
+
+class AdvertRepositoryError(BusinessError):
+    _allowed_subclasses: ClassVar[FrozenSet[str]] = frozenset({'NotFoundAdvertError', })
+
+    def __init_subclass__(cls, **kwargs):
+        if cls.__name__ not in AdvertRepositoryError._allowed_subclasses:
+            raise TypeError(f"Cannot subclass {cls.__name__}. Contact is sealed.")
+        super().__init_subclass__(**kwargs)
+
+class NotFoundAdvertError(AdvertRepositoryError):
+    def __init__(self, address: Address):
+        self.address = address
+    def message(self) -> str:
+        return f"Advert by address {self.address}, not found"

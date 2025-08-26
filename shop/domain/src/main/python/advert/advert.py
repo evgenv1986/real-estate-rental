@@ -1,10 +1,12 @@
+from typing import ClassVar, FrozenSet
+
 from common.types.src.main.base.AggregateRoot import AggregateRoot
 from common.types.src.main.common.Count import Count
 from common.types.src.main.error.BusinesError import BusinessError
 from shop.domain.src.main.python.advert.advert_events import AdvertWritedownedToWorkEvent
 from shop.domain.src.main.python.advert.advert_types import Address, FloorCount, \
     RoomCount, AdvertIdProvider, FlatArea, SourceAdvert, \
-    Photos, Interior, Price, AdvertAlreadyInWork
+    Photos, Interior, Price, AdvertAlreadyInWork, AdvertRejected
 from shop.domain.src.main.python.advert.Contact import Contact
 from shop.domain.src.main.python.advert.advert_types import AdvertID
 
@@ -22,6 +24,7 @@ class Advert (AggregateRoot):
     _photos: Photos
     _source_advert: SourceAdvert
     _id: AdvertID
+    _rejected: bool
 
     def __init__(self,
                  contact: Contact,
@@ -61,10 +64,13 @@ class Advert (AggregateRoot):
                     photos: Photos,
                     source_advert: SourceAdvert,
                     advert_id_provider: AdvertIdProvider,
-                    advert_already_in_work: AdvertAlreadyInWork
+                    advert_already_in_work: AdvertAlreadyInWork,
+                    advert_rejected: AdvertRejected,
                     ) -> 'Advert':
         if advert_already_in_work.invoke(address):
             AlreadyInWorkAdvertError()
+        if advert_rejected.invoke(address):
+            AdvertRejected()
         advert_id: AdvertID[int] = advert_id_provider.next_id()
         advert: Advert = Advert(
             contact,
@@ -107,8 +113,21 @@ class Advert (AggregateRoot):
 
 
 
+class AdvertError(BusinessError):
+    _allowed_subclasses: ClassVar[FrozenSet[str]] = frozenset({
+        'AdvertEqualsException',
+        'AlreadyInWorkAdvertError',
+        'AdvertRejectedError',
+    })
+    def __init_subclass__(cls, **kwargs):
+        if cls.__name__ not in AdvertError._allowed_subclasses:
+            raise TypeError(f"Cannot subclass {cls.__name__}. Contact is sealed.")
+        super().__init_subclass__(**kwargs)
+
 class AdvertEqualsException(Exception):pass
 
+class AlreadyInWorkAdvertError(BusinessError):pass
 
-class AlreadyInWorkAdvertError(BusinessError):
-    pass
+class AdvertRejectedError(AdvertError):
+    def message(self) -> str:
+        return f"Объявление находится в статусе отклонено"

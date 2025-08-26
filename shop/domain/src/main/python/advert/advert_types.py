@@ -166,3 +166,7 @@ class AdvertAlreadyInWork(ABC):
     @abstractmethod
     def invoke(self, address: Address)-> bool:pass
 
+
+class AdvertRejected(ABC):
+    @abstractmethod
+    def invoke(self, address: Address) -> bool: pass

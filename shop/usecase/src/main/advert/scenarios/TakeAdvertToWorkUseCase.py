@@ -1,9 +1,10 @@
-from sqlite3 import IntegrityError
-
 from shop.domain.src.main.python.advert.advert import Advert, AlreadyInWorkAdvertError
-from shop.domain.src.main.python.advert.advert_types import AdvertID, AdvertIdProvider, AdvertAlreadyInWork
+from shop.domain.src.main.python.advert.advert_types import AdvertID, AdvertIdProvider, AdvertAlreadyInWork, \
+    AdvertRejected
 from shop.usecase.src.main.advert.TakeAdvertToWork import TakeAdvertToWork, AdvertData, AlreadyInWorkUseCaseError
 from shop.usecase.src.main.advert.access.AdvertPersist import AdvertPersist
+
+
 
 
 class TakeAdvertToWorkUseCase(TakeAdvertToWork):
@@ -11,17 +12,18 @@ class TakeAdvertToWorkUseCase(TakeAdvertToWork):
             self,
             advertIdProvider: AdvertIdProvider,
             advertAlreadyInWork: AdvertAlreadyInWork,
-            advert_persist: AdvertPersist
+            advert_persist: AdvertPersist,
+            advert_rejected: AdvertRejected
     ):
         self._advertIdProvider = advertIdProvider
         self._advertAlreadyInWork = advertAlreadyInWork
         self._advert_persist = advert_persist
+        self._advert_rejected = advert_rejected
     def invoke(self, advert: 'AdvertData')-> AdvertID:
         try:
             advert = Advert.write_down(
                 advert.contact,
                 advert.address,
-                advert.address.street,
                 advert.floor_count,
                 advert.room_count,
                 advert.area,
@@ -31,7 +33,8 @@ class TakeAdvertToWorkUseCase(TakeAdvertToWork):
                 advert.photos,
                 advert.source_advert,
                 self._advertIdProvider,
-                self._advertAlreadyInWork
+                self._advertAlreadyInWork,
+                self._advert_rejected
             )
             self._advert_persist.save(advert)
             return advert.id()

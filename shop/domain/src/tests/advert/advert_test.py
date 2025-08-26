@@ -5,6 +5,7 @@ from shop.domain.src.main.python.advert.Contact import Contact, Phone, Email
 from shop.domain.src.main.python.advert.advert import Advert
 from shop.domain.src.main.python.advert.advert_types import Address, FloorCount, RoomCount, FlatArea, Interior, Price, \
     Photos, Photo, SourceAdvert
+from shop.in_memory_persistence.InMemoryAdvertRepository import InMemoryAdvertRepository, TestPublisher
 from shop.persistence.src.main.python.advert.InMemoryAdvertIdProvider import InMemoryAdvertIdProvider
 from shop.usecase.src.main.advert.access.ExtractedAdvert import ExtractedAdvert
 from shop.usecase.src.main.advert.invariants.AdvertAlreadyInWorkUseCaseExtracted import \
@@ -31,7 +32,7 @@ class TestAdvert(unittest.TestCase):
                     advert_id_provider = InMemoryAdvertIdProvider(),
                     advert_already_in_work=
                         AdvertAlreadyInWorkUseCaseExtracted(
-                            ExtractedAdvert()
+                            InMemoryAdvertRepository(TestPublisher())
                         )
         )
         assert advert.__eq__ (
@@ -51,7 +52,9 @@ class TestAdvert(unittest.TestCase):
                         Photo('imageRoom.jpg')]),
                     source_advert=SourceAdvert('avito/id=123'),
                     advert_id_provider=InMemoryAdvertIdProvider(),
-                    advert_already_in_work= AdvertAlreadyInWorkUseCaseExtracted(ExtractedAdvert()))
+                    advert_already_in_work= AdvertAlreadyInWorkUseCaseExtracted(
+                        InMemoryAdvertRepository(TestPublisher())
+                    ))
             )
     def test_interior(self):
         assert Interior.create('евро').__eq__(Interior.create('евро'))
