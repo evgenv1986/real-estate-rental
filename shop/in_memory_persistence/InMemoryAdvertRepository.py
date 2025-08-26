@@ -1,9 +1,11 @@
-from typing import Generic, TypeVar, Type
+from typing import Generic, TypeVar, Dict
 
 from common.types.src.main.base.DomainEntity import DomainEvent
 from shop.domain.src.main.python.advert.advert import Advert
 from shop.domain.src.main.python.advert.advert_events import AdvertWritedownedToWorkEvent
+from shop.domain.src.main.python.advert.advert_types import AdvertID, Address
 from shop.usecase.src.main.advert.access.AdvertPersist import AdvertPersist
+from shop.usecase.src.main.advert.access.ExtractedAdvert import ExtractedAdvert
 
 T = TypeVar('T')
 
@@ -35,10 +37,17 @@ class TestPublisher:
         return matched_listeners
 
 
-class InMemoryAdvertRepository(AdvertPersist):
+class InMemoryAdvertRepository(AdvertPersist, ExtractedAdvert):
+    adverts: Dict[AdvertID, Advert] = {}
     def __init__(self, publisher: TestPublisher):
-        self.storage = {}
+        self.adverts: Dict[AdvertID, Advert] = {}
         self.publisher = publisher
     def save(self, advert: Advert) -> None:
         self.publisher.publish(advert.pop_events())
-        self.storage[advert.id] = advert
+        self.adverts[advert.id()] = advert
+    def by_address(self, address: Address) -> Advert:
+        for id, ad in self.adverts.items():
+            if ad._address == address:
+                return ad
+            break
+        raise Exception(f"No advert with address {address}")
