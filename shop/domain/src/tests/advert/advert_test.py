@@ -5,9 +5,9 @@ from shop.domain.src.main.python.advert.Contact import Contact, Phone, Email
 from shop.domain.src.main.python.advert.advert import Advert
 from shop.domain.src.main.python.advert.advert_types import Address, FloorCount, RoomCount, FlatArea, Interior, Price, \
     Photos, Photo, SourceAdvert
-from shop.in_memory_persistence.InMemoryAdvertRepository import InMemoryAdvertRepository, TestPublisher
+from shop.in_memory_persistence.InMemoryAdvertRepository import InMemoryAdvertRepository
+from common.events.src.tests.TestPublisher import TestPublisher
 from shop.persistence.src.main.python.advert.InMemoryAdvertIdProvider import InMemoryAdvertIdProvider
-from shop.usecase.src.main.advert.access.ExtractedAdvert import ExtractedAdvert
 from shop.usecase.src.main.advert.invariants.AdvertAlreadyInWorkUseCaseExtracted import \
     AdvertAlreadyInWorkUseCaseExtracted
 from shop.usecase.src.main.advert.invariants.AdvertRejectedStoredUseCase import AdvertRejectedStoredUseCase

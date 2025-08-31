@@ -1,13 +1,17 @@
 import pytest
+
+from common.events.src.tests.TestPublisher import TestPublisher
 from common.types.src.main.common.Count import Count
 from shop.domain.src.main.python.advert.Contact import Phone
 from shop.domain.src.main.python.advert.advert import Advert
 from shop.domain.src.main.python.advert.advert_types import Address, FloorCount, RoomCount, FlatArea, Interior, Price, \
     Photos, Photo, SourceAdvert
+from shop.in_memory_persistence.InMemoryAdvertRepository import InMemoryAdvertRepository
 from shop.persistence.src.main.python.advert.InMemoryAdvertIdProvider import InMemoryAdvertIdProvider
 from shop.usecase.src.main.advert.access.ExtractedAdvert import ExtractedAdvert
 from shop.usecase.src.main.advert.invariants.AdvertAlreadyInWorkUseCaseExtracted import \
     AdvertAlreadyInWorkUseCaseExtracted
+from shop.usecase.src.main.advert.invariants.AdvertRejectedStoredUseCase import AdvertRejectedStoredUseCase
 
 
 # class AdvertFixture:
@@ -31,5 +35,9 @@ def advert_with_test_data()-> Advert:
                 advert_id_provider = InMemoryAdvertIdProvider(),
                 advert_already_in_work=
                     AdvertAlreadyInWorkUseCaseExtracted(
-                        ExtractedAdvert())
+                        InMemoryAdvertRepository(
+                            TestPublisher())),
+                advert_rejected= AdvertRejectedStoredUseCase(
+                    InMemoryAdvertRepository(
+                        TestPublisher()))
     )
