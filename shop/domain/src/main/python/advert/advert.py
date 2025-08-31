@@ -123,10 +123,13 @@ class AdvertError(BusinessError):
         if cls.__name__ not in AdvertError._allowed_subclasses:
             raise TypeError(f"Cannot subclass {cls.__name__}. Contact is sealed.")
         super().__init_subclass__(**kwargs)
+    def message(self) -> str:pass
 
 class AdvertEqualsException(Exception):pass
 
-class AlreadyInWorkAdvertError(BusinessError):pass
+class AlreadyInWorkAdvertError(BusinessError):
+    def message(self) -> str:
+        return "Объявление уже в работе"
 
 class AdvertRejectedError(AdvertError):
     def message(self) -> str:

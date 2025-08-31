@@ -10,6 +10,7 @@ from shop.persistence.src.main.python.advert.InMemoryAdvertIdProvider import InM
 from shop.usecase.src.main.advert.access.ExtractedAdvert import ExtractedAdvert
 from shop.usecase.src.main.advert.invariants.AdvertAlreadyInWorkUseCaseExtracted import \
     AdvertAlreadyInWorkUseCaseExtracted
+from shop.usecase.src.main.advert.invariants.AdvertRejectedStoredUseCase import AdvertRejectedStoredUseCase
 
 
 class TestAdvert(unittest.TestCase):
@@ -33,7 +34,10 @@ class TestAdvert(unittest.TestCase):
                     advert_already_in_work=
                         AdvertAlreadyInWorkUseCaseExtracted(
                             InMemoryAdvertRepository(TestPublisher())
-                        )
+                        ),
+                    advert_rejected= AdvertRejectedStoredUseCase(
+                        InMemoryAdvertRepository(
+                            TestPublisher()))
         )
         assert advert.__eq__ (
                 Advert.write_down(
@@ -54,8 +58,11 @@ class TestAdvert(unittest.TestCase):
                     advert_id_provider=InMemoryAdvertIdProvider(),
                     advert_already_in_work= AdvertAlreadyInWorkUseCaseExtracted(
                         InMemoryAdvertRepository(TestPublisher())
-                    ))
-            )
+                    ),
+                    advert_rejected= AdvertRejectedStoredUseCase(
+                        InMemoryAdvertRepository(
+                            TestPublisher()))
+            ))
     def test_interior(self):
         assert Interior.create('евро').__eq__(Interior.create('евро'))
         assert not Interior.create('xzcnkdcjkd').__eq__(Interior.create('евро'))
@@ -72,3 +79,37 @@ class TestAdvert(unittest.TestCase):
                 pass
         except TypeError as e:
             print(e)  # Cannot subclass Telegram. Contact is sealed.
+
+    def test_advert_rejected(self):
+        advert_rejected = AdvertRejectedStoredUseCase(
+            InMemoryAdvertRepository(
+                TestPublisher()))
+        self.assertFalse (advert_rejected.invoke (Address('street', 'house')))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,7 +4,7 @@ from shop.usecase.src.main.advert.access.ExtractedAdvert import ExtractedAdvert
 
 
 class AdvertRejectedStoredUseCase(AdvertRejected):
-    def __init(self, storageAdvert: ExtractedAdvert):
+    def __init__(self, storageAdvert: ExtractedAdvert):
         self._storageAdvert = storageAdvert
     def invoke (self, address: Address):
         advert: Either = self._storageAdvert.by_address(address)
