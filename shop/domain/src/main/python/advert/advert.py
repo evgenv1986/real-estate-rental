@@ -1,12 +1,13 @@
 from typing import ClassVar, FrozenSet
 
 from common.types.src.main.base.AggregateRoot import AggregateRoot
+from common.types.src.main.base.DomainEntity import DomainEvent
 from common.types.src.main.common.Count import Count
 from common.types.src.main.error.BusinesError import BusinessError
 from shop.domain.src.main.python.advert.advert_events import AdvertWritedownedToWorkEvent
 from shop.domain.src.main.python.advert.advert_types import Address, FloorCount, \
     RoomCount, AdvertIdProvider, FlatArea, SourceAdvert, \
-    Photos, Interior, Price, AdvertAlreadyInWork, AdvertRejected
+    Photos, Interior, Price, AdvertAlreadyInWork, AdvertRejected, AdvertState, AdvertIdleState, AdvertWritedownedState
 from shop.domain.src.main.python.advert.Contact import Contact
 from shop.domain.src.main.python.advert.advert_types import AdvertID
 
@@ -25,6 +26,7 @@ class Advert (AggregateRoot):
     _source_advert: SourceAdvert
     _id: AdvertID
     _rejected: bool
+    _state: AdvertState
 
     def __init__(self,
                  contact: Contact,
@@ -50,6 +52,8 @@ class Advert (AggregateRoot):
         self._price = price
         self._photos = photos
         self._source_advert = source_advert
+        self._state = AdvertIdleState()
+
 
     @classmethod
     def write_down (cls,
@@ -85,12 +89,19 @@ class Advert (AggregateRoot):
             source_advert,
             advert_id
         )
-        advert.add_event(AdvertWritedownedToWorkEvent(advert_id))
+        advert.change_state(
+            state = AdvertWritedownedState(),
+            event = AdvertWritedownedToWorkEvent(advert_id))
         return advert
-    
+
+    def change_state(self, state, event: DomainEvent):
+        if self._state.canChangeTo(state):
+            self._state = state
+            self.add_event(event)
+
     def contact(self): 
         return self._contact
-   
+
     def __eq__(self, obj: object) -> bool:
         if not isinstance(obj, Advert):
             raise AdvertEqualsException('Ошибка при сравнении объявлений, сравниваемый объект не является классом объявления')

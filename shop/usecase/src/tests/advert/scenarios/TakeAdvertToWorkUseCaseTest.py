@@ -1,7 +1,7 @@
 import pytest
 
 from common.events.src.tests.TestPublisher import TestPublisher
-from shop.domain.src.teatFixtures.Fixtures import writedonwed_test_advert, advert_data_fixture
+from shop.domain.src.teatFixtures.Fixtures import advert_data_fixture
 from shop.in_memory_persistence.InMemoryAdvertRepository import InMemoryAdvertRepository
 from shop.persistence.src.main.python.advert.InMemoryAdvertIdProvider import InMemoryAdvertIdProvider
 from shop.usecase.src.main.advert.TakeAdvertToWork import TakeAdvertToWork

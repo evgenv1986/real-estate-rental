@@ -1,19 +1,19 @@
-import unittest
-
 from common.types.src.main.common.Count import Count
 from shop.domain.src.main.python.advert.Contact import Contact, Phone, Email
 from shop.domain.src.main.python.advert.advert import Advert
 from shop.domain.src.main.python.advert.advert_types import Address, FloorCount, RoomCount, FlatArea, Interior, Price, \
-    Photos, Photo, SourceAdvert
+    Photos, Photo, SourceAdvert, AdvertState, AdvertIdleState, AdvertWritedownedState
 from shop.in_memory_persistence.InMemoryAdvertRepository import InMemoryAdvertRepository
 from common.events.src.tests.TestPublisher import TestPublisher
 from shop.persistence.src.main.python.advert.InMemoryAdvertIdProvider import InMemoryAdvertIdProvider
 from shop.usecase.src.main.advert.invariants.AdvertAlreadyInWorkUseCaseExtracted import \
     AdvertAlreadyInWorkUseCaseExtracted
 from shop.usecase.src.main.advert.invariants.AdvertRejectedStoredUseCase import AdvertRejectedStoredUseCase
+from shop.domain.src.teatFixtures.Fixtures import advert_data_fixture
 
 
-class TestAdvert(unittest.TestCase):
+
+class TestAdvert:
     def test_create(self):
         advert = Advert.write_down(
                     contact = Phone('+7...'),
@@ -84,22 +84,56 @@ class TestAdvert(unittest.TestCase):
         advert_rejected = AdvertRejectedStoredUseCase(
             InMemoryAdvertRepository(
                 TestPublisher()))
-        self.assertFalse (advert_rejected.invoke (Address('street', 'house')))
+        assert False == (advert_rejected.invoke (Address('street', 'house')))
 
+    def test_change_state_to_writedowned(self, advert_data_fixture):
+        d = advert_data_fixture
+        advert: Advert = Advert(
+            d.contact,
+            d.address,
+            d.floor_count,
+            d.room_count,
+            d.area,
+            d.interior,
+            d.flat_floor,
+            d.price,
+            d.photos,
+            d.source_advert,
+            _id=InMemoryAdvertIdProvider().next_id()
+        )
+        writedowned_advert = advert.write_down(
+            d.contact,
+            d.address,
+            d.floor_count,
+            d.room_count,
+            d.area,
+            d.interior,
+            d.flat_floor,
+            d.price,
+            d.photos,
+            d.source_advert,
+            advert_id_provider=InMemoryAdvertIdProvider(),
+            advert_already_in_work = AdvertAlreadyInWorkUseCaseExtracted(
+                InMemoryAdvertRepository(TestPublisher())),
+            advert_rejected=AdvertRejectedStoredUseCase(
+                InMemoryAdvertRepository(TestPublisher()))
+        )
+        assert True == isinstance (writedowned_advert._state, AdvertWritedownedState)
 
+    def test_writedowned_state(self, advert_data_fixture):
+        idle: AdvertState = AdvertIdleState()
+        assert AdvertWritedownedState == idle.next_state()
 
+    def test_can_change_to_state(self):
+        ns = AdvertIdleState().next_state()
+        can = AdvertIdleState().canChangeTo(AdvertWritedownedState())
+        assert (True == AdvertIdleState()
+                .canChangeTo(AdvertWritedownedState()))
+        assert (False == AdvertIdleState()
+                .canChangeTo(AdvertIdleState()))
 
-
-
-
-
-
-
-
-
-
-
-
+    def test_equals_classes(self):
+        assert (True == isinstance(AdvertWritedownedState(), AdvertWritedownedState))
 
 
 

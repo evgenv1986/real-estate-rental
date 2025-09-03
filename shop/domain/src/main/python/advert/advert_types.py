@@ -170,3 +170,26 @@ class AdvertAlreadyInWork(ABC):
 class AdvertRejected(ABC):
     @abstractmethod
     def invoke(self, address: Address) -> bool: pass
+
+
+class AdvertState:
+    def next_state(self)-> 'AdvertState':
+        pass
+    def canChangeTo(self, param):
+        pass
+
+class AdvertWritedownedState(AdvertState):
+    def next_state(self)-> 'AdvertState':
+        return AdvertWritedownedState
+
+class AdvertIdleState(AdvertState):
+    def next_state(self)-> 'AdvertState':
+        return AdvertWritedownedState()
+
+    def canChangeTo(self, state: AdvertState)-> bool:
+        if isinstance(self.next_state(), state.__class__):
+            return True
+        return False
+        # return True \
+        #     if AdvertWritedownedState == self.next_state() \
+        #     else False
