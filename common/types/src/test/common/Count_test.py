@@ -11,7 +11,7 @@ class TestCount(unittest.TestCase):
     def test_cant_create_invalid_count_value(self):
         with pytest.raises(NegativeValueError):
             v: int = -1
-            IntCount.create(v)
+            IntCount.make(v)
 
     def test_valid_count_value(self):
         v: int = 2
@@ -20,13 +20,13 @@ class TestCount(unittest.TestCase):
 
     def test_create_from_srting(self):
         s: str = '1'
-        count = CountAsString.create(s)
+        count = CountAsString.make(s)
         assert 1 == count.value()
 
     def test_cant_create_from_invalid_srting(self):
         s: str = '1sadsd'
         with pytest.raises(StringContainsNonNumericCharsError):
-            CountAsString.create(s)
+            CountAsString.make(s)
 
     def test_create_IntCount_with_Count_class(self):
         assert Count.create(234).__eq__(Count.create(234))

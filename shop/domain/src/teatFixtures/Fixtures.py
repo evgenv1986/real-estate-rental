@@ -15,8 +15,7 @@ from shop.usecase.src.main.advert.invariants.AdvertAlreadyInWorkUseCaseExtracted
 from shop.usecase.src.main.advert.invariants.AdvertRejectedStoredUseCase import AdvertRejectedStoredUseCase
 
 
-# class AdvertFixture:
-# @pytest.fixture
+@pytest.fixture
 def writedonwed_test_advert()-> Advert:
     return Advert.write_down(
                 contact = Phone('+7...'),
@@ -60,4 +59,30 @@ def advert_data_fixture()-> AdvertData:
             Photo('imageKitchen.jpg'),
             Photo('imageRoom.jpg')]),
         source_advert=SourceAdvert('avito/id=123'),
+    )
+
+def writedonwed_test_advert_without_fixture()-> Advert:
+    return Advert.write_down(
+                contact = Phone('+7...'),
+                address = Address('street', 'house'),
+                floor_count = FloorCount.create(1),
+                room_count = RoomCount.create(Count.create(2)),
+                area = FlatArea.create(
+                    living_area = 54.0,
+                    total_area = 56.1),
+                interior = Interior.create('евро'),
+                flat_floor = Count.create(2),
+                price= Price.create(14800000),
+                photos = Photos.create([
+                        Photo('imageKitchen.jpg'),
+                        Photo('imageRoom.jpg')]),
+                source_advert = SourceAdvert('avito/id=123'),
+                advert_id_provider = InMemoryAdvertIdProvider(),
+                advert_already_in_work=
+                    AdvertAlreadyInWorkUseCaseExtracted(
+                        InMemoryAdvertRepository(
+                            TestPublisher())),
+                advert_rejected= AdvertRejectedStoredUseCase(
+                    InMemoryAdvertRepository(
+                        TestPublisher()))
     )

@@ -19,5 +19,5 @@ class FloorCountTest(unittest.TestCase):
 
     def test_equals_created_from_int_and_string(self):
         _str: FloorCount = FloorCount.create_from_str('1')
-        _int: FloorCount = FloorCount.create(IntCount.create(1))
+        _int: FloorCount = FloorCount.create(IntCount.make(1))
         assert _str.value() == _int.value()

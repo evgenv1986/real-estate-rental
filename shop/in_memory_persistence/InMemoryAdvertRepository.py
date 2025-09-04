@@ -1,4 +1,4 @@
-from typing import TypeVar, Dict, ClassVar, FrozenSet
+from typing import Dict, ClassVar, FrozenSet
 
 from common.events.src.tests.TestPublisher import TestPublisher
 from common.types.src.main.base.Either import Either, Right, Left
@@ -20,12 +20,20 @@ class InMemoryAdvertRepository(AdvertPersist, ExtractedAdvert):
         self.adverts[advert.id()] = advert
 
     def by_address(self, address: Address) -> Either['AdvertRepositoryError', Advert]:
-        for id, ad in self.adverts.items():
+        for _id, ad in self.adverts.items():
             if ad._address == address:
                 return Right (ad)
             break
-        return Left(NotFoundAdvertError(address))
-        # raise Exception(f"No advert with address {address}")
+        return Left(NotFoundAdvertError())
+
+    def advert_by_id(self, _id: AdvertID)-> Either['AdvertRepositoryError', Advert]:
+        if self.adverts.get(_id).id().value() == _id.value():
+            return Right(self.adverts.get(_id))
+        else:
+            return Left(NotFoundAdvertError())
+
+
+
 
 class AdvertRepositoryError(BusinessError):
     _allowed_subclasses: ClassVar[FrozenSet[str]] = frozenset({'NotFoundAdvertError', })
@@ -36,7 +44,7 @@ class AdvertRepositoryError(BusinessError):
         super().__init_subclass__(**kwargs)
 
 class NotFoundAdvertError(AdvertRepositoryError):
-    def __init__(self, address: Address):
-        self.address = address
+    def __init__(self):
+        super().__init__()
     def message(self) -> str:
-        return f"Advert by address {self.address}, not found"
+        return f"Advert not found"
