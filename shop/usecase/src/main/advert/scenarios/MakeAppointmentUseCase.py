@@ -9,7 +9,9 @@ from shop.usecase.src.main.advert.access.ExtractedAdvert import ExtractedAdvert
 
 
 class MakeAppointmentUseCase(MakeAppointment):
-    def __init__(self, extracted_advert: ExtractedAdvert):
+    def __init__(self,
+                 advert_id: AdvertID[int],
+                 extracted_advert: ExtractedAdvert):
         self._extractedAdvert = extracted_advert
 
     def invoke(self, advert_id: AdvertID[int], meet_at: datetime) -> Either[MakeAppointmentUseCaseError, Appointment]:

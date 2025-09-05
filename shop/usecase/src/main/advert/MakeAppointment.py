@@ -9,8 +9,10 @@ from shop.domain.src.main.python.appointment.Appointment import Appointment
 
 
 class MakeAppointment(ABC):
-    def invoke(self, advert_id: AdvertID[int], meet_at: datetime)-> (
-            Either['MakeAppointmentUseCaseError', Appointment]):
+    def invoke(self,
+               advert_id: AdvertID[int],
+               meet_at: datetime)\
+            -> (Either['MakeAppointmentUseCaseError', Appointment]):
         pass
 
 @dataclass
