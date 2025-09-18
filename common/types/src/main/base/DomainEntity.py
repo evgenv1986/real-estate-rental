@@ -10,10 +10,10 @@ class EventStoreID:
 
 
 class DomainEvent:
-    _id: UID
+    _event_id: UID
     _created: DateTime
     def __init__(self):
-        self._id = EventStoreID().next()
+        self._event_id = EventStoreID().next()
         self._created = DateTime()
 
 class DomainEntity:
