@@ -10,7 +10,7 @@ class MeetStore (MeetPersist):
     def save(self, meet: Meet):
         self.meets.append(meet)
         events: list[DomainEvent] = meet.pop_events()
-        self.waiting_message_entities.send(events)
+        self.waiting_message_entities.notify(events)
 
     def __init__(self, waiting_message_entities: WaitingMessageObjects):
         self.waiting_message_entities = waiting_message_entities

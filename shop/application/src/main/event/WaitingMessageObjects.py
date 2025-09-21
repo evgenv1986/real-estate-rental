@@ -10,7 +10,7 @@ class WaitingMessageObjects(DomainEventPublisher):
     def register(self, listener):
         self.listeners.append(listener)
 
-    def send(self, events: list[DomainEvent]):
+    def notify(self, events: list[DomainEvent]):
         for event in events:
             for listener in self.listeners_for(event):
                 listener.handle(event)
