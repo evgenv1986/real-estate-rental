@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from routers.meetRoutes import router
+
 # Создаем экземпляр FastAPI приложения
 app = FastAPI(
     title="Real Estate Rental API",
@@ -16,6 +18,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Подключаем роутер
+app.include_router(router)
 
 @app.get("/")
 async def root():
@@ -36,5 +41,3 @@ async def api_info():
         "description": "Management system for rental properties"
     }
 
-# Здесь вы можете добавить другие endpoints
-# Например, endpoints для работы с недвижимостью, пользователями и т.д.

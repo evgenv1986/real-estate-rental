@@ -25,7 +25,7 @@ if [ $? -eq 0 ]; then
     echo "──────────────────────────────────────"
 
     # Запускаем основное приложение
-    python main/main.py
+    python shop/application/src/main/main.py
 else
     echo -e "${RED}❌ Tests failed! Fix the issues before starting the server.${NC}"
     exit 1
