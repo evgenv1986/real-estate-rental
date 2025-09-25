@@ -2,7 +2,7 @@ from abc import ABC
 from dataclasses import dataclass
 from datetime import datetime
 
-from common.types.src.main.base.DomainEntity import DomainEntity
+from common.types.src.main.base.AggregateRoot import AggregateRoot
 from common.types.src.main.base.Either import Either, Left, Right
 from common.types.src.main.error.BusinesError import BusinessError
 from shop.domain.src.main.python.advert.advert import Advert
@@ -13,7 +13,7 @@ from shop.domain.src.main.python.meet.MeetID import MeetID
 from shop.domain.src.main.python.meet.MeetIdStore import MeetIdStore
 from shop.domain.src.main.python.meet.MeetingTimeNotYetComeCondition import MeetingTimeNotYetComeCondition
 
-class Meet(DomainEntity):
+class Meet(AggregateRoot):
     def meet_at(self)-> MeetAt:
         return self._meet_at
 
