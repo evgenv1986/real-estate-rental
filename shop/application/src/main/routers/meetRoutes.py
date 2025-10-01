@@ -30,17 +30,16 @@ router = APIRouter(
 async def api_meets_v1():
     advert: Advert = writedonwed_test_advert_without_fixture()
     meet_at = datetime.now()
-    waitingMessageObjects = WaitingMessageObjects()
-    waitingMessageObjects.register(SMSMeetMakedRule())
+    waiting_message_objects = WaitingMessageObjects()
+    waiting_message_objects.register(SMSMeetMakedRule())
     return MakeMeetEndPoint(
         MakeMeetUseCase(
             reading_advert_store=FakeExtractingAdvertStorage(advert.id()),
             meet_id_store=MeetIdStoreInMemory(),
             meet_in_future=MeetingTimeNotYetComeCondition(MeetAt(meet_at)),
-            meet_persist=MeetStore(waitingMessageObjects),
+            meet_persist=MeetStore(waiting_message_objects),
         )
     ).execute(
         advert.id().value(),
         meet_at
     )
-    # return {"message": "Meets endpoint324234324"}
